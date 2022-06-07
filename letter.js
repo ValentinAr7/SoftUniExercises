@@ -10,6 +10,7 @@ for(let i = 0; i < word.length; i++){
         case "i": total += 3; break;
         case "o": total += 4; break;
         case "u": total += 5; break;
+        case "m": total +=6; break
         }
         }
         console.log(total);
