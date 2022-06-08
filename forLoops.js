@@ -4,7 +4,7 @@ text = input[0]
 
 for(index = 0; index < text.length; index++){
     if(text.indexOf("q")){
-        console.log("yes");
+        console.log("YesYes");
     } else {
         console.log("No");
     }
