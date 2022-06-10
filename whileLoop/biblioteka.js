@@ -4,23 +4,26 @@ function biblioteka (input){
 
     let index = 1;
     let command = input[index];
-    index++
+    
 
-    counter = 0;
+    bookIsFound = false
 
     while(command !== "No More Books"){
-        counter = counter + 1
 
-        if(command = book){
-            console.log(`You checked ${counter} books and found it`);
-        } else{
-        console.log("The book you search is not here!");
-        console.log(`You checked ${counter} books.`);
+        if(command === book){
+            bookIsFound = true;
+            break;
         }
-        command = input[index]
+        command = input[index];
         index++
     }
 
+        if(bookIsFound === false){
+            console.log("The book you search is not here!");
+            console.log(`You checked ${index - 2} books.`);
+        } else {
+            console.log(`You checked ${index - 2} books and found it.`);
+        }
 
 }
 
