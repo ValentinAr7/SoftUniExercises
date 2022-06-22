@@ -1,42 +1,14 @@
-function school(input){
-
-    let goodGrade = 0;
-    let badGrade = 0;
-    let sum = 0;
-
-    index = 1
-    let command = input[index];
-    index++
-
-
-    while(command !== "Enough"){
-        console.log(command);
-
-        command = input[index]
-        index++ 
-        
-        if(command[index] = "Enough"){
-            avgScore = 
-
-
-
-            "Average score: {средна оценка}"
-
-o "Number of problems: {броя на всички задачи}"
-
-o "Last problem: {името на последната задача}"
-        }
+function watch (){
+for(let hours = 0; hours < 24; hours++){
+for(let min = 0; min <= 59; min++){
+    
+    if(min <= 9){
+        console.log(`${hours}:0${min}`);
+    }   else    {
+        console.log(`${hours}:${min}`);
     }
-
-
+}
 }
 
-school (["2",
-"Income",
-"3",
-"Game Info",
-"6",
-"Best Player",
-"4"])
-
-
+}
+watch()
