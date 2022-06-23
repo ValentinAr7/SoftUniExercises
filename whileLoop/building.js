@@ -4,9 +4,9 @@ function building (input){
     let x = Number(input[1]);
 
     for(let i = y; i >0; i--){
-
+            let buff = "";
         for(let z = 0; z < x; z++){
-            
+
         }
     }
 
