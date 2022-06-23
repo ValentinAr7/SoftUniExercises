@@ -10,8 +10,9 @@ function building (input){
                 buff += `L${i}${z} `
             } else if (i % 2 === 0){
                 buff+= `O${i}${z} `;
-            } 
-
+            } else{
+                buff += `A${i}${z}`
+            }
         }
     }
 
