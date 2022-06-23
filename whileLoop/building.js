@@ -6,6 +6,11 @@ function building (input){
     for(let i = y; i >0; i--){
             let buff = "";
         for(let z = 0; z < x; z++){
+            if(i === y){
+                buff += `L${i}${z} `
+            } else if (i % 2 === 0){
+                buff+= `O${i}${z} `;
+            } 
 
         }
     }
