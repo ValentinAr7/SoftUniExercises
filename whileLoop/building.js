@@ -11,9 +11,10 @@ function building (input){
             } else if (i % 2 === 0){
                 buff+= `O${i}${z} `;
             } else{
-                buff += `A${i}${z}`
+                buff += `A${i}${z} `
             }
         }
+        console.log(buff);
     }
 
 }
