@@ -1,17 +1,17 @@
-function foodForDog(input){
+function foodForDog(input) {
 
     let foodKg = Number[input[0]];
-    
+
     let index = 1;
     let dogFood = input[index];
     index++
 
     let foodConvert = dogFood * 1000
-    
+
     let command = input[index]
     index++
 
-    while(command !== "Adopted"){
+    while (command !== "Adopted") {
         let food = Number[command]
 
         foodConvert -= food
@@ -19,22 +19,12 @@ function foodForDog(input){
         index++
     }
 
-    if(foodConvert >= 0){
+    if (foodConvert >= 0) {
         console.log(`Food is enough: Leftovers ${foodConvert}`);
-    }   else{
+    } else {
         console.log(`Food is not enough: You need ${Math.abs(foodConvert)}`);
     }
 
 }
 
-foodForDog(["2",
-
-"999",
-
-"456",
-
-"999",
-
-"999",
-
-"123", "456", "Adopted"])
+foodForDog(["2", "999", "456", "999", "999", "123", "456", "Adopted"])
