@@ -26,3 +26,15 @@ function foodForDog(input){
     }
 
 }
+
+foodForDog(["2",
+
+"999",
+
+"456",
+
+"999",
+
+"999",
+
+"123", "456", "Adopted"])
