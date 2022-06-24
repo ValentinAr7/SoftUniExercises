@@ -9,6 +9,12 @@ function easterCompetitions(input){
         index++
         let command = input[index];
         index++
-        
+
+        let tempSumPoints = 0;
+
+        while(command !== "Stop"){
+            let point = Number(command);
+            tempSumPoints += point
+        }
     }
 }
