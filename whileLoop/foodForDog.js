@@ -8,13 +8,14 @@ function foodForDog(input){
 
     let foodConvert = dogFood * 1000
     
-    
+    let command = input[index]
+    index++
 
+    while(command !== "Adopted"){
+        let food = Number[command]
 
-    while(inputIndex !== "Adopted"){
-        inputIndex += 
-
-        inputIndex = input[index]
+        foodConvert -= food
+        command = input[index]
         index++
 
     }
