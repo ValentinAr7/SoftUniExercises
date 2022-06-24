@@ -15,6 +15,16 @@ function easterCompetitions(input){
         while(command !== "Stop"){
             let point = Number(command);
             tempSumPoints += point
+
+            command = input[index];
+            index++
+        }
+
+        console.log(`${name} has ${tempSumPoint} points.`);
+        if(tempSumPoints > chefPoints){
+            chefName = name;
+            chefPoints = tempSumPoints;
+            console.log(`${chefName} is the new number 1.`);
         }
     }
 }
