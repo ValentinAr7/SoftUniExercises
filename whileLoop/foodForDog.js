@@ -17,7 +17,12 @@ function foodForDog(input){
         foodConvert -= food
         command = input[index]
         index++
+    }
 
+    if(foodConvert >= 0){
+        console.log(`Food is enough: Leftovers ${foodConvert}`);
+    }   else{
+        console.log(`Food is not enough: You need ${Math.abs(foodConvert)}`);
     }
 
 }
