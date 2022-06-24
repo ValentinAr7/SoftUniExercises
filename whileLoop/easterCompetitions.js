@@ -23,7 +23,7 @@ function easterCompetitions(input){
             index++
         }
 
-        console.log(`${name} has ${tempSumPoint} points.`);
+        console.log(`${name} has ${tempSumPoints} points.`);
         if(tempSumPoints > chefPoints){
             chefName = name;
             chefPoints = tempSumPoints;
@@ -34,3 +34,27 @@ function easterCompetitions(input){
     console.log(`${chefName} won competition with ${chefPoints} poits.`);
 
 }
+
+easterCompetitions(["2",
+
+"Chef Angelov",
+
+"9",
+
+"9",
+
+"9",
+
+"Stop",
+
+"Chef Rowe",
+
+"10",
+
+"10",
+
+"10",
+
+"10",
+
+"Stop"])
