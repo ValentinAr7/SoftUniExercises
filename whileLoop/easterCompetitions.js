@@ -4,6 +4,9 @@ function easterCompetitions(input){
     let easterBread = Number(input[index]);
     index++
 
+    let chefName = "";
+    let chefPoints = 0;
+
     for(let i = 0; i <easterBread; i++){
         let name = input[index];
         index++
@@ -27,4 +30,7 @@ function easterCompetitions(input){
             console.log(`${chefName} is the new number 1.`);
         }
     }
+
+    console.log(`${chefName} won competition with ${chefPoints} poits.`);
+
 }
