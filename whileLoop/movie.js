@@ -10,3 +10,12 @@ function movie(input){
 
     let extraTime = movieSeasons * 10
 
+    let time = totalTime * movieSeasons * movieEpisodes + extraTime
+    console.log(`Total time needed to watch the ${movieName} series is ${time} minutes.`);
+
+}
+
+movie(["Lucifer",
+        "3",
+        "18",
+        "55"])
