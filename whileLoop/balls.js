@@ -39,7 +39,16 @@ function balls(input){
                 totalPoints = Math.floor(totalPoints / 2);
                 totalPoints++
                 break;
+
+                default: otherBalls++; break
         }
     }
 
+    console.log(`Total points: ${totalPoints}`);
+    console.log(`Red balls: ${redBalls}`);
+    console.log(`Orange balls: ${orangeBalls}`);
+    console.log(`Yellow balls: ${yelloBalls}`);
+    console.log(`White balls: ${whiteBalls}`);
+    console.log(`Other colours: ${otherBalls}`);
+    console.log(`Divides frrom black balls: ${blackBalls}`);
 }
