@@ -14,6 +14,32 @@ function balls(input){
     for(let i = 0; i < n; i++){
         let color = input[index];
         index++
+
+        switch(color){
+            case "red":
+                totalPoints += 5;
+                redBalls++; break
+
+                case "orange": 
+                totalPoints += 10
+                orangeBalls++;
+                break;
+
+                case "yellow": 
+                totalPoints += 15;
+                yelloBalls++;
+                break;
+
+                case "white": 
+                totalPoints += 20;
+                whiteBalls++;
+                break;
+                
+                case "black": 
+                totalPoints = Math.floor(totalPoints / 2);
+                totalPoints++
+                break;
+        }
     }
 
 }
