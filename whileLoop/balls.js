@@ -9,5 +9,11 @@ function balls(input){
     let yelloBalls = 0;
     let whiteBalls = 0;
     let blackBalls = 0;
-    
+    let otherColors = 0;
+
+    for(let i = 0; i < n; i++){
+        let color = input[index];
+        index++
+    }
+
 }
