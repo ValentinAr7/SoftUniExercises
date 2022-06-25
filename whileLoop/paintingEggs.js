@@ -6,6 +6,7 @@ function eggs(input) {
 
     let price = 0;
 
+    
     switch (eggsSize) {
 
         case "Large":
@@ -55,8 +56,15 @@ function eggs(input) {
             break;
     }
 
+
         
     price = price * 0.65
-    console.log(price);
+    console.log(`${price.toFixed(2)} leva.`);
 
 }
+
+eggs(["Large",
+
+"Red",
+
+"7"])
