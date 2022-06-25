@@ -55,5 +55,8 @@ function eggs(input) {
             break;
     }
 
+        
+    price = price * 0.65
+    console.log(price);
 
 }
