@@ -1,4 +1,4 @@
-function balls(input){
+function balls(input) {
 
     let index = 0;
     let n = Number(input[index]);
@@ -11,36 +11,36 @@ function balls(input){
     let blackBalls = 0;
     let otherBalls = 0;
 
-    for(let i = 0; i < n; i++){
+    for (let i = 0; i < n; i++) {
         let color = input[index];
         index++
 
-        switch(color){
+        switch (color) {
             case "red":
                 totalPoints += 5;
                 redBalls++; break
 
-                case "orange": 
+            case "orange":
                 totalPoints += 10
                 orangeBalls++;
                 break;
 
-                case "yellow": 
+            case "yellow":
                 totalPoints += 15;
                 yelloBalls++;
                 break;
 
-                case "white": 
+            case "white":
                 totalPoints += 20;
                 whiteBalls++;
                 break;
-                
-                case "black": 
+
+            case "black":
                 totalPoints = Math.floor(totalPoints / 2);
                 totalPoints++
                 break;
 
-                default: otherBalls++; break
+            default: otherBalls++; break
         }
     }
 
@@ -53,10 +53,10 @@ function balls(input){
     console.log(`Divides frrom black balls: ${blackBalls}`);
 }
 
-balls (["3",
+balls(["3",
 
-"white",
+    "white",
 
-"black",
+    "black",
 
-"pink"])
+    "pink"])
