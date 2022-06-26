@@ -11,7 +11,13 @@ function beerAndChips(input){
 
     let totalPrice = totalPriceForBeer + totalPriceForChips
 
- 
+    if(totalPrice > budjed){
+        console.log(`${name} needs ${(totalPrice - budjed).toFixed(2)} more leva!`);
+    } else {
+        console.log(`${name} bought a snack and has ${(budjed - totalPrice).toFixed(2)} leva left.`);
+    }
+
+}
 
 beerAndChips(["George",
 "10",
