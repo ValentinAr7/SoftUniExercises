@@ -8,7 +8,6 @@ function eggs(input) {
 
     
     switch (eggsSize) {
-
         case "Large":
             switch (eggsColor) {
                 case "Red": 

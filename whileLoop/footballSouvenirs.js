@@ -1,103 +1,114 @@
-function footballSouvenirs(input){
-
-    let index = 0;
-    let n = Number(input[index]);
+function footballSouvenirs(input) {
 
     let team = input[0];
     let souvenir = input[1];
-    let numberSouvenier = Number(input[2]); 
+    let num = Number(input[2]);
 
     let totalPrice = 0;
 
-    for(let i = 0; i < n; i++){
-        let color = input[index];
-        index++
+    switch (team) {
+        case "Argentina":
+            switch (souvenir) {
+                case "flags":
+                    totalPrice = num * 3.25
+                    break;
 
-        switch (team) {
-            case "Argentina": 
+                case "caps":
+                    totalPrice = num * 7.20
+                    break;
 
-            if(souvenir === "flags"){
-                totalPrice += 3.25
-                totalPrice++
-            } else if (souvenir === "caps"){
-                totalPrice += 7.20
-                totalPrice++
-            } else if (souvenir === "poster"){
-                totalPrice += 5.10
-                totalPrice++
-            } else if  (souvenir === "stickers"){
-                totalPrice += 1.25
-                totalPrice++
-            } else {
-                console.log("Invalid stock");
+                case "poster":
+                    totalPrice = num * 5.10
+                    break;
+
+
+                case "stickers":
+                    totalPrice = num * 1.25
+                    break;
+
+                    default: console.log("Invalid stock!"); break;
             }
             break;
 
+        case "Brazil":
+            switch (souvenir) {
+                case "flags":
+                    totalPrice = num * 4.20
+                    break;
 
-            case "Brazil": 
-            if(souvenir === "flags"){
-                totalPrice += 4.20
-                totalPrice++
-            } else if (souvenir === "caps"){
-                totalPrice += 8.50
-                totalPrice++
-            } else if (souvenir === "poster"){
-                totalPrice += 5.35
-                totalPrice++
-            } else if  (souvenir === "stickers"){
-                totalPrice += 1.20
-                totalPrice++
-            } else {
-                console.log("Invalid stock");
+                case "caps":
+                    totalPrice = num * 8.50
+                    break;
+
+                case "poster":
+                    totalPrice = num * 5.35
+                    break;
+
+
+                case "stickers":
+                    totalPrice = num * 1.20
+                    break;
+
+                    default: console.log("Invalid stock!"); break;
             }
             break;
 
+        case "Croatia":
+            switch (souvenir) {
+                case "flags":
+                    totalPrice = num * 2.75
+                    break;
 
-            case "Croatia": 
-            if(souvenir === "flags"){
-                totalPrice += 2.75
-                totalPrice++
-            } else if (souvenir === "caps"){
-                totalPrice += 6.90
-                totalPrice++
-            } else if (souvenir === "poster"){
-                totalPrice += 4.95
-                totalPrice++
-            } else if  (souvenir === "stickers"){
-                totalPrice += 1.10
-                totalPrice++
-            } else {
-                console.log("Invalid stock");
+                case "caps":
+                    totalPrice = num * 6.90
+                    break;
+
+                case "poster":
+                    totalPrice = num * 4.95
+                    break;
+
+
+                case "stickers":
+                    totalPrice = num * 1.10
+                    break;
+
+                    default: console.log("Invalid stock!"); break;
             }
             break;
+        case "Denmark":
+            switch (souvenir) {
+                case "flags":
+                    totalPrice = num * 3.10
+                    break;
+
+                case "caps":
+                    totalPrice = num * 6.50
+                    break;
+
+                case "poster":
+                    totalPrice = num * 4.80
+                    break;
+
+
+                case "stickers":
+                    totalPrice = num * 0.90
+                    break;
+
+                    default: console.log("Invalid stock!"); break;
+            }
+            break;
+
+            default: console.log("Invalid country!"); break
             
-            
-            
-            case "Denmark": 
-            if(souvenir === "flags"){
-                totalPrice += 3.10
-                totalPrice++
-            } else if (souvenir === "caps"){
-                totalPrice += 6.50
-                totalPrice++
-            } else if (souvenir === "poster"){
-                totalPrice += 4.80
-                totalPrice++
-            } else if  (souvenir === "stickers"){
-                totalPrice += 0.90
-                totalPrice++
-            } else {
-                console.log("Invalid stock");
-            }
-            break;
-                
-        }
     }
-
-    console.log(`Pepi bought ${numberSouvenier} ${souvenir} of ${team} for ${totalPrice} lv.`);
-
+    
+    console.log(`Pepi bought ${num} ${souvenir} of ${team} for ${(totalPrice).toFixed(2)} lv.`);
 }
 
-footballSouvenirs(["Brazil",
-"stickers",
-"5"])
+
+
+
+
+footballSouvenirs(["bufaria",
+    "stickers",
+    "5"])
