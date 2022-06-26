@@ -18,4 +18,19 @@ function puppyCare (input){
         command = input[index];
         index++
     }
+
+    if(dogFoodInG >= 0){
+        console.log(`Food is enough! Leftovers: ${dogFoodInG} grams.`);
+    } else{
+        console.log(`Food is not enough. You need ${Math.abs(dogFoodInG)} grams more.` );
+    }
 }
+
+puppyCare(["2",
+"999",
+"456",
+"999",
+"999",
+"123",
+"456",
+"Adopted"])
