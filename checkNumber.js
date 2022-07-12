@@ -12,4 +12,4 @@ function checkNumber(input){
     }
 }
 
-checkNumber(["15", "85"])
+checkNumber(["15", "85", "65"])
