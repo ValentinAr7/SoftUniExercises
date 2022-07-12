@@ -3,12 +3,14 @@ function newloop(input){
     a = Number(input[0])
     b = Number(input[1])
 
-    result = a * b
-    console.log(result);
+    result = a *b
 
-
-
-
+    if(result => 46){
+        
+        console.log("Your number is bigger than 50");
+    } else{
+        console.log("Increase the number")
+    }
 }
 
-newloop([5, 10])
+newloop([3, 10])
