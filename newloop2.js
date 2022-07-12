@@ -10,6 +10,7 @@ function newloop(input){
     if(result >= 46){
         
         console.log("Your number is bigger than 50");
+        console.log("Thank you");
     } else{
         console.log("Increase the number")
     }
