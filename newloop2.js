@@ -3,7 +3,7 @@ function newloop(input){
     a = Number(input[0])
     b = Number(input[1])
 
-    result = a *b
+    result = a * b
 
     if(result => 46){
         
