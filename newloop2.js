@@ -5,7 +5,7 @@ function newloop(input){
 
     result = a * b
 
-    if(result => 46){
+    if(result >= 46){
         
         console.log("Your number is bigger than 50");
     } else{
