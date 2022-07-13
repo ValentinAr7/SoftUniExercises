@@ -1,0 +1,4 @@
+function lifeInWeeks(){
+
+    var yearsRemaining = 
+}
