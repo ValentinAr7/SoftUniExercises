@@ -14,6 +14,8 @@ function newloop(input){
     } else{
         console.log("Increase the number")
     }
+
+    
 }
 
 newloop([3, 10, 15])
