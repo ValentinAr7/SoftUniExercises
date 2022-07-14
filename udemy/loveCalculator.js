@@ -6,7 +6,7 @@ function loveCalculator(input){
     let girl = input[0];
     let boy = input[1]
 
-    console.log(`${girl} and ${boy} have ${n}% love`);
+    console.log(`${girl} and ${boy} have ${n.toFixed(2)} % love`);
 
 }
 
