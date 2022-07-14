@@ -6,8 +6,10 @@ function loveCalculator(input){
     let girl = input[0];
     let boy = input[1]
 
+    if(n >= 50){
+    console.log("LOVE IS IN THE AIR");
     console.log(`${girl} and ${boy} have ${n.toFixed(2)} % love`);
-
+    }
 }
 
 loveCalculator(["Angela", "Valentin"])
