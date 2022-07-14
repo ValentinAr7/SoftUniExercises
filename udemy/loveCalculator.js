@@ -9,6 +9,10 @@ function loveCalculator(input){
     if(n >= 50){
     console.log("LOVE IS IN THE AIR");
     console.log(`${girl} and ${boy} have ${n.toFixed(2)} % love`);
+    } else{
+        console.log("You are not a perfect match");
+    console.log(`${girl} and ${boy} have ${n.toFixed(2)} % love`);
+
     }
 }
 
