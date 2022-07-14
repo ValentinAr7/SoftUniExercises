@@ -4,7 +4,9 @@ function leapYear(input){
 
     if(year % 4 == 0 ){
         console.log("leap year");        
-    } else if(year % 100 == )
+    } else {
+        console.log("Not a leap year");
+    }
 
 }
 
