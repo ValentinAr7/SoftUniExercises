@@ -10,4 +10,4 @@ function leapYear(input){
 
 }
 
-leapYear([2012])
+leapYear(["2012"])
