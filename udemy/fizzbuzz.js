@@ -2,10 +2,12 @@ function fizbuzz(){
 
 let num = 0;
 num++
-let count
-while (num => 100){
 
-    if()
+while (count => 100){
+
+    if(count % 3 == 0 && count % 5 == 0){
+        console.log("fizbuzz");
+    }
 
 }
 
