@@ -1,7 +1,7 @@
 function fizbuzz(){
 
-let num = 0;
-num++
+let count = 0;
+count++
 
 while (count => 100){
 
@@ -12,7 +12,6 @@ while (count => 100){
     } else (count % 5 == 0){
         console.log("fuzz");
     }
-
 }
 
 }
