@@ -3,8 +3,9 @@ function month(input) {
     num = Number(input[0]);
 
     if (num > 12 && num < 1) {
-        switch (m) {
+        switch (may) {
             case 1:
+                num = "January"
                 console.log("January");
                 break;
 
@@ -54,6 +55,8 @@ function month(input) {
             default:
                 break;
         }
+
+        console.log(num);
     }
 }
 
