@@ -5,7 +5,7 @@ function solve(country){
     } else if(country == "Spain" || country == "Argentina" || country == "Mexico") {
         console.log("Spanish");
     } else {
-        console.log("unknow");
+        console.log("unknown");
     }
 }
 
