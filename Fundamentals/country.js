@@ -1,4 +1,6 @@
-function solve(country){
+function solve(input){
+
+    let country = input[0];
 
     if(country == "USA" || country == "England"){
         console.log("English");
@@ -8,5 +10,3 @@ function solve(country){
         console.log("unknown");
     }
 }
-
-country(["USA"])
