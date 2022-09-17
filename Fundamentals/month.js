@@ -50,10 +50,11 @@ function month(input) {
             case 12:
                 console.log("December");
                 break;
-                
+
             default:
                 break;
         }
-
     }
 }
+
+month(["1"])
