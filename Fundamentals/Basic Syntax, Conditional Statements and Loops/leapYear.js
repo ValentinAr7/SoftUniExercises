@@ -2,9 +2,11 @@ function leapYear(input){
 
     let year = Number(input)
 
-    if(year % 4 == 0 && year % 100 == 1){
+    if(year % 4 == 0){
         console.log("yes");
-    } else if(year % 400 == 0){
+    } else if(year % 100 == 1){
+    } 
+    else if(year % 400 == 0){
         console.log("yes");
     } else{
         console.log("no");
@@ -12,4 +14,4 @@ function leapYear(input){
 
 }
 
-leapYear(1984)
+leapYear(1900)
