@@ -2,7 +2,7 @@ function syntaxDemo(input){
 
     let age = Number(input)
 
-    if(age <= 2){
+    if(age <= 2 && age >= 0){
         console.log("baby");
     } else if(age >= 3 && age <= 13){
         console.log("child");
@@ -13,8 +13,8 @@ function syntaxDemo(input){
     } else if(age > 65){
         console.log("elder");
     } else{
-        console.log("out of boundaries");
+        console.log("out of bounds");
     }
 }
 
-syntaxDemo(20)
+syntaxDemo(-4)
