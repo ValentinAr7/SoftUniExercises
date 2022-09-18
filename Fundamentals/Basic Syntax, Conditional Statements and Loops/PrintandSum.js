@@ -8,7 +8,7 @@ function PrintandSum(startNum, endNum){
         output += `${currentNumber} `;
     }
     console.log(output);
-    console.log(sum);
+    console.log( "Sum: " + sum);
 
 }
 
