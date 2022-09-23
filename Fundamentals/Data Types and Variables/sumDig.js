@@ -1,10 +1,10 @@
 function sumDig(num){
 
     let sum = 0;
-    
 
-    for(sum = 0; sum = num.length; sum++){
-    
+    for(i = 0; i = num.length; i++){
+    let sum = 0;
+    num += i
     }
 
 
