@@ -1,13 +1,14 @@
 function sumDig(num){
 
-    let numStr = num.toString 
-    console.log(numStr);
+    let numStr = num.toString();
+    let sum = 0
 
-    for(i = 0; i = numStr.length; i++){
-    let sum = 0;
-    num += i
+    for(let i = 0; i < numStr.length; i++){
+    let currenDigit = Number(numStr[i]);
+        sum += currenDigit
     }
 
+    console.log(sum);
 
 }
 sumDig(23543)
