@@ -1,10 +1,6 @@
 function gladiatorExpenses(lostFights, helmetPrice, swordPrice, shieldPrice, armorPrice){
 
 let fights = lostFights = 0;
-let helmetRepair = 0;
-let swordRepair = 0;
-let shieldRepair = 0;
-let armorRepair = 0;
 
 let brokenShield = 0;
 
