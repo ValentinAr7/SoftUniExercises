@@ -22,7 +22,7 @@ for(let currentFight = 1; currentFight <= lostFights; currentFight++){
         }
 }
 }
-console.log(expenses);
+console.log(`The gladiator expenses are - ${expenses}$`);
 }
 
 gladiatorExpenses(7, 2, 3, 4, 5)
