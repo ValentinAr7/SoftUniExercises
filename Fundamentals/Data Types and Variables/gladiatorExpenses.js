@@ -25,4 +25,4 @@ for(let currentFight = 1; currentFight <= lostFights; currentFight++){
 console.log(`The gladiator expenses are - ${expenses}$`);
 }
 
-gladiatorExpenses(7, 2, 3, 4, 5)
+gladiatorExpenses(10, 4, 3, 4, 5)
