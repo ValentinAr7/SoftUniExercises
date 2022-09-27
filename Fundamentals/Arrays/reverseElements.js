@@ -4,12 +4,9 @@ function reverseElements(n, numbers){
         rev.push(numbers[i]);
     }
 
-    for(r = 0; r < rev.length; r++){
+    for(r = rev.length - 1; r >=0; r--){
         console.log(rev[r]);
     }
-
-
-
 
 }
 
