@@ -1,10 +1,9 @@
 function firstArray(num){
 
-
-    
-let firstNum =input[0]
-let lastNum = input[input.lenght - 1]
-console.log(firstNum + lastNum);
+let firstNum = num[0]
+let lastNum = num[input.lenght - 1]
+let sum = firstNum + lastNum
+console.log(sum);
 
 }
 
