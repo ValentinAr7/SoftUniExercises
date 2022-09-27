@@ -1,7 +1,11 @@
 function reverseElements(n, numbers){
+    let rev = [];
+    for(let i = 0; i < n; i++){
+        rev.push(numbers[i]);
+    }
 
-    for(let i = 0; i < numbers.length; i++){
-        console.log(numbers[i]);
+    for(r = 0; r < rev.length; r++){
+        console.log(rev[r]);
     }
 
 
