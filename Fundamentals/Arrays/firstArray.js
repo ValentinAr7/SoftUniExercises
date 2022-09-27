@@ -1,5 +1,6 @@
-function firstArray(){
+function firstArray(num){
 
-const random = ['tree', 795, [0, 1, 2]];
-random[2][2]
+
 }
+
+firstArray([20, 30, 40])
