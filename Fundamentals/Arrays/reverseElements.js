@@ -10,6 +10,6 @@ function reverseElements(n, numbers){
 
 }
 
-reverseElements (3, [10, 20, 30, 40, 50])
+reverseElements (3, [10, 20, 30, 40, 60])  
 console.log("----------------------------");
 reverseElements (4, [-1, 20, 99, 5])
