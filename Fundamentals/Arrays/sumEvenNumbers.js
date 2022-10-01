@@ -10,8 +10,7 @@ for(let numberText of numbers){
         sum += number
     }
 }
-
-
+console.log(sum);
 }
 
 sumEvenNumbers['2','4','6','8','10']
