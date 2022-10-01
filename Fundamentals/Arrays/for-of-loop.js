@@ -1,9 +1,11 @@
-function forOffLoop(names){
+
+
+let names = ["Pesho", "Gosho"]
 
     for (let name of names){
-        (console.log(`My name is ${name}`);)
+        (console.log(`My name is ${name}`))
     }
 
 
-}
+
 
