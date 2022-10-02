@@ -1,6 +1,8 @@
 function addAndSubstract(arr){
 
     let newArr = [];
+    let inputArraySum = 0;
+    letresultArraySum = 0;
 
 for (let i = 0; i < arr.length; i++){
     let num = arr[i];
@@ -11,7 +13,11 @@ for (let i = 0; i < arr.length; i++){
         newArr.push(num-i)
     }
 }
+
 console.log(newArr);
+console.log(newArr++);
+
+
 
 }
 
