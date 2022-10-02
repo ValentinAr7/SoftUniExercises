@@ -2,10 +2,9 @@ function mergeArrays(arr1, arr2){
 
 let arr3 = [];
 
-for(let indexArr1 = 0; indexArr1 < arr1; indexArr1++){
-    console.log(arr1[indexArr1]);
+for(let i = 0; i < arr1; i++){
+    console.log(arr1[i]);
 }
-
 }
 mergeArrays
 (['5', '15', '23', '56', '35'],
