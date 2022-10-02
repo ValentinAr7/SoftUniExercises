@@ -14,7 +14,7 @@ for(let i = 0; i < arr1.length; i++){
     }
     
 
-console.log(arr3);
+console.log(arr3.join(" - "));
 }
 mergeArrays
 (['5', '15', '23', '56', '35'],
