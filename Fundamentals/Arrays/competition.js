@@ -1,5 +1,12 @@
 function points(games) {
 
+    for(let i = 0; i < games.length; i++){
+        let currentScore = games[i];
+        let homeTeamScore = currentScore[0]
+        let awayTeamScore = currentScore[2]
+        
+        
+    }
     
   }
 
