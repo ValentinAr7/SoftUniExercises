@@ -12,7 +12,7 @@ function mergeArrays(arr1, arr2) {
     }
 
     arr3.sort(function(a, b){return a - b})   //sorting numbers in asacending order
-    console.log(set(arr3));
+    console.log(set(arr3)); // remove duplicate numbers
 }
 
 mergeArrays([1, 2, 2, 16, 5],
