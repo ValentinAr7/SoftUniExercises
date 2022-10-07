@@ -4,13 +4,11 @@ function mergeArrays(arr1, arr2) {
     for(let i = 0; i < arr1.length; i++){
         let currentNumber1 = arr1[i]
         arr3.push(currentNumber1)
-        
-
-
         for(let r=0; r < arr2.length; i++){
+            let currentNumber2 = arr2[r];
+            arr3.push(currentNumber2)
         }
     }
-
     console.log(arr3);
 }
 
