@@ -11,7 +11,7 @@ function mergeArrays(arr1, arr2) {
         arr3.push(currentNumber2)
     }
 
-    arr3.sort(function(a, b){return a - b})  
+    arr3.sort(function(a, b){return a - b})   //sorting numbers in asacending order
     console.log(set(arr3));
 }
 
