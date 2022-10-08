@@ -1,9 +1,9 @@
-function schoolGrade(input) {
+function schoolGrade(grade) {
 
-    let grade = Number(input[0]);
 
     if (grade < 3.00) {
-        console.log(`Fail (${grade.toFixed(2)})`);
+        console.log(`Fail (${Math.trunc(grade)})`);
+        grade = 2
     } else if (grade >= 3.00 && grade < 3.50) {
         console.log(`Poor (${grade.toFixed(2)})`);
     }
@@ -16,4 +16,4 @@ function schoolGrade(input) {
     }
 }
 
-schoolGrade(3.33)
+schoolGrade(2.99)
