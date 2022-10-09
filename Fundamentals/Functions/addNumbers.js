@@ -6,7 +6,13 @@ function addNumbers(num1, num2, num3) {
     }
     let sum = add(num1, num2)
 
+    function add2(sum, num3){
+        let lastSum = sum - num3
+        return lastSum
+    }
 
+    let substract = add2(sum,num3)
+    console.log(substract);
 
 
 
