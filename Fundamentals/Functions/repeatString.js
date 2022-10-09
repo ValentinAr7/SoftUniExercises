@@ -1,11 +1,6 @@
-function repeatString (string, repeat){
+function repeatString (string, count){
 
-    
-    for(let i = 0; i < repeat; i++){
-        let string = repeat[i]
-
-        console.log(string);
-    }
+console.log(string.repeat(count)); 
 
 }
 
