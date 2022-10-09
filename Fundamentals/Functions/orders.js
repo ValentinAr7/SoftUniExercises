@@ -1,21 +1,24 @@
-function oreders(drink, quantity){
+function oreders(drink, quantity) {
 
-    let coffee = 1.50
-    let water = 1.00
-    let coke = 1.40
-    let snacks = 2.00
+    let coffee = 1.5
+    let water = 1
+    let coke = 1.4
+    let snacks = 2.0
 
     let totalPrice = 0;
 
-    switch (totalPrice) {
-        case drink = coffee: totalPrice = drink * quantity 
-            break;
-    
-        default:
-            break;
+    if (drink = coffee) {
+        totalPrice = coffee * quantity
+    } else if (drink = water) {
+        totalPrice = water * quantity
+    } else if (drink = coke) {
+        totalPrice = coke * quantity
+    } else if (drink = snacks) {
+        totalPrice = snacks * quantity
     }
-console.log(totalPrice);
+
+    console.log((totalPrice).toFixed(2));
 
 }
 
-oreders("coffee", 5)
+oreders("water", 5)
