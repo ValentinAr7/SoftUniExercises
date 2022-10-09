@@ -5,14 +5,15 @@ function oreders(drink, quantity) {
     let coke = 1.4
     let snacks = 2.0
 
-    let totalPrice = 0;
-
     if (drink = coffee) {
         totalPrice = coffee * quantity
+
     } else if (drink = water) {
         totalPrice = water * quantity
+
     } else if (drink = coke) {
         totalPrice = coke * quantity
+        
     } else if (drink = snacks) {
         totalPrice = snacks * quantity
     }
@@ -21,4 +22,4 @@ function oreders(drink, quantity) {
 
 }
 
-oreders("water", 5)
+oreders("water", 9)
