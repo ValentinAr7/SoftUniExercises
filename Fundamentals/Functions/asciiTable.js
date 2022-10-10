@@ -8,6 +8,7 @@ let string1 = "";
 
         for(let i = startRange; i < endRange; i++){
             console.log(String.fromCharCode(i));
+            string1 += `${i} `
         }
 
 }
