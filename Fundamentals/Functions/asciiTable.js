@@ -4,6 +4,10 @@ function asciitable (firstChar, secondChar){
         let endRange = secondChar.charCodeAt()
     
 
+        for(let i = startRange; i < endRange; i++){
+            
+        }
+
 }
 
 asciitable([":", "%"])
