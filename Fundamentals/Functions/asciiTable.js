@@ -10,7 +10,7 @@ let string1 = "";
             console.log(String.fromCharCode(i));
             string1 += `${i} `
         }
-
+console.log(string1);
 }
 
 asciitable(":", "%")
