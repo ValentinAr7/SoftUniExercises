@@ -5,7 +5,7 @@ function asciitable (firstChar, secondChar){
     
 
         for(let i = startRange; i < endRange; i++){
-            console.log(i);
+            console.log(String.fromCharCode(i));
         }
 
 }
