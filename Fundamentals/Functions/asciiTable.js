@@ -5,9 +5,9 @@ function asciitable (firstChar, secondChar){
     
 
         for(let i = startRange; i < endRange; i++){
-            
+            console.log(i);
         }
 
 }
 
-asciitable([":", "%"])
+asciitable(":", "%")
