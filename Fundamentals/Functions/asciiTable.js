@@ -1,5 +1,7 @@
 function asciitable (firstChar, secondChar){
 
+let string1 = "";
+
     let startRange = firstChar.charCodeAt()
         let endRange = secondChar.charCodeAt()
     
