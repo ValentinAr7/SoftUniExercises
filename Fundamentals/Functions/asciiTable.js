@@ -6,7 +6,7 @@ let string1 = "";
         let endRange = secondChar.charCodeAt()
     
 
-        for(let i = startRange; i < endRange; i++){
+        for(let i = startRange + 1; i < endRange; i++){
             console.log(String.fromCharCode(i));
             string1 += `${i} `
         }
