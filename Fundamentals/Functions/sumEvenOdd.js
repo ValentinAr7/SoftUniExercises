@@ -13,8 +13,8 @@ function sumEvenOdd(num){
         oddSum += currentNumber
     }
     }
-    console.log(evenSum);
-    console.log(oddSum);
+    console.log(`Even sum = ${evenSum}`);
+    console.log(`Odd sum = ${oddSum}`);
 }
 
 sumEvenOdd("1587436")
