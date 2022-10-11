@@ -6,6 +6,7 @@ function addAndSubstract(arr){
 
 for (let i = 0; i < arr.length; i++){
     let num = arr[i];
+    console.log(num);
     
     if(num % 2 == 0){
         newArr.push(num + i);
@@ -16,9 +17,9 @@ for (let i = 0; i < arr.length; i++){
     resultArraySum+=newArr[i]
 }
 
-console.log(newArr);
-console.log(inputArraySum);
-console.log(resultArraySum);
+// console.log(newArr);
+// console.log(inputArraySum);
+// console.log(resultArraySum);
 
 
 
