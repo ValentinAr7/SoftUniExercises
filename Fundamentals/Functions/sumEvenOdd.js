@@ -5,7 +5,7 @@ function sumEvenOdd(num){
 
 
     for(let i = 0; i < num.length; i++){
-    let currentNumber = num[i]
+    let currentNumber = Number(num[i])
 
     if(currentNumber % 2 === 0){
         evenSum += currentNumber
@@ -17,4 +17,4 @@ function sumEvenOdd(num){
     console.log(oddSum);
 }
 
-sumEvenOdd("1000436")
+sumEvenOdd("1587436")
