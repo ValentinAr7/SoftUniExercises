@@ -2,8 +2,8 @@ function reverseString(array){
 
     for(let i =0; i < array.length; i++){
 
-        let arrayAsString = array[i].asString();
-        let reversedString = arrayAsString.split().reverse().join("")
+        let arrayAsString = array[i].toString();
+        let reversedString = arrayAsString.split("").reverse().join("")
 
         if(arrayAsString === reversedString){
             console.log(true);
