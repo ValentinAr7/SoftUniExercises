@@ -4,6 +4,8 @@ function reverseString(array){
 
         let arrayAsString = array[i].asString();
         let reversedString = arrayAsString.split().reverse().join("")
+
+        if(arrayAsString === reversedString)
     }
 
 }
