@@ -8,8 +8,7 @@ function loginCheck(password) {
     let onlyLettersAndDigits = ["^(?=(.*[a-zA-Z]){1,})(?=(.*[0-9]){2,}).{8}$"]
     if (onlyLettersAndDigits !== true){
         console.log("Password must consist only of letters and digits");
-        console.log("Password must have at least 2 digits");
-        
+        console.log("Password must have at least 2 digits"); 
     }
     
     if (password.length < 6) {
