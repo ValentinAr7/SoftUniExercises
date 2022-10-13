@@ -6,11 +6,13 @@ function loginCheck(password) {
     }
 
     let onlyLettersAndDigits = ""
-    if (password.match("^[a-zA-Z0-9]+$")) {
+    if (password.match("^(?=(.*[a-zA-Z]){1,})(?=(.*[0-9]){2,}).{8}$")){
         console.log(password);
     } else {
         console.log("Password must consist only of letters and digits");
     }
+
+    if(password)
     
 
     if (password.length < 6) {
