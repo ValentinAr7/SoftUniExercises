@@ -5,18 +5,23 @@ function loginCheck(password) {
         let currentChar = password[i]
     }
 
+
+
+
     let onlyLettersAndDigits = ["^(?=(.*[a-zA-Z]){1,})(?=(.*[0-9]){2,}).{8}$"]
     if (onlyLettersAndDigits !== true){
         console.log("Password must consist only of letters and digits");
         console.log("Password must have at least 2 digits"); 
-    }
-    
-    if (password.length < 6) {
-        console.log("Password must be between 6 and 10 characters");
+
+        if (password.length < 6 && password.length > 10) {
+            console.log("Password must be between 6 and 10 characters");
+        } 
     } else {
         console.log("Succesfull login");
     }
+    
+
 
 
 }
-loginCheck('Pa$s$s')
+loginCheck('MyPass123')
