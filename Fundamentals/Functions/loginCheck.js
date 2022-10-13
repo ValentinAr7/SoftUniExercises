@@ -5,16 +5,13 @@ function loginCheck(password) {
         let currentChar = password[i]
     }
 
-    let onlyLettersAndDigits = ""
-    if (password.match("^(?=(.*[a-zA-Z]){1,})(?=(.*[0-9]){2,}).{8}$")){
-        console.log(password);
+    let onlyLettersAndDigits = true
+    if ("^(?=(.*[a-zA-Z]){1,})(?=(.*[0-9]){2,}).{8}$"){
     } else {
         console.log("Password must consist only of letters and digits");
+        console.log("Password must have at least 2 digits");
     }
-
-    if(password)
     
-
     if (password.length < 6) {
         console.log("Password must be between 6 and 10 characters");
     } else {
@@ -23,4 +20,4 @@ function loginCheck(password) {
 
 
 }
-loginCheck('@lo7777g')
+loginCheck('MyPass123)
