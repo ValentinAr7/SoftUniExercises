@@ -24,4 +24,4 @@ function loginCheck(password) {
 
 
 }
-loginCheck('MyPass123')
+loginCheck('logIn')
