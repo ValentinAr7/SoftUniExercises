@@ -3,7 +3,7 @@ function sequenceK (length, K){
     let sequnce = [1];
 
     for(let i = 1; i < length; i++){
-        let index = Math.max(sequnce.length - K, 0)
+        let index = Math.max(sequnce.length - K, 0) //sequence lenth - K(3), if number is < 3 then  index = 0
 
         let lastElement = sequnce.slice(index)
 
