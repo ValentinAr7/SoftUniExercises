@@ -1,25 +1,10 @@
-function sequenceK (input){
+function sequenceK (length, K){
 
-    let sequnceLenght = Number(input[0]);
-    let sequenceSum = Number(input[1])
+    let sequnce = [1];
 
-    let array1 = [];
-
-    let firstElement = 1;
-    let secondElement = firstElement
-    let thirdElement = firstElement + secondElement
-
-    
-
-    let sequence = firstElement + secondElement + thirdElement
-    array1.push(firstElement, secondElement, thirdElement, sequence)
+    for
 
 
-    console.log(array1);    
-    
-
-
-    
 
 
 }
