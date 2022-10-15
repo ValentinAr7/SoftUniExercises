@@ -5,7 +5,7 @@ function firstK (numbers){
     let firstHalf = numbers.slice(1, K + 1)
     console.log(firstHalf.join(" "));
 
-    let secondHalf = numbers.slice(K, numbers.length)
+    let secondHalf = numbers.slice(numbers.length - K)
     console.log(secondHalf.join(" "));
 
    
