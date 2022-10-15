@@ -4,6 +4,14 @@ function sequenceK (length, K){
 
     for(let i = 1; i < length; i++){
         let index = Math.max(sequnce.length - K, 0)
+
+        let lastElement = sequnce.slice(index)
+
+        let sum = 0;
+
+        for (const element of lastElement) {
+            
+        }
     }
 
 
