@@ -14,4 +14,4 @@ function processOdd (array1){
 
 }
 
-processOdd([10, 15, 20, 25])
+processOdd([3, 0, 10, 4, 7, 3])
