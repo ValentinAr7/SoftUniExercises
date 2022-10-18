@@ -8,6 +8,12 @@ function vagonsSolve (vagons){
 
     for(let i = 0; i < vagonsArray.length; i++){
     console.log(vagonsArray[i]);
+
+        
+
+    if(vagonsArray[i] < vagonsCapacity){
+
+    }
     }
 
 }
