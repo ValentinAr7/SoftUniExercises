@@ -3,7 +3,8 @@ function vagonsSolve(arr) {
     let passangersInVagons = arr.shift().split(" ").map(Number)
     let maxCapacity = Number(arr.shift());
     // shift() - removes the first element of "arr" (the variable passangersInVagons stores the value of it).
-    // split(" ") - makes the elements frrom the new array and
+    // split(" ") -converet it into array with strings
+    // map(Number) conver strings into numbers
 
     for (let i = 0; i < arr.length; i++) {
         let currentRow = arr[i].split(" ")        
