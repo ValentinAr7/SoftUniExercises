@@ -9,7 +9,7 @@ function vagonsSolve(arr) {
     for (let i = 0; i < arr.length; i++) {
         let currentRow = arr[i].split(" ")        
 
-        if (currentRow === "Add"){
+        if (currentRow[0] === "Add"){
             let newPassangers = Number(currentRow[1])
             passangersInVagons.push(newPassangers)
         } else{
