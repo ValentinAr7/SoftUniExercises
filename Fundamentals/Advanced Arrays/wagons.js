@@ -6,11 +6,14 @@ function vagonsSolve(arr) {
     for (let i = 0; i < arr.length; i++) {
         let currentRow = arr[i].split(" ")
         console.log(currentRow);
-        // for(let r = 2; i < )
+        
 
-        // if(vagonsArray[i] < vagonsCapacity){
-        //     vagonsArray[i]+= 
-        // }
+        if (currentRow === "Add"){
+            let newPassangers = currentRow[1]
+            passangersInVagons.push(newPassangers)
+        } else{
+
+        }
     }
 
 }
