@@ -1,13 +1,13 @@
 function vagonsSolve(arr) {
 
-    let passangersInVagons = arr.shift().split("").map(Number)
+    let passangersInVagons = arr.shift().split(" ").map(Number)
     let maxCapacity = Number(arr.shift());
 
     for (let i = 0; i < arr.length; i++) {
         let currentRow = arr[i].split(" ")        
 
         if (currentRow === "Add"){
-            let newPassangers = currentRow[1]
+            let newPassangers = Number(currentRow[1])
             passangersInVagons.push(newPassangers)
         } else{
             for(let r = 0; r < passangersInVagons.length; r++){
@@ -19,7 +19,7 @@ function vagonsSolve(arr) {
             }
         }
     }
-    console.log(passangersInVagons);
+    console.log(passangersInVagons.join(" "));
 }
 
 vagonsSolve(['32 54 21 12 4 0 23',          // wagons       
