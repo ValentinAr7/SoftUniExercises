@@ -2,21 +2,15 @@ function distinctArray (array){
 
     let repeatingNumbers = [];
 
-    for (let i = 0; i < array.length; i++){
-        let currentNumber = array[i]
+    uniqeuNumbers = []
 
         for (let r = 0; r < array.length; r++){
-            let repeatingNum = array[r];
 
-            if(repeatingNum == currentNumber){
-                repeatingNumbers.push(repeatingNum)
-                console.log(repeatingNumbers);
-
+            if(!uniqeuNumbers.includes(array[r])){
+                uniqeuNumbers.push(array[r])
             }
         }
-
-    }
-
+    console.log(uniqeuNumbers.join(" "));
 }
 
 distinctArray([7, 8, 9, 7, 2, 3, 4, 1, 2])
