@@ -9,6 +9,9 @@ let resultArray = []
         resultArray.push(firstElement)
         resultArray.push(lastElement)
     }
+    resultArray.push(sortedArray.pop())
+    resultArray.push(sortedArray.shift())
+
     console.log(resultArray.join(" "));
     
 }
