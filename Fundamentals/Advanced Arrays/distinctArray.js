@@ -1,20 +1,18 @@
 function distinctArray (array){
 
-
-
     for (let i = 0; i < array.length; i++){
         let currentNumber = array[i]
-
         let repeatingNumbers = [];
 
         for (let r = 0; r < array.length; r++){
             let repeatingNum = array[r];
 
             if(repeatingNum == currentNumber){
-                
+                repeatingNumbers.push(currentNumber)
+                console.log(currentNumber);
+
             }
         }
-
     }
 
 }
