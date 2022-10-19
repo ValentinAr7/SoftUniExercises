@@ -1,9 +1,13 @@
 function sortingNumbs (numbers){
 
-    let orderedNumbers  = [];
-
+    let sortedArray = numbers.sort((a,b) => a-b);
+let resultArray = []
     for(let i = 0; i < numbers.length; i++){
         
+        let firstElement = sortedArray.pop();
+        let lastElement = sortedArray.shift();
+        resultArray.push(firstElement)
+        resultArray.push(lastElement)
     }
     
 }
