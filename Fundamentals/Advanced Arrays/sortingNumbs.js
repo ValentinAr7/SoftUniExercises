@@ -12,7 +12,7 @@ let resultArray = []
     resultArray.push(sortedArray.pop())
     resultArray.push(sortedArray.shift())
 
-    console.log(resultArray.join(" "));
+    console.log(resultArray.join(","));
     
 }
 sortingNumbs ([1, 21, 3, 52, 69, 63, 31, 2, 18, 94])
