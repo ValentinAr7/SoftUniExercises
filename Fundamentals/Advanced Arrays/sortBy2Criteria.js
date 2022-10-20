@@ -1,5 +1,13 @@
-function sortBy2Criteria (){
+function sortBy2Criteria (array){
 
+
+
+    for (let i = 0; i < array.length; i++){
+        let currentName = array[i]
+        console.log(currentName);
+        // currentName= array.sort((a,b)=> a - b)
+        // console.log(currentName);
+    }
 
 }
 
