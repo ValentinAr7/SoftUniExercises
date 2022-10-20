@@ -4,7 +4,7 @@ function sortBy2Criteria (array){
         let currentName = array[i]
 
         currentName = array.sort((a,b)=> a.length - b.length)
-        console.log(currentName.join(" "));
+        console.log(currentName.join(" ").sort((a,b)=> a - b));
 
     }
 
