@@ -1,12 +1,11 @@
-function sortBy2Criteria (array){
+function sortBy2Criteria(array) {
 
-    for (let i = 0; i < array.length; i++){
-        let currentName = array[i]
 
-        currentName = array.sort((a,b)=> a.length - b.length)
-        console.log(currentName.join(" "));
+    currentName = array.sort((a, b) => a.length - b.length || a.localeCompare(b))
 
-    }
+    currentName.forEach(element => {
+        console.log(element);
+    });
 
 }
 

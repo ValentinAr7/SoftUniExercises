@@ -26,13 +26,11 @@ function houseParty(arr){
         } else {
             let index = newGuestList.indexOf(name); //indexOf shows the index of element in the array
             newGuestList.splice(index,1)            // print the element
-
-            
         }
     }
 }
 
-    console.log(newGuestList.join("/n"));
+    console.log(newGuestList.join(" "));
 }
 houseParty(['Allie is going!',
             'George is going!',
