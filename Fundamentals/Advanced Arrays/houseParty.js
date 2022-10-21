@@ -11,10 +11,12 @@ function houseParty(arr){
                 console.log(`${name} is already in the list!`);
             } else { 
                 newGuestList.push(name)
-        
             }
-
-
+        } if(!newGuestList.includes(name)){
+            console.log(`${name} is not in the list`);
+        } else {
+            let index = newGuestList.indexOf(name);
+            newGuestList.splice(index,1)
         }
     }
 
