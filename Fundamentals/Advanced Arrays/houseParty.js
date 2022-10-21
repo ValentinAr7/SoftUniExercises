@@ -12,13 +12,15 @@ function houseParty(arr){
             } else { 
                 newGuestList.push(name)
             }
-        } if(!newGuestList.includes(name)){
+        } else {
+            if(!newGuestList.includes(name)){
             console.log(`${name} is not in the list`);
         } else {
             let index = newGuestList.indexOf(name);
             newGuestList.splice(index,1)
         }
     }
+}
 
     console.log(newGuestList.join("/n"));
 }
