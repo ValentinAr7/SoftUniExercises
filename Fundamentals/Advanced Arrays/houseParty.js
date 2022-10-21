@@ -9,8 +9,9 @@ function houseParty(arr){
         if(el.length === 3){
             if(newGuestList.includes(name)){
                 console.log(`${name} is already in the list!`);
-            } else {
-                
+            } else { 
+                newGuestList.push(name)
+        
             }
 
 
