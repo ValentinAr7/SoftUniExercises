@@ -3,21 +3,31 @@ function houseParty(arr){
     let newGuestList = []
 
     for (const el of arr) {
-        let command = el.split(" ")
-        let name = command[0]
+        let command = el.split(" ")    // separets the sentance into separate strings
+        let name = command[0]           // then stores the first string of the sentace 
 
-        if(el.length === 3){
+        //example    "Allie is going" --------> "Allie", "is", "going"
+//________________________________________________________________________________________________
+
+  
+            if(el.length === 3){
             if(newGuestList.includes(name)){
                 console.log(`${name} is already in the list!`);
+                // check if the array includes the name 
             } else { 
                 newGuestList.push(name)
             }
+
         } else {
+
             if(!newGuestList.includes(name)){
             console.log(`${name} is not in the list`);
+        
         } else {
-            let index = newGuestList.indexOf(name);
+            let index = newGuestList.indexOf(name); 
             newGuestList.splice(index,1)
+
+            
         }
     }
 }
