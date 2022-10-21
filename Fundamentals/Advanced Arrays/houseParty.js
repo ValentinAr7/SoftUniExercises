@@ -24,8 +24,8 @@ function houseParty(arr){
             console.log(`${name} is not in the list`);
         
         } else {
-            let index = newGuestList.indexOf(name); 
-            newGuestList.splice(index,1)
+            let index = newGuestList.indexOf(name); //indexOf shows the index of element in the array
+            newGuestList.splice(index,1)            // print the element
 
             
         }
