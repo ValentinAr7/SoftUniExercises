@@ -20,7 +20,7 @@ function houseParty(arr){
         }
     }
 
-
+    console.log(newGuestList.join("/n"));
 }
 houseParty(['Allie is going!',
             'George is going!',
