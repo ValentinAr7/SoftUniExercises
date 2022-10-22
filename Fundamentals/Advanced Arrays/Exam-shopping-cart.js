@@ -33,7 +33,20 @@ function shopping(input){
                 break;
 
                 case "Correct":
-            
+            let updateIndex = shoppingList.indexOf(firstArgument)
+
+            if(updateIndex > -1){
+                shoppingList[updateIndex] = secondArgument
+            }
+                    break;
+
+                    case "Rearrange":
+                        let removeIndex =  shoppingList.indexOf(firstArgument);
+
+                        if(removeIndex > -1){
+                        
+                            shoppingList.splice(removeIndex, 1)
+                        }
                     break;
     
 
