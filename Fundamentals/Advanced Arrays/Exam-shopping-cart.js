@@ -22,6 +22,14 @@ function shopping(input){
         case "Urgent":
             
             break;
+
+            case "Unnecessary":
+            
+                break;
+
+                case "Correct":
+            
+                    break;
     
 
     }
