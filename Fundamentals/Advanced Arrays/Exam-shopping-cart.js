@@ -9,9 +9,12 @@ function shopping(input){
     // let products = input.shift(input[0]).replaceAll("!", " ")
     // products.split("!") to remove the ! from the variable
 
-   while(currentCommand != "Go shopping!"){         
+   while(currentLine != "Go shopping!"){         
     currentCommand= commands.shift()        //removes the current command from the array and goes to the next one
-    
+    let Lineargs = currentLine.split(" ");
+    let command = Lineargs[0];
+    let firstArgument = Lineargs[1]
+    let secondArgument = Lineargs[2]    
 
 
     }
