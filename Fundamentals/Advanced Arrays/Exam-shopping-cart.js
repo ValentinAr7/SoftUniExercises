@@ -6,6 +6,9 @@ function shopping(input){
 
     for(let i = 0; i < input.length; i++){
         
+        let elements = input[i].split(" ")
+
+        
     }
 }
 
