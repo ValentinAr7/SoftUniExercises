@@ -4,7 +4,9 @@ function shopping(input){
 
     let products = input.shift(input[0])
 
-    console.log(products);
+    for(let i = 0; i < input.length; i++){
+        
+    }
 }
 
 shopping(["Tomatoes!Potatoes!Bread",
