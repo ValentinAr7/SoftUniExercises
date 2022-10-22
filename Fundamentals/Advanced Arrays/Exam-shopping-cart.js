@@ -16,6 +16,13 @@ function shopping(input){
     let firstArgument = Lineargs[1]
     let secondArgument = Lineargs[2]    
 
+    }
+
+    switch (command) {
+        case "Urgent":
+            
+            break;
+    
 
     }
    
