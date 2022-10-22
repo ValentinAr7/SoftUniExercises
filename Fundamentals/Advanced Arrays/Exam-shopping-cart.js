@@ -1,9 +1,21 @@
 function shopping(input){
 
-    let shoppingList = []
+    let shoppingList = input.shift()
+    let commands = input.slice()
+    let initialShoppingList = shoppingList.split("!")
+    let currentCommand = commands.shift()   //takes the command
+   
+    //Alternative to the code above    
+    // let products = input.shift(input[0]).replaceAll("!", " ")
+    // products.split("!") to remove the ! from the variable
 
-    let products = input.shift(input[0]).replaceAll("!", " ")
+   while(currentCommand != "Go shopping!"){         
+    currentCommand= commands.shift()        //removes the current command from the array and goes to the next one
+    
 
+
+    }
+   
     console.log(products);
 
 
