@@ -1,8 +1,8 @@
 function shopping(input){
 
-    let shoppingList = input.shift()
+    let rowList = input.shift()
     let commands = input.slice()
-    let initialShoppingList = shoppingList.split("!")
+    let ShoppingList = rowList.split("!")
     let currentCommand = commands.shift()   //takes the command
    
     //Alternative to the code above    
@@ -20,11 +20,16 @@ function shopping(input){
 
     switch (command) {
         case "Urgent":
-            
+            if(!ShoppingList.includes(firstArgument))
+            ShoppingList.unshift(firstArgument)
             break;
 
             case "Unnecessary":
-            
+                let itemIndex = ShoppingList.indexOf(firstArgument);
+
+                if(itemIndex > -1){
+                    ShoppingList.splice(itemIndex, 1)
+                }
                 break;
 
                 case "Correct":
