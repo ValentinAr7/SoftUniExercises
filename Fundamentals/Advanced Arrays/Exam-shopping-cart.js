@@ -5,6 +5,8 @@ function shopping(input){
     let ShoppingList = rowList.split("!")
     let currentLine = commands.shift()   //takes the command
 
+    
+
     //Alternative to the code above    
     // let products = input.shift(input[0]).replaceAll("!", " ")
     // products.split("!") to remove the ! from the variable

@@ -23,6 +23,7 @@ function exam (array){
         )
 
     }
+    console.log(totalExperiance);
 
     if(totalExperiance > experianceNeeded){
      console.log(`Player successfully collected his needed experience for ${countBattles} battles.`);
@@ -31,6 +32,10 @@ function exam (array){
         }
 }
 
-exam ([500, 5, 
-    
-    50, 100, 200, 100, 30])
+exam ([400,
+    5,
+    50,
+    100,
+    200,
+    100,
+    20])
