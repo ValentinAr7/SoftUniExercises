@@ -13,15 +13,14 @@ function exam2(array) {
         let lineargs = currentCommand.split(" ");
         let command = lineargs[0];
         let firstArgument = lineargs[1]
+        let defeat = false
 
         switch (command) {
             case "Travel":
                     startingFuel -= firstArgument
                     if (startingFuel > 0) {
                         console.log(`The spaceship travelled ${firstArgument} light-years.`);
-                    } else {
-                        console.log("Mission failed");
-                    }
+                    } 
                 break;
 
 
@@ -32,36 +31,33 @@ function exam2(array) {
                 } else {
 
                 startingFuel -= firstArgument * 2
-                if(startingFuel < 0){
-                console.log(`An enemy with ${firstArgument} armour is outmaneuvered."`);
+                if(startingFuel > 0){
+                console.log(`An enemy with ${firstArgument} armour is outmaneuvered.`);
                 }
                 }
                 break;
+
+
 
             case "Repair":
                 ammunition += firstArgument * 2
                 console.log(`Ammunitions added: ${firstArgument * 2}.`);
 
                 startingFuel += firstArgument
-                console.log(`Fuel added: ${firstArgument}. `);
-                
-
-
-                case "Titan":
-                    if(ammunition > 15){
-                        console.log(`You have reached Titan, all passengers are safe.`);
-                    } else {
-                        console.log("Mission failed");
-                    }
+                console.log(`Fuel added: ${firstArgument}.`);
                 break;
-                
-                
+      
         }
         currentCommand = travel.shift()
 
     }
 
-
+    
+        if(ammunition < 30){
+            console.log(`You have reached Titan, all passengers are safe.`);
+        } else {
+            console.log("Mission failed.");
+        }
 
 }
 
