@@ -3,7 +3,11 @@ function exam (array){
     let experianceNeeded = Number(array[0])
     let countBattles = Number(array[1])
 
-
+    console.log(countBattles);
+    
+    for(let i = 0; i < array.length; i++){
+        
+    }
 
 
 }
