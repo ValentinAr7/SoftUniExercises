@@ -1,16 +1,11 @@
-function exam(input){
+function exam (array){
 
-    let experianceNeeded = Number(input[0])
-    console.log(experianceNeeded);
+    let experianceNeeded = Number(array[0])
+    let countBattles = Number(array[1])
+
+
 
 
 }
 
-exam[(500, //amount of experiance needed to unlock new tank
-    5,      // count of battles
-
-    50,     // experiance gain for each battle
-    100, 
-    200, 
-    100, 
-    30)]
+exam[(500, 5, 50, 100, 200, 100, 30)]
