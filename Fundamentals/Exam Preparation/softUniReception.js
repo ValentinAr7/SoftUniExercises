@@ -1,8 +1,14 @@
 function softUniReception (array){
 
-    let teacher1 = array.shift()
-    let teacher2 = array.shift()
-    let teacher3 = array.shift()
+    let teacher1 = Number(array.shift())
+    let teacher2 = Number(array.shift())
+    let teacher3 = Number(array.shift())
+
+    let studentsCount = Number(array.shift())
+
+
+    
+
 
 }
 
