@@ -6,10 +6,21 @@ function softUniReception (array){
 
     let studentsCount = Number(array.shift())
 
+    let studentsPerHour = teacher1 + teacher2 + teacher3
 
+    let hours = 0
     
 
+    while(studentsCount > 0){
+        studentsCount -= studentsPerHour
+        hours++
 
+        if( hours % 4 == 0){
+            hours++
+        }
+    }
+
+    console.log(`Time needed: ${hours}h.`);
 }
 
-softUniReception(['5','6','4','20'])
+softUniReception(['1','2','3','45'])
