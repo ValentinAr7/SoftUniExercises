@@ -2,6 +2,11 @@ function arrayModifier (array){
 
     let arrayNumbers = array.shift()
 
+
+
+    while (curretnLine !== "end") {
+
+        
     for(let i = 0; i < array.length; i++){
         let curretnLine = array[i]
         let lineSymbols = curretnLine.split(" ")
@@ -9,11 +14,7 @@ function arrayModifier (array){
 
     }
 
-
-    // while (curretnLine !== "end") {
-
-
-    // }
+    }
 
 
 
