@@ -1,19 +1,32 @@
 function arrayModifier (array){
 
     let arrayNumbers = array.shift()
-    let curretnLine = array.splice()
+    let currentLine = array.splice()
 
 
-    while (curretnLine !== "end") {
+    while (currentLine !== "end") {
 
-        
     for(let i = 0; i < array.length; i++){
-        let curretnLine = array[i]
-        let lineSymbols = curretnLine.split(" ")
+        let currentLine = array[i]
+        let lineSymbols = currentLine.split(" ")
         console.log(lineSymbols);
     }
 
+    let command = currentLine[0]
+    let num1 = currentLine[1]
+    let num2 = currentLine[2]
+
+    switch (command) {
+        case "swap":
+            
+            
+            break;
     
+        default:
+            break;
+    }
+
+
         break;
     }
 
