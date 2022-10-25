@@ -1,7 +1,7 @@
 function arrayModifier (array){
 
     let arrayNumbers = array.shift()
-
+    let curretnLine = array.splice()
 
 
     while (curretnLine !== "end") {
