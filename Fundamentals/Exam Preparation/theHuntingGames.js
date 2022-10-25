@@ -9,27 +9,29 @@ function arrayModifier (array){
     for(let i = 0; i < array.length; i++){
         let currentLine = array[i]
         let lineSymbols = currentLine.split(" ")
-        console.log(lineSymbols);
-    }
 
-    let command = currentLine[0]
-    let num1 = currentLine[1]
-    let num2 = currentLine[2]
+
+        let command = lineSymbols[0]
+        let num1 = Number(currentLine[1])
+        let num2 = Number(currentLine[2])
+    
+
+
+
+
 
     switch (command) {
         case "swap":
-            
-            
+            arrayNumbers.splice(num1, num2)
             break;
-    
-        default:
-            break;
+
     }
 
 
         break;
     }
-
+    
+}
 
 
 }
