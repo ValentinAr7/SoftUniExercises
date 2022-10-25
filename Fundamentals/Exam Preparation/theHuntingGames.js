@@ -11,9 +11,10 @@ function arrayModifier (array){
         let curretnLine = array[i]
         let lineSymbols = curretnLine.split(" ")
         console.log(lineSymbols);
-
     }
 
+    
+        break;
     }
 
 
