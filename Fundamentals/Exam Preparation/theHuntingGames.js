@@ -21,21 +21,21 @@ function arrayModifier (array){
                     arrayNumbers[i]--
                 }                
                 break;
-        // if the command = "decrease"
-
-
-
+//          if the command = "decrease", loop through the array of Numbers and decrease
+//          each element with 1
+//--------------------------------------------------------------------------------------------------
             case "swap":
 
                 let temp = index1
                 arrayNumbers[index1] =arrayNumbers[index2]
                 arrayNumbers[index2] = temp
             break
-
+//          if the command = swap, swap the number on index1 with the number on index 2 
+//-----------------------------------------------------------------------------------------------------
             case "multiply":
-                
                 arrayNumbers[index1] *= arrayNumbers[index2]
             break
+//          if the command
         }
     }
 
