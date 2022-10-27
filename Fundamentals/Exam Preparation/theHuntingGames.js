@@ -23,7 +23,9 @@ function arrayModifier (array){
                 arrayNumbers[index2] = temp
             break
 
-            
+            case "multiply":
+
+            break
         }
     }
 
