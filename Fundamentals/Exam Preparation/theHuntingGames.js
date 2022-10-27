@@ -9,6 +9,10 @@ function arrayModifier (array){
         let index1 = commandLine[1]
         let index2 = commandLine[2]
 
+        if(command == "swap"){
+            
+        }
+
 
     }
 }
