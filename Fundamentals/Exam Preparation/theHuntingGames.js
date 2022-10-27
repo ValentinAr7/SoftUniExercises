@@ -9,12 +9,17 @@ function arrayModifier (array){
         let index1 = commandLine[1]
         let index2 = commandLine[2]
 
-        if(command == "swap"){
-            
+        switch (command) {
+            case "decrease":
+                for(let i = 0; i < arrayNumbers.length; i++){
+                    arrayNumbers[i]--
+                }                
+                break;
         }
-
-
     }
+
+    console.log(arrayNumbers);
+
 }
 
 arrayModifier ([
