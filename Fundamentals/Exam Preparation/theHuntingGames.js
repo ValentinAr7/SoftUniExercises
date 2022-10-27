@@ -4,7 +4,12 @@ function arrayModifier (array){
 
     while (array != "end"){
 
-        let command = array.shift().split(" ")
+        let commandLine = array.shift().split(" ")
+        let command = commandLine[0]
+        let index1 = commandLine[1]
+        let index2 = commandLine[2]
+
+
     }
 }
 
