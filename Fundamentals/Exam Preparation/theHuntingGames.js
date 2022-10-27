@@ -1,6 +1,6 @@
 function arrayModifier (array){
 
-    let arrayNumbers = array.shift().split(" ")
+    let arrayNumbers = array.shift().split(" ").map(Number)
     let currentLine = array.splice()
 
     
