@@ -35,11 +35,13 @@ function arrayModifier (array){
             case "multiply":
                 arrayNumbers[index1] *= arrayNumbers[index2]
             break
-//          if the command
+//          if the command = "multiply", multiply number on index1 with number on index2
+//          store the value on first number
         }
     }
 
     console.log(arrayNumbers);
+//          print the result
 
 }
 
