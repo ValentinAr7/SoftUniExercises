@@ -24,9 +24,8 @@ function arrayModifier (array){
             break
 
             case "multiply":
-                let tempNum = index1
-                arrayNumbers[index1] * arrayNumbers[index2]
-                arrayNumbers[index1] = tempNum
+                
+                arrayNumbers[index1] *= arrayNumbers[index2]
             break
         }
     }
