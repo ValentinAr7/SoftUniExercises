@@ -1,33 +1,11 @@
 function arrayModifier (array){
 
     let arrayNumbers = array.shift().split(" ").map(Number)
-    let currentLine = array.splice()
 
-    
+    while (array != "end"){
 
-        
-    for(let i = 0; i < array.length; i++){
-        let currentLine = array[i]
-        let lineSymbols = currentLine.split(" ")
-
-        console.log(lineSymbols);
-        
-        let command = lineSymbols[0]
-        let num1 = Number(currentLine[1])
-        let num2 = Number(currentLine[2])
-
-        
-    switch (command) {
-        case "swap":
-            arrayNumbers.splice(num1,num2)[0]
-            console.log(arrayNumbers);
-            break;
+        let command = array.shift().split(" ")
     }
-
-    }
-
-
-
 }
 
 arrayModifier ([
