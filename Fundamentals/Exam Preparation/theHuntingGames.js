@@ -6,8 +6,7 @@ function arrayModifier (array){
 
         let commandLine = array.shift().split(" ")
         let command = commandLine[0]
-        let index1 = commandLine[1]
-        let index2 = commandLine[2]
+
 
         switch (command) {
             case "decrease":
@@ -15,6 +14,16 @@ function arrayModifier (array){
                     arrayNumbers[i]--
                 }                
                 break;
+
+            case "swap":
+                let index1 = Number(commandLine[1])
+                let index2 = Number(commandLine[2])
+                let temp = index1
+                arrayNumbers[index1] =arrayNumbers[index2]
+                arrayNumbers[index2] = temp
+            break
+
+            
         }
     }
 
