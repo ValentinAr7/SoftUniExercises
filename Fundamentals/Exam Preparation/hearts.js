@@ -1,7 +1,15 @@
 function stValentines(input){
 
-    let string = input.shift().split("@").map(Number)
+    let neiberhood = input.shift().split("@").map(Number)
 
+    while(input != "Love!"){
+        let line = input.shift().split(" ")
+        let command = input[0]
+        let jumps = input[1]
+
+        
+
+    }
 
 }
 
