@@ -12,10 +12,9 @@ function stValentines(input){
             let cupid = 0
             if(command = "Jump"){
                 currentIndex -= 2
+                console.log(neiberhood);
             }
         }
-        console.log(neiberhood);
-
     }
 }
 
