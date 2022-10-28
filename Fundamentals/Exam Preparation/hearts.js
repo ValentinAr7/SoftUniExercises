@@ -1,21 +1,27 @@
 function stValentines(input){
 
     let neiberhood = input.shift().split("@").map(Number)
+    let cupid = 0
 
-    while(input != "Love!"){
+    while(input[0] != "Love!"){
         let line = input.shift().split(" ")
         let command = input[0]
-        let jumps = input[1]
+        let jumps = Number(input[1])
 
-        for(let i = 0; i < neiberhood.length; i++){
-            let currentIndex = neiberhood[i]
-            let cupid = 0
-            if(command = "Jump"){
-                currentIndex -= 2
-                console.log(neiberhood);
+        cupid += jumps
+
+        if(cupid>= neiberhood.length){
+            cupid = 0
+        }
+
+            if(neiberhood[cupid] == 0){
+                console.log(`Place ${neiberhood[i]} already had Valentine's day.`);
             }
+        
+
         }
     }
+
 }
 
 stValentines (["10@10@10@2",
