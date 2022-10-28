@@ -36,16 +36,16 @@ function stValentines(input){
     }
 
     let missedHouses = 0
-    
+    // variable to store the missed houses
 
     for (let house of neiberhood) {
         if(house > 0){
             missedHouses++
         }
+    //if a house did not have Valentines, mission failed, increase missedHouses by 1
     }
-
     console.log(`Cupid's last position was ${cupid}`);
-
+    //print cupids last position
 
     if(missedHouses > 0){
         console.log(`Cupid has failed ${missedHouses} houses.`);
