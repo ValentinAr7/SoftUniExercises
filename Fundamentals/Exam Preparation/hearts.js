@@ -23,20 +23,21 @@ function stValentines(input){
         }
     // if cupid jumps with more indexes than arrays' length, cupid goes back to index[0]
 
-
             if(neiberhood[cupid] == 0){
                 console.log(`Place ${neiberhood[i]} already had Valentine's day.`);
+    // if any of the indexes in the array is equal to 0, the neiborhood already had Valentines
             } else {
                 neiberhood[cupid] -= 2
                 if(neiberhood[cupid] == 0){
                     console.log(`Place ${cupid} has Valentine's day.`);
                 }
+    // if it is not equal to 0, substract by 2
             }
     }
 
-
-
     let missedHouses = 0
+    
+
     for (let house of neiberhood) {
         if(house > 0){
             missedHouses++
