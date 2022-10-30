@@ -1,15 +1,15 @@
 function movies (movieData){
 
     for(let i = 0; i < movieData.length; i++){
-        let splittedArray = movieData.split(" ")
-        console.log(splittedArray);
+        let currentIndex = movieData[i]
+        console.log(currentIndex);
+
     }
     
 
 }
 
 ([
-
     'addMovie Fast and Furious',
     'addMovie Godfather',
     
