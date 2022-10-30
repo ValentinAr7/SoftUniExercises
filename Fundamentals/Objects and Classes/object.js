@@ -1,9 +1,10 @@
 function object (list){
 
-    let employeeList = {}
+    let employeeList = {};
 
-    array.forEach(person => {
+    list.forEach(person => {
         employeeList[person] = person.length
+        console.log(employeeList);
     });
 
     for (const key in employeeList) {
