@@ -9,14 +9,17 @@ let totalStore = {}
     }
     for(let i = 0; i <orderedStock.length; i+=2){
         let currentIndex = orderedStock[i]
-        totalStore[currentIndex] = currentIndex[i + 1]
+
+        if(!totalStore.hasOwnProperty(currentIndex)){
+            totalStore[currentIndex] = 0
+        }
+
+        totalStore[currentIndex] += Number(orderedStock[i + 1])
     }
         
-        for (const key in totalStore) {
-            console.log(key);
+        for (const product in totalStore) {
+            console.log(`${product} -> ${totalStore[product]}`);
         }
-    
-
 }
 
 storeProvision([
