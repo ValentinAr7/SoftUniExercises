@@ -54,6 +54,7 @@ function stValentines(input) {
     }
 }
 
+
 stValentines(["4@2@4@2",
 
     "Jump 1",
