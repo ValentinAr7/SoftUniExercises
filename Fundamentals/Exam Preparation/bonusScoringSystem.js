@@ -5,6 +5,10 @@ function bonusScoringSystem (array){
     let totalNumOfLectures = array.shift()
     let additionalBonus = array.shift()
 
+    for(let i = 0; i < array.length; i++){
+        
+    }
+
 }
 
 bonusScoringSystem (5,      // number of students
