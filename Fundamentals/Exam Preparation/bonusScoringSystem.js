@@ -1,11 +1,11 @@
 function bonusScoringSystem (array){
 
 
-    let numberOfStudents = array.shift()
-    let totalNumOfLectures = array.shift()
-    let additionalBonus = array.shift()
-
+    let numberOfStudents = Number(array.shift())
+    let totalNumOfLectures = Number(array.shift())
+    let additionalBonus = Number(array.shift())
     let newArray = []
+
 
     for(let i = 0; i < array.length; i++){
         let currentStudentAtendences = array[i]
@@ -14,14 +14,10 @@ function bonusScoringSystem (array){
         newArray.push(currentStudentAtendences / totalNumOfLectures * (5 + additionalBonus))
     
 
-        let bonusNum = Math.ceil(newArray);
-        console.log(Math.max(bonusNum));
 
     }
-
-    // let max = Math.max(totalBonus)
-    // console.log(max);
-
+    let arrayNumbers = newArray.map(Number)
+    console.log(Math.ceil(Math.max.apply(Math, arrayNumbers))); 
 }
 
 bonusScoringSystem ([5,      // number of students
