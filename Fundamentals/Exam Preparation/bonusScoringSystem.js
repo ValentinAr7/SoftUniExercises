@@ -6,17 +6,24 @@ function bonusScoringSystem (array){
     let additionalBonus = Number(array.shift())
     let newArray = []
 
+    let highestAttendence = []
+
 
     for(let i = 0; i < array.length; i++){
         let currentStudentAtendences = array[i]
+
+        highestAttendence.push(currentStudentAtendences)
        
 
         newArray.push(currentStudentAtendences / totalNumOfLectures * (5 + additionalBonus))
-    
     }
+
+    
     let arrayNumbers = newArray.map(Number)
-    console.log(`Max bonus: ${Math.ceil(Math.max.apply(Math, arrayNumbers))}`); 
-    console.log(`The student has attended: `);
+    let maxAttendence = Math.ceil(Math.max.apply(Math, arrayNumbers))
+
+    console.log(`Max bonus: ${maxAttendence}`); 
+    console.log(`The student has attended: ${Math.max.apply(Math, highestAttendence)} `);
 }
 
 bonusScoringSystem ([5,      // number of students
