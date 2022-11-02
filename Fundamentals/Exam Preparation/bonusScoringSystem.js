@@ -5,13 +5,18 @@ function bonusScoringSystem (array){
     let totalNumOfLectures = array.shift()
     let additionalBonus = array.shift()
 
+    let newArray = []
+
     for(let i = 0; i < array.length; i++){
         let currentStudentAtendences = array[i]
-        let totalBonus = 0
+       
 
-        totalBonus = currentStudentAtendences / totalNumOfLectures * (5 + additionalBonus)
-        let bonusNum = Math.ceil(totalBonus);
+        newArray.push(currentStudentAtendences / totalNumOfLectures * (5 + additionalBonus))
+    
+
+        let bonusNum = Math.ceil(newArray);
         console.log(Math.max(bonusNum));
+
     }
 
     // let max = Math.max(totalBonus)
