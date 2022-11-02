@@ -16,6 +16,7 @@ function bonusScoringSystem (array){
     }
     let arrayNumbers = newArray.map(Number)
     console.log(`Max bonus: ${Math.ceil(Math.max.apply(Math, arrayNumbers))}`); 
+    console.log(`The student has attended: `);
 }
 
 bonusScoringSystem ([5,      // number of students
