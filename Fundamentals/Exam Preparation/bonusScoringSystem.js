@@ -13,11 +13,9 @@ function bonusScoringSystem (array){
 
         newArray.push(currentStudentAtendences / totalNumOfLectures * (5 + additionalBonus))
     
-
-
     }
     let arrayNumbers = newArray.map(Number)
-    console.log(Math.ceil(Math.max.apply(Math, arrayNumbers))); 
+    console.log(`Max bonus: ${Math.ceil(Math.max.apply(Math, arrayNumbers))}`); 
 }
 
 bonusScoringSystem ([5,      // number of students
