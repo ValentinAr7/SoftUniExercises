@@ -4,7 +4,9 @@ function mu (str){
 
     for (const element of array) {
         let line = element.split(" ")
-        console.log(line);
+        let command = line[0]
+        let num = line[1]
+        console.log(command);
     }
 
 
