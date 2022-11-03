@@ -22,8 +22,8 @@ function bonusScoringSystem (array){
     let arrayNumbers = newArray.map(Number)
     let maxAttendence = Math.ceil(Math.max.apply(Math, arrayNumbers))
 
-    console.log(`Max bonus: ${maxAttendence}`); 
-    console.log(`The student has attended: ${Math.max.apply(Math, highestAttendence)} `);
+    console.log(`Max Bonus: ${maxAttendence}.`); 
+    console.log(`The student has attended ${Math.max.apply(Math, highestAttendence)} lectures. `);
 }
 
 bonusScoringSystem ([5,      // number of students
