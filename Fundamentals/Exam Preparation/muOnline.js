@@ -6,6 +6,7 @@ function mu(str) {
     let bitcoins = 0
 
     for (const element of array) {
+
         let line = element.split(" ")
         let command = line[0]
         let num = Number(line[1])
@@ -30,7 +31,7 @@ function mu(str) {
             health -= num
 
             if (health <= 0){
-                console.log(`You died! Killed by ${command}.` );
+                console.log(`You died! Killed by ${command}.`);
                 break;
             } else { 
                 console.log(`You slayed ${command}.`);
@@ -44,5 +45,5 @@ function mu(str) {
 
 }
 // mu(["potion 10|chest 100"])
-mu (["rat 10|bat 20|potion 10|rat 10|chest 100|boss 70|chest 1000"])
-console.log("________________________________");
+// mu (["rat 10|bat 20|potion 10|rat 10|chest 100|boss 70|chest 1000"])
+mu(["cat 10|potion 30|orc 10|chest 10|snake 25|chest 110"])
