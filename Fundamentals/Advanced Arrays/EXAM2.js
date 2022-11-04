@@ -5,7 +5,7 @@ function exam2(array) {
     let ammunition = Number(array[1])
 
     let currentCommand = travel.shift()
-
+console.log(currentCommand);
     // let currentLine = travel.shift()
 
     while (currentCommand != "Titan") {
