@@ -6,6 +6,8 @@ function shootWin (array){
 
     let shooting = array.map(Number)
 
+    let numberOfShots = 0
+
     for(let i = 0; i < shooting.length; i++){
         let currentShot = shooting[i]
         let currentTarget = shotTargets[currentShot]
