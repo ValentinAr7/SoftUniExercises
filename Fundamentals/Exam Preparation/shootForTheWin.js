@@ -14,6 +14,8 @@ function shootWin (array){
 
         if(currentTarget > 0){
             shotTargets[currentShot] = -1
+            numberOfShots++
+
 
         for(let j =0; j < shotTargets.length; j++){
             if(shotTargets[j] > -1){
@@ -27,7 +29,7 @@ function shootWin (array){
     }
 
             }
-            console.log(shotTargets);
+            console.log(`Shot targets ${numberOfShots} -> ${shotTargets.join(" ")}`);
             console.log(shooting);
 }
 
