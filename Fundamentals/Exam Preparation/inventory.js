@@ -2,17 +2,17 @@ function inventory (array){
 
     let journal = array.shift().split(" ")
     console.log(journal);
-    currentCommand = array.shift()
-    console.log(currentCommand);
 
-//     while (currentCommand != "Craft!") {
+        let currentLine = array[0]
+
+    while (currentLine != "Craft!") {
         
-//         let lineItems = currentCommand.split("-")
-//         let command = lineItems[0]
-//         let item = lineItems[1]
-            
+        let lineItems = currentLine.split("-")
+        let command = lineItems[0]
+        let item = lineItems[1]
+        console.log(lineItems);
 
-// }
+}
 }
 
 inventory(["Iron Wood Sword",
