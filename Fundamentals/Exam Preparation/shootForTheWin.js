@@ -3,9 +3,15 @@ function shootWin (array){
     let shotTargets = array.shift().split(" ").map(Number)
     console.log(shotTargets);
 
+    let targetIndex = array.pop()
+
+    array = array.map(Number)
+    console.log(array);
+
+    
 }
 
-array (["24, 50, 36, 70",
+shootWin (["24 50 36 70",
         "0",
         "4",
         "3",
