@@ -4,11 +4,13 @@ function computerStore(data) {
     let command = data.pop()
     let partPrices = data.map(Number)
 
+    
     //Special clients discounts
     let specialTaxes = 0
     let finalPrice = 0
     let additionalDiscount = 0
     let receiptPriceSpecial = 0
+
 
     //Regular clients discounts
     let regularTaxes = 0
@@ -19,6 +21,8 @@ function computerStore(data) {
         totalPrice += partPrices[i]
     }
 
+
+    //Special clients discounts 
     if (command === "special") {
         specialTaxes = totalPrice * 0.2
         finalPrice = totalPrice + specialTaxes
