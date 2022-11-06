@@ -18,7 +18,12 @@ function computerStore(data) {
     let receiptPriceRegular = 0
 
     for (let i = 0; i < partPrices.length; i++) {
+        let currentPart = partPrices[i]
+        if(currentPart < 0){
+            console.log("Invalid price!");
+        }
         totalPrice += partPrices[i]
+
     }
 
 
@@ -49,6 +54,7 @@ function computerStore(data) {
         console.log(`Total price: ${(receiptPriceRegular).toFixed(2)}$`)
     }
 
+   
 
 
 }
