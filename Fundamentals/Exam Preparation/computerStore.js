@@ -4,7 +4,7 @@ function computerStore(data) {
     let command = data.pop()
     let partPrices = data.map(Number)
 
-    
+
     //Special clients discounts
     let specialTaxes = 0
     let finalPrice = 0
@@ -35,6 +35,8 @@ function computerStore(data) {
         console.log("-----------");
         console.log(`Total price: ${(receiptPriceSpecial).toFixed(2)}$`)
 
+
+        //Regular clients discounts
     } else if (command === "regular") {
         regularTaxes = totalPrice * 0.2
         finalPriceNoDiscount = totalPrice + regularTaxes
