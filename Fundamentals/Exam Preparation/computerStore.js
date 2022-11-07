@@ -1,5 +1,6 @@
 //PROGRAMMING FUNDAMENTALS WITH JAVASCRIPT - МАЙ 2022
 //Exam Preparation
+//https://softuni.bg/trainings/resources/video/72951/video-20-june-2022-todor-stoyanov-programming-fundamentals-with-javascript-may-2022/3732
 
 function computerStore(data) {
 
