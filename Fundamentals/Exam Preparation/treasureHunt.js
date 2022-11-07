@@ -10,7 +10,7 @@ function treasurHunt(input) {
         let tokens = command.split(" ")
         let operation = tokens.shift()     
 
-        switch (operation) {
+        switch (operation){
             case "Loot":
                 for (let el of tokens) {
                     if (!initialLoot.includes(el)) {
@@ -34,10 +34,20 @@ function treasurHunt(input) {
         command = input[index]
         index++
     }
-    console.log(initialLoot);
+    let sun = 0
+    for(let el of initialLoot){
+        sum+= el.length;
+    }
+    if(initialLoot.length > 0){
+        let avg = sum / initialLoot.length
+        console.log(`Avarage treasure gain: ${avg.toFixed(2)} pirate credits.`);
+    } else {
+        console.log("Failed treasure hunt.");
+    }
 }
 
-treasurHunt(["Gold|Silver|Bronze|Medallion|Cup",
+treasurHunt([
+    "Gold|Silver|Bronze|Medallion|Cup",
     "Loot Wood Gold Coins",
     "Loot Silver Pistol,",
     "Drop 3",
