@@ -3,13 +3,20 @@ function treasurHunt(input){
 let initialLoot = input.shift().split("|")
 let end = input.pop()
 
-let currentLine = input[0]
 
 for(let i = 0; i < input.length; i++){
+    let currentLine = input[i]  //all
 
-    let lineArguments = currentLine.split(" ")
-    let command = lineArguments[0]
-    console.log(lineArguments);
+
+    let lineArguments = currentLine.split(" ") // ["wood", "gold", "coins"]
+    let command = lineArguments.shift()        //commands only
+    let item1 = lineArguments[1]
+    let item2 = lineArguments[2]
+    let item3 = lineArguments[3]
+
+    console.log(currentLine);
+
+
 }
 
 }
