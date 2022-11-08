@@ -44,7 +44,17 @@ function manOwar (data){
                 }
 
                 case "Repair":
-                    
+                    let h = Number(tokens[1])
+                    let health = Number(tokens[2])
+
+                    if(h < 0 || h > statusOfShip.length - 1 ){
+                        command = data[index]
+                        index++
+                        continue
+                    }
+                    if(statusOfShip[h] + health <= 70){
+                        statusOfShip[h] = statusOfShip[h] + health
+                    }
                     break
         }
 
@@ -58,10 +68,10 @@ console.log(statusOfShip);
 manOwar(["12>13>11>20>66",
     "12>22>33>44>55>32>18",
     "70",
-    "Fire 2 11",
-    "Fire 8 100",
-    "Defend 3 6 11",
-    "Defend 0 3 5",
+    // "Fire 2 11",
+    // "Fire 8 100",
+    // "Defend 3 6 11",
+    // "Defend 0 3 5",
     "Repair 1 33",
     "Status",
     "Retire"
