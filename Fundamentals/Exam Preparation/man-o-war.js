@@ -1,11 +1,31 @@
 function manOwar (data){
 
     let statusOfShip = data.shift().split(">")
-    let statusWarShip = data.shift.split(">")
+    let statusWarShip = data.shift().split(">")
     let maximumHealth = data.shift()
 
     let index = 0
-    let 
+    let command = data[index]
+    index++
+    while(command != "Retire"){
+        let tokens = command.split(" ")
+        let operation = tokens[0]
+        let atackIndex = tokens[1]
+        let damage = tokens[2]
+        
+        switch (operation) {
+            case "Fire":
+            statusWarShip[atackIndex] = statusWarShip[atackIndex] - damage
+                console.log(statusWarShip);
+                break;
+        
+            default:
+                break;
+        }
+
+        command = data[index]
+        index++
+    }
 
 
 }
