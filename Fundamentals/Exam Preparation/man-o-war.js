@@ -60,9 +60,10 @@ function manOwar (data){
                     break
 
                     case "Status":
-                        let breakPoint = health * 0.20
+                        let breakPoint = maximumHealth * 0.20
                         let result = statusOfShip.filter(el => el < breakPoint)
-                        console.log(result.join(""));
+                        console.log(result.length + " sections need repair");
+                        break
                     }
 
         command = data[index]
