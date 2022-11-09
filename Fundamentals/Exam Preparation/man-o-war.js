@@ -27,9 +27,7 @@ function manOwar (data){
                 console.log("You won! The enemy ship has sunken.");
             }
                 break;
-
-
-
+                
                 case "Defend":
                 i = Number(tokens[1])
                 let end = Number(tokens[2])
@@ -64,11 +62,28 @@ function manOwar (data){
                         let result = statusOfShip.filter(el => el < breakPoint)
                         console.log(result.length + " sections need repair");
                         break
+
+                        case "Repair":
+
                     }
 
         command = data[index]
         index++
     }
+
+
+    let warShipResult = 0
+    let pirateShipResult = 0
+    for(let sec of statusWarShip){
+        warShipResult += sec
+    }
+
+    for(let section of statusOfShip){
+        pirateShipResult += section
+    }
+
+    console.log(warShipResult);
+    console.log(pirateShipResult);
 console.log(statusOfShip);
 
 }
@@ -76,10 +91,10 @@ console.log(statusOfShip);
 manOwar(["12>13>11>20>66",
     "12>22>33>44>55>32>18",
     "70",
-    // "Fire 2 11",
-    // "Fire 8 100",
-    // "Defend 3 6 11",
-    // "Defend 0 3 5",
+    "Fire 2 11",
+    "Fire 8 100",
+    "Defend 3 6 11",
+    "Defend 0 3 5",
     "Repair 1 33",
     "Status",
     "Retire"
