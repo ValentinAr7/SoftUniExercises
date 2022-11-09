@@ -54,11 +54,16 @@ function manOwar (data){
                         index++
                         continue
                     }
-                    if(statusOfShip[h] + health <= 70){
+                    if(statusOfShip[h] + health <= health){
                         statusOfShip[h] = statusOfShip[h] + health
                     }
                     break
-        }
+
+                    case "Status":
+                        let breakPoint = health * 0.20
+                        let result = statusOfShip.filter(el => el < breakPoint)
+                        console.log(result.join(""));
+                    }
 
         command = data[index]
         index++
