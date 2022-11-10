@@ -41,10 +41,14 @@ function theLift(input){
                 liftFreeCapacity -= freeWagonSpace
             } else{
                 peopleWaiting -=peopleWaiting
-                wagons[i]
+                wagons[i] += freeWagonSpace
             }
         }
 
+        if(peopleWaiting == 0 && liftFreeCapacity > 0){
+            console.log("The lift has empty spots");
+            console.log(`${wagons.join(" ")}`);
+        }
      }
     
 
