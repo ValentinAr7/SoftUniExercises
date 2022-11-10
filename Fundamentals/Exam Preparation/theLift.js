@@ -1,3 +1,5 @@
+//https://github.com/Blagovest-Todorov/TheLift/blob/master/Program.cs
+
 function theLift(input){
 
     let peopleWaiting = input.shift()
