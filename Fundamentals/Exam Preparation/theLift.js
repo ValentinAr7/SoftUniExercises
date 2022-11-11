@@ -52,9 +52,6 @@ function theLift(input){
             console.log(`${wagons.join(" ")}`);
         }
      }
-    
-
-
 
 theLift([
     "15",
