@@ -1,3 +1,5 @@
+
+//Soft Uni tasks
 //https://github.com/Blagovest-Todorov/TheLift/blob/master/Program.cs
 
 function theLift(input){
