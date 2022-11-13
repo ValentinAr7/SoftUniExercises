@@ -2,10 +2,10 @@ function textProcessing (words, text){
 
     let wordsArray = words.shift().split(", ")
 
-    for(let i = 0; i < wordsArray.length; i++){
-        let currentWord = wordsArray[i]
-        console.log(currentWord);
-    }
+    wordsArray.forEach(word => {
+        const match = "*".repeat(word.length)
+        text = text.replace(match, word)
+    });
 
 }
 textProcessing(['great, learning',
