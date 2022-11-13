@@ -1,7 +1,6 @@
 function repeatingLetters (string){
 
     let letters = string.split("")
-    console.log(letters);
 
     let result = []
 
