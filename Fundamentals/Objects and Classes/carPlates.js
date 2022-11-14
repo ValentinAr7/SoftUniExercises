@@ -9,7 +9,9 @@ function carPlates (input){
         let command = element[0]
         let numberPlate = element[1]
 
-        
+        if(command === "IN"){
+            parkingList.set(numberPlate, command)
+        }
     });
 
 }
