@@ -17,7 +17,8 @@ function carPlates (input){
     });
 
     let sortedCarNumbers = Array.from(parkingList).sort((a,b)=> a[0].localeCompare(b[0]))
-
+    //return an array from arrays (matrix)
+    // sort by letters
     console.log(sortedCarNumbers[0]);
 
 }
