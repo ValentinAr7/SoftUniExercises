@@ -16,6 +16,8 @@ function carPlates (input){
         }
     });
 
+    console.log(parkingList);
+
 }
 
 carPlates([
