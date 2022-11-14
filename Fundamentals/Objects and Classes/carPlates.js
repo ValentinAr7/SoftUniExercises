@@ -11,6 +11,8 @@ function carPlates (input){
 
         if(command === "IN"){
             parkingList.set(numberPlate, command)
+        } else if( command === "OUT"){
+            parkingList.delete(numberPlate)
         }
     });
 
