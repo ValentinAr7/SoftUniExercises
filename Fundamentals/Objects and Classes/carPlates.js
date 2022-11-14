@@ -2,8 +2,15 @@ function carPlates (input){
 
     let parkingList = new Map
 
-    let fullList = input.split(" ")
-    console.log(fullList);
+    let fullList = input.map(el => el.split(", "))
+    // to transform array to array of elements
+
+    fullList.forEach(element => {
+        let command = element[0]
+        let numberPlate = element[1]
+
+        
+    });
 
 }
 
