@@ -19,10 +19,12 @@ function carPlates (input){
     let sortedCarNumbers = Array.from(parkingList).sort((a,b)=> a[0].localeCompare(b[0]))
     //return an array from arrays (matrix)
     // sort by letters
-    console.log(sortedCarNumbers[0]);
 
+    if(sortedCarNumbers.length === 0){
+        console.log("Parking is empty");
+    } 
+    sortedCarNumbers.forEach((numberPlate) => console.log(numberPlate[0]))
 }
-
 carPlates([
 
 'IN, CA2844AA',
