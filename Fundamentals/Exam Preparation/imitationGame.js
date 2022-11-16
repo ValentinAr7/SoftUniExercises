@@ -20,11 +20,22 @@ for (const element of encryptedMessage) {
     }
 }
 console.log(encryptedMessage);
+
+
+    case "Insert": 
+    // Insert {index} {value}
+    // Inserts the given value before the given index in the string.
+    // 'Insert|2|o',
+    let encrypted = encryptedMessage
+    encryptedMessage.substr(arg1) + arg2 
+    console.log(encryptedMessage);
+
+
             break;
     
 
 
-            
+
         default:
             break;
     }
