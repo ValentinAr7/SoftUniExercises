@@ -8,18 +8,32 @@ function imitationGame (input){
 
     let lineArguments = line.split("|")
     let command = lineArguments[0]
-    console.log(lineArguments);
+    let arg1 = lineArguments[1]
+    let arg2 = lineArguments[2]
 
-    while(line !== "Decode"){
 
-
-        let line = input[index]
-        index++
-
+    switch (command) {
+        case "ChangeAll":
+            encryptedMessage.forEach(element =>{
+                if(element == arg1){
+                    element.replace(arg1, arg2)
+                    console.log(encryptedMessage);
+                }
+                
+            });
+            break;
+    
+        default:
+            break;
     }
 
+    // while(line !== "Decode"){
 
 
+    //     let line = input[index]
+    //     index++
+
+    // }
 }
 
 imitationGame([
