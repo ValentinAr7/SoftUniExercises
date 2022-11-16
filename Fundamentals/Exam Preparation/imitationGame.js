@@ -16,13 +16,15 @@ function imitationGame (input){
         case "ChangeAll":
 for (const element of encryptedMessage) {
     if(element === arg1){
-        encryptedMessage.replace(arg1, arg2)
-        console.log(encryptedMessage);
+        encryptedMessage = encryptedMessage.replace(arg1, arg2)
     }
-    
 }
+console.log(encryptedMessage);
             break;
     
+
+
+            
         default:
             break;
     }
