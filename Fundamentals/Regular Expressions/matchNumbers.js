@@ -1,9 +1,11 @@
 function matchNumbers(input){
 
+
+    let text = input.shift()
     let patter = /\b\+359([ -])2 \1\ d{4} \1\ d{4}\b/g
 
 
-    let text = input.shift()
+    
     let result = input.match(patter)
     console.log(result.join(" "));
 
