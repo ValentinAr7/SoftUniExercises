@@ -2,7 +2,7 @@ function matchDates (input){
 
     let text = input.shift()
 
-    let pattern = /\b(\d{2})([\/.-])[A-Z][a-z]+\2\d+/
+    let pattern = /\b(\d{2})([\/.-])([A-Z][a-z]{2})\2(\d{4})/
 
 
 }
