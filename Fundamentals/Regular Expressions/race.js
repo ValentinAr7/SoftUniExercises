@@ -16,9 +16,11 @@ function race(raceDataArray) {
         if (racersArray.includes(currentName)) {
             let distance = 0
 
-            currentDistance.forEach(digit => {
+            for (const digit of currentDistance) {
                 distance += Number(digit)
-            });
+
+            }
+
 
             if (!raceObject.hasOwnProperty(currentName)) {
                 raceObject[currentName] = distance;
