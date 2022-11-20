@@ -5,6 +5,15 @@ function race(raceDataArray){
 
     const patternName = /[A-Za-z]+/g
     const patterDistance = /[0-9]+/g
+
+    let command = raceDataArray.shift()
+
+    while(command !== 'end of race' ){
+        const currentName = command.match(patternName).join("")
+        console.log(currentName);
+        command = raceDataArray.shift()
+
+    }
 }
 
 race (['G4e@55or%6g6!68e!!@ ',
@@ -12,5 +21,6 @@ race (['G4e@55or%6g6!68e!!@ ',
         'B5@i@#123ll',
         'G@e54o$r6ge#',
         '7P%et^#e5346r',
-        'T$o553m&6'
+        'T$o553m&6',
+        'end of race'
 ])
