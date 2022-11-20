@@ -7,7 +7,8 @@ function furniture (input){
 
     while(input[index] !== "Purchase"){
 
-        let product = input[index]
+        let productRow = input[index]
+        let validProducts = pattern.exec()
     }
 
 }
