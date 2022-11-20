@@ -8,9 +8,11 @@ function furniture (input){
     while(input[index] !== "Purchase"){
 
         let productRow = input[index]
-        let validProducts = pattern.exec()
-    }
+        let validProducts = pattern.exec(productRow)
 
+        index++ 
+    
+    }
 }
 
 furniture (['>>Sofa<<312.23!3',
