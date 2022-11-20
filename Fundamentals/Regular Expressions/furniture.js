@@ -10,6 +10,14 @@ function furniture (input){
         let productRow = input[index]
         let validProducts = pattern.exec(productRow)
 
+        while(validProducts !== null){
+            const productName = validProducts.groups["name"]
+            console.log(productName);
+
+            const productPrice = validProducts.groups["price"]
+            console.log(productPrice);
+        }
+
         index++ 
     
     }
