@@ -1,7 +1,10 @@
-function race(radeDataArray){
+function race(raceDataArray){
 
+    let racersArray = raceDataArray.shift().split(", ") 
+    let raceObject = {}
 
-
+    const patternName = /[A-Za-z]+/g
+    const patterDistance = /[0-9]+/g
 }
 
 race (['G4e@55or%6g6!68e!!@ ',
