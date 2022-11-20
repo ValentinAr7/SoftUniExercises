@@ -32,6 +32,8 @@ function race(raceDataArray) {
         command = raceDataArray.shift()
 
     }
+    let sortedRacer = Object.entries(raceObject).sort((a,b)=>b[1]-a[1]);
+    console.log(sortedRacer[0]);
 }
 
 race(['G4e@55or%6g6!68e!!@ ',
