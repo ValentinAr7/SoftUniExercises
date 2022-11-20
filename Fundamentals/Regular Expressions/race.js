@@ -33,7 +33,13 @@ function race(raceDataArray) {
 
     }
     let sortedRacer = Object.entries(raceObject).sort((a,b)=>b[1]-a[1]);
-    console.log(sortedRacer[0]);
+    const firstPlace = sortedRacer[0][0];
+    const secondPlace = sortedRacer[1][0];
+    const thirdPlace = sortedRacer[2][0]
+    console.log(`First place: ${firstPlace}`);
+    console.log(`Second place: ${secondPlace}`);
+    console.log(`Third place: ${thirdPlace}`);
+
 }
 
 race(['G4e@55or%6g6!68e!!@ ',
