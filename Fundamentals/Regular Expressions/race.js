@@ -10,7 +10,23 @@ function race(raceDataArray){
 
     while(command !== 'end of race' ){
         const currentName = command.match(patternName).join("")
-        console.log(currentName);
+
+        let currentDistance = command.match(patterDistance).join("")
+
+        if (racersArray.includes(currentName)){
+            let distance = 0
+
+            currentDistance.forEach(digit => {
+                distance += Number(digit)
+            });
+
+            if(!raceObject.hasOwnProperty(currentName)){
+                raceObject[currentName] = distance;
+            } else{
+                raceObject[currentName] += distance
+            }
+        }
+
         command = raceDataArray.shift()
 
     }
