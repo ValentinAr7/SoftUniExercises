@@ -15,7 +15,11 @@ function furniture (input){
             console.log(productName);
 
             const productPrice = validProducts.groups["price"]
-            console.log(productPrice);
+
+            const productQuantity = validProducts.groups["quantity"]
+
+            totalPrice += productPrice * productQuantity
+           
         }
 
         index++ 
