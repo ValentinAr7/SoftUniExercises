@@ -5,6 +5,8 @@ function furniture (input){
     let pattern = />>(?<name>)[A-Za-z]+<<(?<price>)[\d]+[\.]*[\d]+!(?<quantity>)[\d]+/g
     let totalPrice = 0;
 
+    console.log("Bought furniture:");
+
     while(input[index] !== "Purchase"){
 
         let productRow = input[index]
@@ -19,12 +21,12 @@ function furniture (input){
             const productQuantity = validProducts.groups["quantity"]
 
             totalPrice += productPrice * productQuantity
-           
         }
 
         index++ 
     
     }
+    console.log(totalPrice);
 }
 
 furniture (['>>Sofa<<312.23!3',
