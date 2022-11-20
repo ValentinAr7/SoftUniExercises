@@ -1,6 +1,9 @@
 function furniture (input){
 
+
+    let index = 0;
     let pattern = />>(?<name>)[A-Za-z]+<<(?<price>)[\d]+[\.]*[\d]+!(?<quantity>)[\d]+/g
+    let totalPrice = 0;
 
 }
 
