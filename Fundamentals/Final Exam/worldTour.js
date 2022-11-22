@@ -6,8 +6,11 @@ function worldTour (input){
     let command = input[index]
     
     while (command !== "Travel"){
-
+        
+        let command = input[index]
         index++
+        console.log(command);
+
     }
 
 }
