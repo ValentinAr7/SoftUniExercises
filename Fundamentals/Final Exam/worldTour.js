@@ -7,12 +7,13 @@ function worldTour (input){
     
     while (command !== "Travel"){
         
-        let command = input[index]
+        for(let i = 0; i < command.length; i++){
+            console.log(command[i]);
+
+        }
         index++
-        console.log(command);
 
     }
-
 }
 
 worldTour(["Hawai::Cyprys-Greece",
