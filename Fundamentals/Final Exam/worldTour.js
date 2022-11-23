@@ -7,8 +7,9 @@ function worldTour (input){
     while (command !== "Travel"){
         
         let [action, firstParam, lastParam] = input.split(":")
+        let startIndex;
+        let lastIndex
         
-
         switch (arg1) {
             case "Add Stop":
                 wrldTour.push(arg3[arg2])
