@@ -2,17 +2,23 @@ function worldTour (input){
 
 
     let wrldTour = input.shift()
-    let index = 0
-    let command = input[index]
+    let command = input.shift()
     
     while (command !== "Travel"){
         
-        for(let i = 0; i < command.length; i++){
-            console.log(command[i]);
+        let [action, firstParam, lastParam] = input.split(":")
+        
 
+        switch (arg1) {
+            case "Add Stop":
+                wrldTour.push(arg3[arg2])
+                break;
+        
+            default:
+                break;
         }
-        index++
 
+        command = input[index]    
     }
 }
 
