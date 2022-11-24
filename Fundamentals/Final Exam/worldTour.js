@@ -28,6 +28,12 @@ function worldTour (input){
                 break;
 
                 case "Remove Stop":
+                    startIndex = Number(firstParam)
+                    lastIndex = Number(lastParam)
+
+                    if(!initialString[startIndex] || !initialString[lastIndex]){
+                        console.log(initialString);
+                    }
 
                 break;
         
