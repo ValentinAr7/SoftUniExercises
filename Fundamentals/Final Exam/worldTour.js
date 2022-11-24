@@ -41,6 +41,12 @@ function worldTour (input){
                     console.log(initialString);
                     break;
 
+                case "Switch":
+                    let newValue = lastParam
+                    let oldValue = firstParam
+
+                    let pettern = new RegExp (oldValue, "g")
+                    initialString = initialString.replace(pettern, newValue)
                 break;
         
 
