@@ -33,6 +33,7 @@ function worldTour (input){
 
                     if(!initialString[startIndex] || !initialString[lastIndex]){
                         console.log(initialString);
+                        break;
                     }
 
                 break;
