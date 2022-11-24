@@ -13,6 +13,11 @@ function worldTour (input){
         switch (action) {
             case "Add Stop":
                 startIndex = Number(firstParam)
+
+                if (startIndex < 0 || startIndex >= initialString.length){
+                    console.log(initialString);
+                    break;
+                }
                 let value = lastParam
 
                 let firstPart = initialString.slice(0, startIndex)
@@ -20,6 +25,9 @@ function worldTour (input){
 
                 initialString = firstPart + value + secondPart
                 console.log(initialString);
+                break;
+
+                case "Remove Stop":
 
                 break;
         
