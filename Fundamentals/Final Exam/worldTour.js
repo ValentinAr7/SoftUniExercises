@@ -47,6 +47,7 @@ function worldTour (input){
 
                     let pettern = new RegExp (oldValue, "g")
                     initialString = initialString.replace(pettern, newValue)
+                    console.log(initialString);
                 break;
         
 
