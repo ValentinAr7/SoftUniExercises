@@ -36,6 +36,9 @@ function worldTour (input){
                         break;
                     }
 
+                    let subStr = initialString.substring(startIndex, lastIndex + 1)
+                    
+
                 break;
         
 
