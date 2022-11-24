@@ -37,7 +37,9 @@ function worldTour (input){
                     }
 
                     let subStr = initialString.substring(startIndex, lastIndex + 1)
-                    
+                    initialString = initialString.replace(subStr, "")
+                    console.log(initialString);
+                    break;
 
                 break;
         
