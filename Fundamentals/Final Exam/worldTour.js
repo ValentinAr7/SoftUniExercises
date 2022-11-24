@@ -54,6 +54,7 @@ function worldTour (input){
         }
         command = input.shift()
     }
+    console.log(`Ready for world tour! Planned stpes: ${initialString}`);
 }
 
 worldTour(["Hawai::Cyprys-Greece",
