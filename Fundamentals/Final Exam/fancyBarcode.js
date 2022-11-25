@@ -22,8 +22,11 @@ function fancyBarcode (input){
             match = pattern.exec(barcode)
     }
     if (isValid){
+        concatenatedDigit = concatenatedDigit !== "" ? concatenatedDigit : "00"
         console.log(`Product group: ${concatenatedDigit}`);
-    }
+    } else (
+        console.log("Invalid barcode");
+    )
 }
 
 }
