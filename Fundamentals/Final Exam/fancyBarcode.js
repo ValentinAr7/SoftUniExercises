@@ -21,8 +21,10 @@ function fancyBarcode (input){
             }
             match = pattern.exec(barcode)
     }
-    console.log(concatenatedDigit);
+    if (isValid){
+        console.log(`Product group: ${concatenatedDigit}`);
     }
+}
 
 }
 
