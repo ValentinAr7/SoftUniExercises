@@ -24,16 +24,12 @@ function fancyBarcode (input){
     if (isValid){
         concatenatedDigit = concatenatedDigit !== "" ? concatenatedDigit : "00"
         console.log(`Product group: ${concatenatedDigit}`);
-    } else (
+    } else {
         console.log("Invalid barcode");
-    )
+    }
 }
 
 }
 
-fancyBarcode(["3",
-            
-            "@#FreshFisH@#",
-            "@###Brea0D@###",
-            "@##Che4s6E@##"])
+fancyBarcode(["6", "@###Val1d1teM@###", "@#ValidIteM@#", "##InvaliDiteM##", "@InvalidIteM@", "@#Invalid_IteM@#", "@#ValiditeM@#"])
 
