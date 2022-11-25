@@ -11,7 +11,7 @@ function fancyBarcode (input){
         let concatenatedDigit = "";
         let isValid = false
         while(match !== null){
-            console.log(match[2]);
+            isValid = true
             let barcodeText = match[2]
 
             for(let ch of barcodeText){
@@ -19,7 +19,9 @@ function fancyBarcode (input){
                     concatenatedDigit += ch
                 }
             }
+            match = pattern.exec(barcode)
     }
+    console.log(concatenatedDigit);
     }
 
 }
