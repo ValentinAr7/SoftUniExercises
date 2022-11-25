@@ -15,7 +15,9 @@ function fancyBarcode (input){
             let barcodeText = match[2]
 
             for(let ch of barcodeText){
-                
+                if(!isNaN(Number(ch))){
+                    concatenatedDigit += ch
+                }
             }
     }
     }
