@@ -8,7 +8,7 @@ function worldTour (input){
         
         let [action, firstParam, lastParam] = command.split(":")
         let startIndex;
-        let lastIndex
+        let lastIndex;
 
         switch (action) {
             case "Add Stop":
