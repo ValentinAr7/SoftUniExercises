@@ -18,7 +18,20 @@ function plantDiscovery (input){
     let command = input.shift()
     while(command !== "Exhibition"){
         let [commandName, args] = command.split(": ");
-        let arguments = args.split(" - ")
+        let [plantName, argument] = args.split(" - ")
+
+        switch (commandName) {
+            case "Rate":
+                plants[plantName].rating = argument
+        // take from the class "plants" the specific plant "PlantName"
+        // take the rating and replace it with the new rating (argument2)
+                break;
+        
+            default:
+                break;
+        }
+
+
         command = input.shift
     }
 
