@@ -1,16 +1,19 @@
 function plantDiscovery (input){
 
-    let n = input.shift()
+    let plantCount = input.shift()
+    let plants = {}
 
-    for(let i = 0; i < input.length; i++){
-       let foundPlants = input[i]
-        if(i >= n){
-            break
-        }
+    for(let i = 0; i < plantCount; i++){
+       let plant = input.shift()
         
-        let plantsRarity = foundPlants.split("<->")
-    }
+        let [plantName, rarity]= plant.split("<->")
 
+        plants[plantName] = {                 //put into "plants"
+            rarity: rarity,                   // it returns the 
+            rating: 0               // the name of the object with its characteristics in the following format:
+                                    // plantName: {rarity: "4", rating: "0"}
+        }
+    }
     
 
 }
