@@ -2,8 +2,13 @@ function plantDiscovery (input){
 
     let n = input.shift()
 
-    for(let i = 0; i < input[n]; i++){
-        console.log(i);
+    for(let i = 0; i < input.length; i++){
+       let foundPlants = input[i]
+        if(i >= n){
+            break
+        }
+        
+        let plantsRarity = foundPlants.split("<->")
     }
 
     
