@@ -15,6 +15,12 @@ function plantDiscovery (input){
         }
     }
     
+    let command = input.shift()
+    while(command !== "Exhibition"){
+        let [commandName, args] = command.split(": ");
+        let arguments = args.split(" - ")
+        command = input.shift
+    }
 
 }
 
