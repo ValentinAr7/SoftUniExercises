@@ -24,8 +24,21 @@ function activationKey (input){
                 }
                 break;
         
-            default:
-                break;
+                
+            case "Flip":
+                upperLower = lineArguments[1]
+                index1 = lineArguments[2]
+                index2 = lineArguments[3]
+
+                if(upperLower == "Upper"){
+                    let subStr = rawActivationKey.substring(index1, index2)
+                    rawActivationKey = rawActivationKey.replace(subStr, subStr.toUpperCase())
+                    console.log(rawActivationKey);
+                } else {
+                    let subStr = rawActivationKey.substring(index1, index2)
+                    rawActivationKey = rawActivationKey.replace(subStr, subStr.toLowerCase())
+                    console.log(rawActivationKey);
+                }
         }
 
         line = input[index]
@@ -41,7 +54,7 @@ activationKey(["abcdefghijklmnopqrstuvwxyz",
 
 // "Flip>>>Upper>>>3>>>14",
 
-// "Flip>>>Lower>>>5>>>7",
+"Flip>>>Upper>>>5>>>7",
 
 "Contains>>>xzy",
 
