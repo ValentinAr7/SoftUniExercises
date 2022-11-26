@@ -10,10 +10,10 @@ function emojiDetector (input){
         threshold *= digit
     }
 
-    let emojiMatches = text.matchAll(/\(:{2}|\*{2})(<name>[A-Z][a-z]){2,}\1/g)
+    let emojiMatches = text.matchAll(/(:{2}|\*{2})(?<name>[A-Z][a-z]{2,})\1/g)
     for (const emojiMatch of emojiMatches) {
         console.log(emojiMatch[0]);
-        console.log(emojiMatch.group.name);        
+        console.log(emojiMatch.groups.name);        
     }
 }
 
