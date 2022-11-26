@@ -1,8 +1,10 @@
 function activationKey (input){
 
     let rawActivationKey = input.shift()
+    
     let index = 0
     let line = input[index]
+    let removedElement = input.shift()
 
     while(line !== "Generate"){
         let lineArguments = line.split(">>>")
@@ -10,7 +12,7 @@ function activationKey (input){
         let upperLower;
         let index1;
         let index2;
-        console.log(lineArguments);
+        
         
 
         switch (command) {
@@ -20,7 +22,7 @@ function activationKey (input){
                 if(rawActivationKey.includes(index1)){
                   console.log( `${rawActivationKey} contains ${index1}`); 
                 } else{
-               console.log("Substring not found"); 
+               console.log("Substring not found!"); 
                 }
                 break;
         
@@ -39,22 +41,31 @@ function activationKey (input){
                     rawActivationKey = rawActivationKey.replace(subStr, subStr.toLowerCase())
                     console.log(rawActivationKey);
                 }
-        }
+                break;
 
+                case "Slice":
+                    index1 = lineArguments[1]
+                    index2 = lineArguments[2]
+
+                let subStr = rawActivationKey.substring(index1, index2)
+                rawActivationKey = rawActivationKey.replace(subStr, "")
+                console.log(rawActivationKey);
+                break;
+        }
         line = input[index]
         index++
     }
 
-
+console.log(`Your activation key is: ${rawActivationKey}`);
 }
 
 activationKey(["abcdefghijklmnopqrstuvwxyz",
 
-// "Slice>>>2>>>6",
+"Slice>>>2>>>6",
 
-// "Flip>>>Upper>>>3>>>14",
+"Flip>>>Upper>>>3>>>14",
 
-"Flip>>>Upper>>>5>>>7",
+"Flip>>>Lower>>>5>>>7",
 
 "Contains>>>xzy",
 
