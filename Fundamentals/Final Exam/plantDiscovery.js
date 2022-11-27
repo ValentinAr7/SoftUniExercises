@@ -9,8 +9,8 @@ function plantDiscovery (input){
         let [plantName, rarity]= plant.split("<->")
 
         plants[plantName] = {                 //put into "plants"
-            rarity: rarity,                   // it returns the 
-            rating: 0               // the name of the object with its characteristics in the following format:
+            rarity: Number(rarity),                   // it returns the 
+            ratings: []             // the name of the object with its characteristics in the following format:
                                     // plantName: {rarity: "4", rating: "0"}
         }
     }
@@ -22,19 +22,21 @@ function plantDiscovery (input){
 
         switch (commandName) {
             case "Rate":
-                plants[plantName].rating = argument
+                let rating = Number(argument)
+                plants[plantName].ratings.push(argument)
         // take from the class "plants" the specific plant "PlantName"
-        // take the rating and replace it with the new rating (argument2)
+        // store the second rating in the array "rating"
                 break;
         
-            default:
+            case "Update":
+
                 break;
         }
 
 
         command = input.shift
     }
-
+console.table(plants)
 }
 
 plantDiscovery(["3",
