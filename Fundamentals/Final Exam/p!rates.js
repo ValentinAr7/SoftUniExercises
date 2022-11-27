@@ -62,6 +62,9 @@ function pirates (input){
                 } else {
                     let result = array.find((x)=> x.city === cityName)
                     let index = array.indexOf(result)
+
+                    array[index].gold += treasure
+                    console.log(`${treasure} added to the city treasury. ${town} has added ${array[index].gold} gold`);
                 }
                 break;
         }
