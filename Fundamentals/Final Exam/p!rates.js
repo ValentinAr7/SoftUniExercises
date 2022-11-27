@@ -26,10 +26,14 @@ function pirates (input){
             array.push(cities)
         //else - make an object with the 3 elements
         }
-
         command = input.shift()
     }
-    array.forEach(e=>console.log(e))
+
+    while(input[0] == "End"){
+        let command = input.shift().split("=>")
+        let currentCommand = command.shift()
+    }
+    
 }
 
 pirates (["Tortuga||345000||1250",
