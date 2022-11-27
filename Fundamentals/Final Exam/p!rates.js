@@ -42,10 +42,22 @@ function pirates (input){
                 console.log(`City ${cityName} plundered! ${gold} stolen, ${people} citizents killeds`);
                 
                 let result = array.find((x)=> x.city === cityName)
+                let index = array.indexOf(result)
+
+                array[index].population -= population
+                array[index].gold -= gold
+
+                if(array[index].population <= 0 || array[index].gold <= 0){
+                    console.log(`${cityName} has been wiped off the map`);
+                }
                 break;
         
             case "Prosper":
-                
+
+                let town = command[0]
+                let treasure = command[1]
+
+                if()
                 break;
         }
     }
