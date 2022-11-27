@@ -1,14 +1,21 @@
 function adAstra(input){
 
-    let pattern = /([\|#])(?<name>([A-Za-z ]+)\1(?<date>\d{2}\/\d{2}\/\d{2})\1(?<kcal>\d+)\1/gm
+    let pattern = /([\|#])\(?<name>([A-Za-z ]+)\1(?<date>\d{2}\/\d{2}\/\d{2})\1(?<kcal>\d+)\1/gm
 
     let exec = pattern.exec(input)
+    let totalKcal = 0
+    let productStore = []
 
     while(exec){
 
         let name = exec.groups["name"]
         let date = exec.groups["date"]
         let kcal = exec.groups["kcal"]
+
+        totalKcal += Number(kcal)
+
+        let currentProductData = `Item: ${name} Best before: ${date} Nutrition: ${kcal}` 
+        productStore.push(currentProductData)
     }
 }
 adAstra([
