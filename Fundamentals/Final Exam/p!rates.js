@@ -57,7 +57,12 @@ function pirates (input){
                 let town = command[0]
                 let treasure = command[1]
 
-                if()
+                if(treasure < 0){
+                    console.log("Gold added cannot be a negative number");
+                } else {
+                    let result = array.find((x)=> x.city === cityName)
+                    let index = array.indexOf(result)
+                }
                 break;
         }
     }
