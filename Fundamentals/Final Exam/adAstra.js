@@ -1,5 +1,6 @@
 function adAstra(input){
 
+    let pattern = /([#|\])(?<name>([A-Za-z ]+)\1(?<date>\d{2}\/\d{2}\/\d{2})\1(?<kcal>\d+)\1/gm
 
 }
 adAstra([
