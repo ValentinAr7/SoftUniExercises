@@ -32,6 +32,22 @@ function pirates (input){
     while(input[0] == "End"){
         let command = input.shift().split("=>")
         let currentCommand = command.shift()
+
+        switch (currentCommand) {
+            case "Plunder":
+                let cityName = command[0]
+                let people = command[1]
+                let gold = command[2]
+
+                console.log(`City ${cityName} plundered! ${gold} stolen, ${people} citizents killeds`);
+                
+                let result = array.find((x)=> x.city === cityName)
+                break;
+        
+            case "Prosper":
+                
+                break;
+        }
     }
     
 }
