@@ -8,10 +8,16 @@ function pirates (input){
         let splitCommand = command.split("||")
 
         let city = splitCommand[0]
-        let population = splitCommand[1]
-        let gold = splitCommand[2]
+        let population = Number(splitCommand[1])
+        let gold = Number(splitCommand[2])
 
-        let result = array.find((x)=>x.cities === city)
+        let result = array.find((x)=>x.city === city)
+        let index = result.indexOf(result)
+
+        if(result == true){
+            array[index].population += population
+            array[index].gold += gold
+        }
 
     
         });
