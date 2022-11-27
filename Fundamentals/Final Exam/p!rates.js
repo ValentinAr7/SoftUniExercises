@@ -11,7 +11,7 @@ function pirates (input){
         let population = splitCommand[1]
         let gold = splitCommand[2]
 
-        let repeeatingCity = 0
+        let result = array.find((x)=>x.cities === city)
 
     
         });
