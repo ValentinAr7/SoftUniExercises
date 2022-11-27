@@ -1,10 +1,10 @@
-function pirates (input){
+function pirates(input) {
 
     let command = input.shift()
     let cities = {}
     let array = []
 
-    while(command !== "Sail"){
+    while (command !== "Sail") {
         let splitCommand = command.split("||")
 
         let city = splitCommand[0]
@@ -17,19 +17,19 @@ function pirates (input){
         let index = array.indexOf(result)
         // find the index of the repeating city
 
-        if(result){
+        if (result) {
             array[index].population += population
             array[index].gold += gold
-        //if the city repeat add up the gold and population
+            //if the city repeat add up the gold and population
         } else {
-            cities = {city, population, gold}
+            cities = { city, population, gold }
             array.push(cities)
-        //else - make an object with the 3 elements
+            //else - make an object with the 3 elements
         }
         command = input.shift()
     }
 
-    while(input[0] == "End"){
+    while (input[0] == "End") {
         let command = input.shift().split("=>")
         let currentCommand = command.shift()
 
@@ -40,27 +40,27 @@ function pirates (input){
                 let gold = command[2]
 
                 console.log(`City ${cityName} plundered! ${gold} stolen, ${people} citizents killeds`);
-                
-                let result = array.find((x)=> x.city === cityName)
+
+                let result = array.find((x) => x.city === cityName)
                 let index = array.indexOf(result)
 
                 array[index].population -= population
                 array[index].gold -= gold
 
-                if(array[index].population <= 0 || array[index].gold <= 0){
+                if (array[index].population <= 0 || array[index].gold <= 0) {
                     console.log(`${cityName} has been wiped off the map`);
                 }
                 break;
-        
+
             case "Prosper":
 
                 let town = command[0]
                 let treasure = command[1]
 
-                if(treasure < 0){
+                if (treasure < 0) {
                     console.log("Gold added cannot be a negative number");
                 } else {
-                    let result = array.find((x)=> x.city === cityName)
+                    let result = array.find((x) => x.city === cityName)
                     let index = array.indexOf(result)
 
                     array[index].gold += treasure
@@ -69,15 +69,19 @@ function pirates (input){
                 break;
         }
     }
-    
+        if(array.length !== 0){
+            console.log(`Ahoy captain! There are ${array.length} wealthy settlements to go`);
+            array.forEach((t)=>console.log(`${t.city} -> Population ${t.population} citizens, Gold: ${t.gold} kg`))
+        } else{
+            console.log("Ahoy captain! All cities have been plundered and destroyed");
+        }
 }
 
-pirates (["Tortuga||345000||1250",
+pirates(["Tortuga||345000||1250",
 
-"Santo Domingo||240000||630",
-"Tortuga||410000||1100", 
-"Tortuga||410000||1100",         //Havana
-"Sail",
-"Plunder=>Tortuga=>75000=>380",
-"Prosper=>Santo Domingo=>180",
-"End"])
+    "Santo Domingo||240000||630",
+    "Havana||410000||1100",
+    "Sail",
+    "Plunder=>Tortuga=>75000=>380",
+    "Prosper=>Santo Domingo=>180",
+    "End"])
