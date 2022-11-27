@@ -1,7 +1,15 @@
 function adAstra(input){
 
-    let pattern = /([#|\])(?<name>([A-Za-z ]+)\1(?<date>\d{2}\/\d{2}\/\d{2})\1(?<kcal>\d+)\1/gm
+    let pattern = /([\|#])(?<name>([A-Za-z ]+)\1(?<date>\d{2}\/\d{2}\/\d{2})\1(?<kcal>\d+)\1/gm
 
+    let exec = pattern.exec(input)
+
+    while(exec){
+
+        let name = exec.groups["name"]
+        let date = exec.groups["date"]
+        let kcal = exec.groups["kcal"]
+    }
 }
 adAstra([
 
