@@ -10,6 +10,8 @@ function imitationGame (input){
             let index1;
             let index2;
 
+
+            let message = ""
             switch (operation) {
                 case "ChangeAll":
                     index1 = line[1]
@@ -20,7 +22,6 @@ function imitationGame (input){
                             encryptedMessage = encryptedMessage.replace(index1, index2)
                         }
                     }
-                    console.log(encryptedMessage);
                     break;
 
                 case "Insert":
@@ -29,16 +30,20 @@ function imitationGame (input){
 
                     let firstPart = encryptedMessage.slice(0, index1)
                     let secondPart = encryptedMessage.slice(index1)
-                    let message = firstPart + index2 + secondPart
-                    console.log(message);
+                    encryptedMessage = firstPart + index2 + secondPart
                     break;
             
-                default:
+               case "Move":
+                    index1 = line[1]
+
+                    let subStr = encryptedMessage.substring(0, index1)
+                    let secondSubStr = encryptedMessage.slice(index1)
+                    encryptedMessage = secondSubStr + subStr
                     break;
             }
-
             command = input.shift()
         }
+        console.log(`The decrypted message is: ${encryptedMessage}`);
 
 }
 
