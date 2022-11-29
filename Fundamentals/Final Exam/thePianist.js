@@ -1,6 +1,11 @@
 function thePianist (input){
 
     let numberOfPieces = input.shift()
+    let pieces = {}
+
+    for(let i = 0; i < numberOfPieces; i++){
+        console.log();
+    }
 
 }
 
