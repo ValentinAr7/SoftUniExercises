@@ -11,10 +11,16 @@ function thePianist (input){
         pieces[pieceName] = {
             composer: composer,
             key: key
+            
         }
     }
-   
 
+    let command = input.shift().split("|")
+    
+    
+
+
+   
 }
 
 thePianist (
