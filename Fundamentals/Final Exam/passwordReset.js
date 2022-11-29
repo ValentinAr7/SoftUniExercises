@@ -1,0 +1,1 @@
+//https://softuni.bg/trainings/resources/video/74225/video-27-july-2022-todor-stoyanov-programming-fundamentals-with-javascript-may-2022/3732

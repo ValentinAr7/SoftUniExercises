@@ -15,15 +15,23 @@ function thePianist (input){
         }
     }
 
-    
-    while (command !== "Stop"){
-        let line = input.shift().split("|")
-        let command = line[0]
-        let piece = line[1]
-        let index1 = line[2]
-        let index2 = line[3]
+    let cmnd = input.shift().split("|")
 
+    while (cmnd !== "Stop"){
+        let command = cmnd[0]
+        let piece = cmnd[1]
+        let index1 = cmnd[2]
+        let index2 = cmnd[3]
+
+        switch (command) {
+            case "Add":
+                pieces[pieceName].piece.push()
+                console.log(pieceName);
+                break;
         
+            default:
+                break;
+        }
     
     }
 
@@ -55,3 +63,6 @@ thePianist (
         
         ]
 )
+
+
+//https://softuni.bg/trainings/resources/video/74225/video-27-july-2022-todor-stoyanov-programming-fundamentals-with-javascript-may-2022/3732
