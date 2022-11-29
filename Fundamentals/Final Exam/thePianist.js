@@ -4,8 +4,16 @@ function thePianist (input){
     let pieces = {}
 
     for(let i = 0; i < numberOfPieces; i++){
-        console.log();
+        let piece = input.shift()
+
+        let [pieceName, composer, key] = piece.split("")
+
+        pieces[pieceName] = {
+            composer: composer,
+            key: key
+        }
     }
+   
 
 }
 
