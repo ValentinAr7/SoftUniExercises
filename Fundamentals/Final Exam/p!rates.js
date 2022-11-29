@@ -73,7 +73,7 @@ function pirates(input) {
             console.log(`Ahoy captain! There are ${array.length} wealthy settlements to go`);
             array.forEach((t)=>console.log(`${t.city} -> Population ${t.population} citizens, Gold: ${t.gold} kg`))
         } else{
-            console.log("Ahoy captain! All cities have been plundered and destroyed");
+             console.log("Ahoy captain! All cities have been plundered and destroyed");
         }
 }
 
