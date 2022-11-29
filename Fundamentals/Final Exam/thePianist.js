@@ -15,9 +15,17 @@ function thePianist (input){
         }
     }
 
-    let command = input.shift().split("|")
     
+    while (command !== "Stop"){
+        let line = input.shift().split("|")
+        let command = line[0]
+        let piece = line[1]
+        let index1 = line[2]
+        let index2 = line[3]
+
+        
     
+    }
 
 
    
