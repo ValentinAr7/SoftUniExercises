@@ -14,25 +14,25 @@ function thePianist (input){
     }
     console.table(store);
 
-    // let cmnd = input.shift().split("|")
+    let line = input.shift().split("|")
 
-    // while (cmnd !== "Stop"){
-    //     let command = cmnd[0]
-    //     let piece = cmnd[1]
-    //     let index1 = cmnd[2]
-    //     let index2 = cmnd[3]
+    while (line !== "Stop"){
+        let command = line[0]
+        let piece = line[1]
+        let index1 = line[2]
+        let index2 = line[3]
 
-    //     switch (command) {
-    //         case "Add":
-    //             pieces[pieceName].piece.push()
-    //             console.log(pieceName);
-    //             break;
+        switch (command) {
+            case "Add":
+                store[pieceName].piece.push()
+                console.log(pieceName);
+                break;
         
-    //         default:
-    //             break;
-    //     }
+            default:
+                break;
+        }
     
-    // }
+    }
 
 
    
