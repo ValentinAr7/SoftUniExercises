@@ -1,39 +1,38 @@
 function thePianist (input){
 
-    let numberOfPieces = input.shift()
-    let pieces = {}
+    let numberOfPieces = Number(input.shift())
+    let store = {}
 
     for(let i = 0; i < numberOfPieces; i++){
-        let piece = input.shift()
-
-        let [pieceName, composer, key] = piece.split("")
-
-        pieces[pieceName] = {
-            composer: composer,
-            key: key
-            
-        }
-    }
-
-    let cmnd = input.shift().split("|")
-
-    while (cmnd !== "Stop"){
-        let command = cmnd[0]
-        let piece = cmnd[1]
-        let index1 = cmnd[2]
-        let index2 = cmnd[3]
-
-        switch (command) {
-            case "Add":
-                pieces[pieceName].piece.push()
-                console.log(pieceName);
-                break;
         
-            default:
-                break;
+        let [piece, composer, key] = input.shift().split("|")
+
+        if(!store.hasOwnProperty(piece)){
+            store[piece] = {}
         }
-    
+        store[piece] [composer]= key 
     }
+    console.table(store);
+
+    // let cmnd = input.shift().split("|")
+
+    // while (cmnd !== "Stop"){
+    //     let command = cmnd[0]
+    //     let piece = cmnd[1]
+    //     let index1 = cmnd[2]
+    //     let index2 = cmnd[3]
+
+    //     switch (command) {
+    //         case "Add":
+    //             pieces[pieceName].piece.push()
+    //             console.log(pieceName);
+    //             break;
+        
+    //         default:
+    //             break;
+    //     }
+    
+    // }
 
 
    
