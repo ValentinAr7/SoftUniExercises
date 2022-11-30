@@ -58,6 +58,11 @@ function thePianist(input) {
         }
         line = input.shift()
     }
+        for(let [piece, composer] of Object.entries(store)){
+            for(let composerKey of Object.keys(store[piece])){
+                console.log(`${piece} -> Composer: ${composer}, Key ${composerKey}`);
+            }
+        }
 }
 
 thePianist(
