@@ -53,6 +53,7 @@ function thePianist(input) {
             for(let [keyComposer, valueKey] of Object.entries(store[piece])){
                 store[piece][keyComposer] = newKey
             }
+            console.log(`Changed the key of ${piece} to ${newKey}`);
             break;
         }
         line = input.shift()
