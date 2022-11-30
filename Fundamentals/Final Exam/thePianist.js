@@ -27,10 +27,12 @@ function thePianist (input){
             if(store.hasOwnProperty(piece)){
                 console.log(`${piece} is already in the collection!`);
                 break;
+            }
 
             store[piece] = {}
             store[piece][composer] = key
-            }
+
+            console.log(`${piece} by ${composer} in ${key} addede to the collection`);
                 // store[pieceName].piece.push()
                 // console.log(pieceName);
                 // break;
