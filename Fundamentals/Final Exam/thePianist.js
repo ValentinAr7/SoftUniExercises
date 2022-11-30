@@ -33,18 +33,19 @@ function thePianist (input){
             store[piece][composer] = key
 
             console.log(`${piece} by ${composer} in ${key} addede to the collection`);
-                // store[pieceName].piece.push()
-                // console.log(pieceName);
-                // break;
+            break;
         
-            default:
-                break;
+
+            case "Remove":
+                if(!store.hasOwnProperty(piece)){
+                    console.log(`Invalid operation! ${piece} does not exist in the collection`);
+                }
+            break;
         }
+            delete store[piece]
+            console.log(`Successfuly removed ${piece}`);
     
     }
-
-
-   
 }
 
 thePianist (
