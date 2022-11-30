@@ -19,14 +19,21 @@ function thePianist (input){
     while (line !== "Stop"){
         let command = line[0]
         let piece = line[1]
-        let index1 = line[2]
-        let index2 = line[3]
+        let composer = line[2]
+        let key = line[3]
 
         switch (command) {
             case "Add":
-                store[pieceName].piece.push()
-                console.log(pieceName);
+            if(store.hasOwnProperty(piece)){
+                console.log(`${piece} is already in the collection!`);
                 break;
+
+            store[piece] = {}
+            store[piece][composer] = key
+            }
+                // store[pieceName].piece.push()
+                // console.log(pieceName);
+                // break;
         
             default:
                 break;
