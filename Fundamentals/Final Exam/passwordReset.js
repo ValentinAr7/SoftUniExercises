@@ -1,7 +1,7 @@
 function passwordReset (input){
 
     let passwordSystem = input.shift()
-
+    let newPassword = []
     let line = input.shift()
 
     while(line !== "Done"){
@@ -9,7 +9,6 @@ function passwordReset (input){
 
         switch (command) {
             case "TakeOdd":
-                let newPassword = []
 
                 for(let i = 0; i < passwordSystem.length; i++){
                     let currentLetter = passwordSystem[i]
@@ -20,12 +19,11 @@ function passwordReset (input){
                     }
                 }
                 console.log(newPassword.join(""));
-
-
                 break;
-        
-            default:
-                break;
+
+                case "Cut":
+                    
+                    break;
         }
         line = input.shift()
     }
