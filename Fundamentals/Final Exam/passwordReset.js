@@ -1,1 +1,11 @@
-//https://softuni.bg/trainings/resources/video/74225/video-27-july-2022-todor-stoyanov-programming-fundamentals-with-javascript-may-2022/3732
+function passwordReset (input){
+
+
+
+}
+passwordReset (["Siiceercaroetavm!:?:ahsott.:i:nstupmomceqr",
+"TakeOdd",
+"Cut 15 3",
+"Substitute :: -",
+"Substitute | ^",
+"Done"])
