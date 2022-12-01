@@ -1,5 +1,13 @@
 function passwordReset (input){
 
+    let passwordSystem = input.shift()
+
+    let line = input.shift()
+
+    while(line !== "Done"){
+        console.log(line);
+        line = input.shift()
+    }
 
 
 }
