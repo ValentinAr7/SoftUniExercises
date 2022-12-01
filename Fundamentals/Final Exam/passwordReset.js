@@ -5,7 +5,8 @@ function passwordReset (input){
     let line = input.shift()
 
     while(line !== "Done"){
-        console.log(line);
+        let [command, index1, index2] = line.split(" ")
+        console.log(command);
         line = input.shift()
     }
 
