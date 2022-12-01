@@ -5,6 +5,7 @@ function passwordReset (input){
     let line = input.shift()
 
     while(line !== "Done"){
+
         let [command, index1, index2] = line.split(" ")
 
         switch (command) {
@@ -15,15 +16,24 @@ function passwordReset (input){
 
                     if(i % 2 !== 0 ){
                         newPassword.push(currentLetter)
-
+                        
                     }
                 }
                 console.log(newPassword.join(""));
                 break;
 
-                case "Cut":
-                    
-                    break;
+                case "Cut": 
+
+                newPassword = newPassword.join("")
+                index1 = Number(index1)
+                index2 = Number(index2)
+                let length = index1 + index2
+                console.log(length);
+            
+                let subStr = newPassword.substring(index1, length)
+                newPassword = newPassword.replace(subStr, "")
+                console.log(newPassword);
+                break;
         }
         line = input.shift()
     }
