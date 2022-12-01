@@ -6,7 +6,27 @@ function passwordReset (input){
 
     while(line !== "Done"){
         let [command, index1, index2] = line.split(" ")
-        console.log(command);
+
+        switch (command) {
+            case "TakeOdd":
+                let newPassword = []
+
+                for(let i = 0; i < passwordSystem.length; i++){
+                    let currentLetter = passwordSystem[i]
+
+                    if(i % 2 !== 0 ){
+                        newPassword.push(currentLetter)
+
+                    }
+                }
+                console.log(newPassword.join(""));
+
+
+                break;
+        
+            default:
+                break;
+        }
         line = input.shift()
     }
 
