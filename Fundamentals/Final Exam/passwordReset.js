@@ -34,6 +34,14 @@ function passwordReset (input){
                 newPassword = newPassword.replace(subStr, "")
                 console.log(newPassword);
                 break;
+
+                case "Substitute":
+                if(newPassword.includes(index1)){
+                    newPassword[index1].replace(index1, index2)
+                    console.log(newPassword);
+                }
+                
+                break;
         }
         line = input.shift()
     }
