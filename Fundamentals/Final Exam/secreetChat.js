@@ -35,6 +35,17 @@ function secretChat (input){
                 break;
 
             case 'InsertSpace':
+                let subStr = newMessage.indexOf(index1)
+                let subMessage = message.slice(subStr,)
+
+                console.log(subStr);
+
+                message = message.replace(index1, "")
+
+                let splitString = subMessage.split("")
+                let reversedString = splitString.reverse()
+                newMessage = message + reversedString.join("")
+
 
             break;
         }
