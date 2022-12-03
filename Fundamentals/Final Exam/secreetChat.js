@@ -31,6 +31,8 @@ function secretChat (input){
                     let reversedString = splitString.reverse()
                     newMessage = message + reversedString.join("")
                     console.log(newMessage);
+                } else{
+                    console.log("error");
                 }
                 break;
 
@@ -57,3 +59,14 @@ secretChat (["heVVodar!gniV",
         'InsertSpace:|:5',
         'Reveal'
     ])
+
+    secretChat ([
+        'Hiware?uiy',
+        'ChangeAll:|:i:|:o',
+        'Reverse:|:?uoy',
+        'Reverse:|:jd',
+        'InsertSpace:|:3',
+        'InsertSpace:|:7',
+        'Reveal'
+      
+      ])
