@@ -35,23 +35,19 @@ function secretChat (input){
                 break;
 
             case 'InsertSpace':
-                let subStr = newMessage.indexOf(index1)
-                let subMessage = message.slice(subStr,)
 
-                console.log(subStr);
+                let subStr = newMessage.substring(0, index1)
+                let subStr2 = newMessage.substring(index1,)
+                
 
-                message = message.replace(index1, "")
-
-                let splitString = subMessage.split("")
-                let reversedString = splitString.reverse()
-                newMessage = message + reversedString.join("")
-
+                newMessage = subStr + " " + subStr2
+                console.log(newMessage);
 
             break;
         }
         line = input.shift()
     }
-
+    console.log(`You have a new text message: ${newMessage}`);
 
 }
 secretChat (["heVVodar!gniV",
