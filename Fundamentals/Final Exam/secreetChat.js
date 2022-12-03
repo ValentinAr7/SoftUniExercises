@@ -21,11 +21,10 @@ function secretChat (input){
                 break;
         
             case 'Reverse':
-
-            
                 if(message.includes(index1)){
-                    
-                    message = message.slice(index1,)
+                    let subStr = message.indexOf(index1)
+                    let subMessage = message.slice(subStr,)
+
                     
                 }
                 break;
