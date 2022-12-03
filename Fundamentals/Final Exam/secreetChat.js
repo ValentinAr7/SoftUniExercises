@@ -25,6 +25,8 @@ function secretChat (input){
                     let subStr = message.indexOf(index1)
                     let subMessage = message.slice(subStr,)
 
+                    let splitString = subMessage.split("")
+                    let reversedString = splitString.reverse()
                     
                 }
                 break;
