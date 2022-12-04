@@ -5,7 +5,28 @@ function stringManipulator(input){
     let line = input.shift()
 
     while(line !== 'End'){
-        console.log(line);
+        
+        let splitLine = line.split(" ")
+        let command = splitLine[0]
+        let index1 = splitLine[1]
+        let index2 = splitLine[2]
+
+        
+
+        switch (command) {
+            case 'Translate':
+                for(let i = 0; i < string.length; i++){
+                if(string.includes(index1)){
+                    string = string.replace(index1, index2)
+                }
+            }
+            console.log(string);
+
+                break;
+        
+            default:
+                break;
+        }
 
         line = input.shift()
     }
