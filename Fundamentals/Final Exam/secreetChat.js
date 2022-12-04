@@ -34,6 +34,8 @@ function secretChat (input){
                 } else{
                     console.log("error");
                 }
+
+                
                 break;
 
             case 'InsertSpace':
