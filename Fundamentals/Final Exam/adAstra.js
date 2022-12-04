@@ -16,6 +16,7 @@ function adAstra(input){
 
         let currentProductData = `Item: ${name}, Best before: ${date}, Nutrition: ${kcal}` 
         productStore.push(currentProductData)
+        console.log(currenProductData);
 
         exec = pattern.exec(input)
     }

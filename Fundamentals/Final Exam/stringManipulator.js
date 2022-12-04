@@ -52,10 +52,12 @@ function stringManipulator(input){
             break;
 
             case 'Remove':
-                let firstPart = string.substring(0, index1)
-                let secondPart = string.substring(index2,)
-                let finalPart = firstPart + secondPart
-                console.log(finalPart);
+                string = [...string]; string.splice(index1, index2); string = string.join("")
+                console.log(string);
+                // let firstPart = string.substring(0, index1)
+                // let secondPart = string.substring(index2,)
+                // let finalPart = firstPart + secondPart
+                // console.log(finalPart);
             break;
 
         }
@@ -65,12 +67,11 @@ function stringManipulator(input){
 
 }
 
-stringManipulator (['//Thi5 I5 MY 5trING!//',
-'Translate 5 s',
-'Includes string',
-'Start //This',
-'Lowercase',
-'FindIndex i',
-'Remove 0 10',
-'End'
+stringManipulator (['*S0ftUni is the B3St Plac3**',
+    'Translate 2 o',
+    'Includes best',
+    'Start the',
+    'Lowercase',
+    'FindIndex p',
+    'Remove 2 7',
 ])
