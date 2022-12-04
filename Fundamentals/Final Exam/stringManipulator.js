@@ -40,6 +40,24 @@ function stringManipulator(input){
                     console.log('False');
                 }
             break;
+
+            case 'Lowercase':
+                string = string.toLowerCase()
+                console.log(string);
+            break;
+
+            case 'FindIndex':
+                let lastOcc = string.lastIndexOf(index1)
+                console.log(lastOcc);
+            break;
+
+            case 'Remove':
+                let firstPart = string.substring(0, index1)
+                let secondPart = string.substring(index2,)
+                let finalPart = firstPart + secondPart
+                console.log(finalPart);
+            break;
+
         }
 
         line = input.shift()
