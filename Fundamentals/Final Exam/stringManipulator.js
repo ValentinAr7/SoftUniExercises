@@ -21,11 +21,25 @@ function stringManipulator(input){
                 }
             }
             console.log(string);
+                break;
 
-                break;
         
-            default:
+            case 'Includes':
+                if(string.includes(index1)){
+                    console.log("True");
+                } else{
+                    console.log("False");
+                }
                 break;
+
+
+            case "Start":
+                if(string.startsWith(index1)){
+                    console.log('True');
+                } else {
+                    console.log('False');
+                }
+            break;
         }
 
         line = input.shift()
