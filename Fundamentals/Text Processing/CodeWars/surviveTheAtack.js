@@ -1,7 +1,7 @@
 function survive (input){
 
-    let attackers = [ 1, 3, 5, 7 ] 
-    let defenders =[ 2, 4, 6, 8 ]  
+    let attackers = input.shift()
+    let defenders =  input.shift()
 
     for(let i = 0; i < attackers.length; i++){
         let currentAttacker = attackers[i]
@@ -9,11 +9,17 @@ function survive (input){
         for(let i = 0; i < defenders.length; i++){
             let currentDefender = defenders[i]
 
+            console.log(currentAttacker);
+
         }
 
     }
 
 }
+
+survive ([ 1, 3, 5, 7 ],
+        [ 2, 4, 6, 8 ] 
+    )
 
 
 // Each soldier attacks the opposing soldier in the same index of the array. The survivor is the number with the highest value.
