@@ -1,31 +1,22 @@
 function hasSurvived(attackers, defenders){
 
     for(let i = 0; i < attackers.length; i++){
+
         let CurrentAttackPower = attackers[i]
         
         for(let i = 0; i < defenders.length; i++){
             let currentDefence = defenders[i]
 
-            if(CurrentAttackPower > currentDefence){
-                CurrentAttackPower -= currentDefence
-                console.log(currentDefence);
-                console.log(defenders);
-            } else {
-                currentDefence -= CurrentAttackPower
-                console.log(CurrentAttackPower);
-                console.log(attackers);
-                break
-            }
-
         }
 
     }
-
+console.log(attackers);
+console.log(defenders);
 
 }
 
-hasSurvived ([ 1, 3, 5, 7 ] ,  
-             [ 2, 4, 6, 8 ])
+hasSurvived ([ 1,3,5,7] ,  
+             [ 2,4,6,8])
 
 
 // Each soldier attacks the opposing soldier in the same index of the array. The survivor is the number with the highest value.
