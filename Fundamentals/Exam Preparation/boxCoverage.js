@@ -5,11 +5,13 @@ function boxGoc (input){
 
     let squareArea = sizeOfSide * sizeOfSide* 6
     
-
-    for(let i = 0; i < input.length; i++){
+    for(let i = 0; i <= input.length; i++){
+        
+            
 
         
     }
+
 }
 
 
