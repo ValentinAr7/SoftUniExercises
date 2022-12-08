@@ -1,11 +1,10 @@
 
-function removeSmallest(numbers) {
+function removeSmallest(numbers) { //Remove the smallest number from the array
     let indexOfMin = numbers.indexOf(Math.min(...numbers));
+    //find the index of the smallest number
     return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)];
+    //slice frrom index 0 to index of the smallest number| remove the number | add the second part 
       }
-
-
-
 removeSmallest ([5,3,2,1,4])
 
 
