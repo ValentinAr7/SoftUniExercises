@@ -1,6 +1,6 @@
 function largestNumber (input) {
 
-
+console.log(Math.max(...input));
 }
 
-largestNumber ([5, -3, 16])
+largestNumber ([5, 8888, 55])
