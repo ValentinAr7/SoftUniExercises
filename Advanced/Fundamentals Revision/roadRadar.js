@@ -37,8 +37,9 @@ function roadRadar (speed, area){
                         status = "excessive speeding"
                     } else {
                         status = 'reckless speeding'
-                    console.log(`The speed is ${speed - InterstatespeedLimit} km/h faster than the allowed speed of ${InterstatespeedLimit} - {status}`);
                 }
+                console.log(`The speed is ${speed - InterstatespeedLimit} km/h faster than the allowed speed of ${InterstatespeedLimit} - {status}`);
+            }
                 console.log(`Driving ${speed} km/h in a {speed limit} zone`);
                 break;
 
@@ -48,16 +49,16 @@ function roadRadar (speed, area){
                     if(speed > citySpeedLimit){
                         let status = ""
 
-                        if ((speed - citySpeedLimit > 20)){
+                        if (((speed - citySpeedLimit) < 20)){
                             status = "speeding"
-                        } else if ((speed - citySpeedLimit > 40)){
+                        } else if (((speed - citySpeedLimit) < 40)){
                             status = "excessive speeding"
                         } else {
                             status = 'reckless speeding'
                         }
-                        console.log(`The speed is ${speed - citySpeedLimit} km/h faster than the allowed speed of ${citySpeedLimit} - {status}`);
+                        console.log(`The speed is ${speed - citySpeedLimit} km/h faster than the allowed speed of ${citySpeedLimit} - ${status}`);
                     }
-                    console.log(`Driving ${speed} km/h in a {speed limit} zone`);
+                    console.log(`Driving ${speed} km/h in a ${citySpeedLimit} zone`);
                     break;
 
 
@@ -90,4 +91,4 @@ function roadRadar (speed, area){
 
 }
 
-roadRadar (40, 'city')
+roadRadar (1120, 'city')
