@@ -26,11 +26,22 @@ function roadRadar (speed, area){
                     let citySpeedLimit = 50
         
         
-                    if(speed > InterstatespeedLimit){
-                        console.log(`The speed is ${speed - InterstatespeedLimit} km/h faster than the allowed speed of ${InterstatespeedLimit} - {status}`);
+                    if(speed > citySpeedLimit){
+                        console.log(`The speed is ${speed - citySpeedLimit} km/h faster than the allowed speed of ${citySpeedLimit} - {status}`);
                     }
                     console.log(`Driving ${speed} km/h in a {speed limit} zone`);
                     break;
+
+                    case 'residential':
+                        let residentialSpeedLimit = 50
+            
+            
+                        if(speed > residentialSpeedLimit){
+                            console.log(`The speed is ${speed - residentialSpeedLimit} km/h faster than the allowed speed of ${residentialSpeedLimit} - {status}`);
+                        }
+                        console.log(`Driving ${speed} km/h in a {speed limit} zone`);
+                        break;
+        
     
     
 
