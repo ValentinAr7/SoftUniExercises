@@ -1,7 +1,14 @@
 function townPopulation (array){
 
 let townData = array
-    .map(element => element.split(' <-> '))
+    .map(element => {
+        let data = element.split(' <-> ')
+    
+        return {
+            name: data[0],
+            population: Number(data[1])
+        }
+    })
 
     console.log(townData[0]);
 
