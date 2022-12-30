@@ -1,15 +1,11 @@
-function cityTaxes (input){
+function magicNumbers (input){
 
 
 
 }
 
 
-
-const city =
-
-cityTaxes('Tortuga',
-7000,
-15000);
-
-console.log(city);
+magicNumbers [
+[4, 5, 6],
+[6, 5, 4],
+[5, 5, 5]]
