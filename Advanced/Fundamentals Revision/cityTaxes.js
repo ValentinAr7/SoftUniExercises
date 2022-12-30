@@ -1,6 +1,7 @@
 function magicNumbers (input){
 
-
+    let [arr1, arr2, arr3] = input
+    
 
 }
 
