@@ -21,7 +21,7 @@ function carEngine (data){
         }
     }
 
-    if(data.carriage == 'hatchback'){
+    if(data.carriage === 'hatchback'){
         res.carriage = {
             type: 'hatchback',
             color: data.color
@@ -33,6 +33,14 @@ function carEngine (data){
         }
     }
 
+    if(data.wheelsize % 2 == 0){
+        data.wheelsize -= 1
+
+        res.wheelSize = {
+            wheels: data.wheelsize
+        }
+    }
+    console.log(data.wheelsize);
     console.table(res)
 }
 
