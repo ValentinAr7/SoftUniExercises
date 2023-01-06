@@ -6,7 +6,10 @@ function caloriesObects (data){
         result[data[i]] = Number(data[i + 1])
     }
 
+    result.name =  "Ivaylo"
     console.log(result);
+
+    
 
 }
 
