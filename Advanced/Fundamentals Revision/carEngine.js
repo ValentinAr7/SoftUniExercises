@@ -21,6 +21,18 @@ function carEngine (data){
         }
     }
 
+    if(data.carriage == 'hatchback'){
+        res.carriage = {
+            type: 'hatchback',
+            color: data.color
+        }
+    } else if(data.carriage == 'hatchback'){
+        res.carriage = {
+            type: 'coupe',
+            color: data.color
+        }
+    }
+
     console.table(res)
 }
 
