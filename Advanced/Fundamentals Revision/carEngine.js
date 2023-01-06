@@ -33,13 +33,16 @@ function carEngine (data){
         }
     }
 
-    if(data.wheelsize % 2 == 0){
-        data.wheelsize -= 1
 
-        res.wheelSize = {
-            wheels: data.wheelsize
-        }
+    let size;
+    if(data.wheelsize % 2 !== 0){
+        size = data.wheelsize
+       
+    } else  {
+        size = data.wheelsize -= 1
     }
+
+    res.wheelsize = [size, size, size, size]
     console.log(data.wheelsize);
     console.table(res)
 }
