@@ -5,18 +5,17 @@ function heroicInventory (input){
 //     console.log(name);
 // }
 
-let result= {}
+let result= []
 
 let splitData = input.map(element =>{
     let [name, levelAsText, items] = element.split(" / ")
     let level = Number(levelAsText)
     items = items ? items.split(", ") : []              // check !! If there is items - split them. If not return an empty array
-    console.log(name);
+    result.push({name, level, items})
 })
 
-    for (const hero in result) {
-        result.nam
-    }
+console.log(JSON.stringify(result));
+
 
 }
 
@@ -24,3 +23,9 @@ heroicInventory ([
 'Isacc / 25 / Apple, GravityGun',
 'Derek / 12 / BarrelVest, DestructionSword',
 'Hes / 1 / Desolator, Sentinel, Antara'])
+
+
+console.log("-------------------");
+
+
+heroicInventory(['Jake / 1000 / Gauss, HolidayGrenade'])
