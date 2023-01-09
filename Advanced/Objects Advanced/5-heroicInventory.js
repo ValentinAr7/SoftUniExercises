@@ -10,7 +10,7 @@ let result= []
 let splitData = input.map(element =>{
     let [name, levelAsText, items] = element.split(" / ")
     let level = Number(levelAsText)
-    items = items ? items.split(", ") : []              // check !! If there is items - split them. If not return an empty array
+    items = items ? items.split(", ") : []              // check ? If there is items - split them. If not : return an empty array
     result.push({name, level, items})
 })
 
