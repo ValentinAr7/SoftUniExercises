@@ -1,5 +1,11 @@
-function lowestPriceCity (input){
+function lowestPriceCity (data){
 
+    let result = {}
+
+    for(let el of data){
+        let [town, product, price] = el.split(" | ")
+        console.log(town);
+    }
 
 
 }
