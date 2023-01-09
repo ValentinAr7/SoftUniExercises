@@ -1,29 +1,32 @@
-function townPopulation (data){
+function townPopulation(data) {
 
-for(let i =0; i < data.length; i++){
-    let currentTown = data[i].split(" <-> ")
-    
-    let obj = {
-        town: currentTown[0],
-        population: currentTown[1]
+    let obj = {}
+
+    for (let el of data) {
+        let [town, populationText] = el.split(" <-> ");
+        let population = Number(populationText)
+
+
+        if (!obj[town]) {
+            obj[town] = 0
+        }
+
+        obj[town] += population
+
+
+        for (const town in obj) {
+            console.log(`${town} : ${obj.town}`);
+        }
     }
-
-    if(obj.hasOwnProperty(town)){
-        obj.population += obj.population
-    }
-
-    console.log(obj);
 }
 
-}
-
-townPopulation (
+townPopulation(
     ['Istanbul <-> 100000',
 
-    'Honk Kong <-> 2100004',
-    
-    'Jerusalem <-> 2352344',
-    
-    'Mexico City <-> 23401925',
-    
-    'Istanbul <-> 1000'])
+        'Honk Kong <-> 2100004',
+
+        'Jerusalem <-> 2352344',
+
+        'Mexico City <-> 23401925',
+
+        'Istanbul <-> 1000'])

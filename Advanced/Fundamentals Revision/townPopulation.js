@@ -1,7 +1,6 @@
 function townPopulation (array){
 
-let townData = array
-    .map(element => {
+let townData = array.map(element => {
         let data = element.split(' <-> ')
     
         return {
