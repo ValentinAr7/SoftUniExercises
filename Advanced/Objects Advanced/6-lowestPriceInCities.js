@@ -1,10 +1,9 @@
 function lowestPrice (input){
 
-    let products = {}
+    let products = []
 
-    let info = input.map(el =>{
-        let [town, product, priceAsString] = el.split(" | ")
-        let price = Number(priceAsString)
+while(input.length > 0){
+    let [town, product, price] = input.shift().split(" | ")
 
         if(products.filter(x => x.product === product).length > 0){
 
@@ -14,12 +13,15 @@ function lowestPrice (input){
             obj.price = Number(price);
             obj.town = town
         }
-        }
-    console.table(res);
+    } else {
+        let obj = {product, town, price: Number(price)};
+        products.push(obj);
+    }
+    }
 
-    })
-
-
+for(let product of products){
+    console.log(`${product.product} -> ${product.price} -> ${product.town}`);
+}
 
 }
 
