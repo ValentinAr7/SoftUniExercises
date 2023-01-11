@@ -17,8 +17,17 @@ function solve() {
 
    for(let worker of workerData){
       let [name, salary] = worker.split(" ");
+   
+   if(!output.hasOwnProperty(restaurantName)){
+      output[restaurantName[name] = Number(salary)]
+   }
+   }
+}
+   let entries = object.entrries(output);
+
+   for(let entry of entries){
+      let key = entry[0];
+      let values = Object.entries(entry[1]);
    }
 
-
-}
 }
