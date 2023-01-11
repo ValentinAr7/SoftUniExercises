@@ -8,6 +8,13 @@ function solve() {
    let currAvgSalary = 0;
    let bestName = "";
    let output = {};
+
+   for(let inputElement of input){
+      let restaurantInfo = inputElement.split(" - ");
+      let restaurantName = restaurantInfo.shift();
+      let workersData = restaurantInfo[0].split(", ");
+   }
    
+
 }
 }
