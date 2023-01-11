@@ -28,6 +28,13 @@ function solve() {
    for(let entry of entries){
       let key = entry[0];
       let values = Object.entries(entry[1]);
+
+      for(let [name, salary] of values){
+         totalSalary += salary
+      }
+
+      avgSalary = totalSalary / values.length
    }
+
 
 }
