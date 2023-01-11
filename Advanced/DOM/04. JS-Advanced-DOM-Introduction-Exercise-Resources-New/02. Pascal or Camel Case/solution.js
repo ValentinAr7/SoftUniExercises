@@ -14,6 +14,13 @@ function solve() {
             words[i] = words[i].charAt(0).toUpperCase() + words[i].substring(1)
           }
         }
+      } else if (convention == "Pascal Case"){
+        for(let i = 0; i < words.length; i++){
+          words[i] = words[i].toLowerCase()
+          
+          words[i] = words[i].charAt(0).toUpperCase() + words[i].substring(1)
+          
+        }
       }
       console.log(words);
     }
