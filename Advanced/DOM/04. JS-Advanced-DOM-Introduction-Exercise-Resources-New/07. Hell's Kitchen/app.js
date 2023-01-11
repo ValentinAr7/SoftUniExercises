@@ -45,6 +45,10 @@ function solve() {
    let result = Object.entries(output[bestName])
    .sort((a,b)=> b[1] - a[1]);
 
+   let print = "";
+
+   result.forEach(w => print += `Name ${w[0]} with salary: ${w[1]}`);
+
    
 
 
