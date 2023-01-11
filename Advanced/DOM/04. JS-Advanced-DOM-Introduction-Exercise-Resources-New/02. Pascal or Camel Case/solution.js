@@ -19,8 +19,9 @@ function solve() {
           words[i] = words[i].toLowerCase()
           
           words[i] = words[i].charAt(0).toUpperCase() + words[i].substring(1)
-          
         }
+      } else{
+        return document.getElementById("result") = "Error!"
       }
       console.log(words);
     }
