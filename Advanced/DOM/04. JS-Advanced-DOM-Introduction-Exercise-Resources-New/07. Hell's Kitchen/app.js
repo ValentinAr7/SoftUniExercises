@@ -34,7 +34,18 @@ function solve() {
       }
 
       avgSalary = totalSalary / values.length
+
+      if(avgSalary > currAvgSalary){
+         currAvgSalary = avgSalary
+         bestName = key;
+         totalSalary = 0;
+      }
    }
+
+   let result = Object.entries(output[bestName])
+   .sort((a,b)=> b[1] - a[1]);
+
+   
 
 
 }
