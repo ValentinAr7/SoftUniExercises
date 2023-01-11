@@ -14,7 +14,11 @@ function solve() {
       let restaurantName = restaurantInfo.shift();
       let workersData = restaurantInfo[0].split(", ");
    }
-   
+
+   for(let worker of workerData){
+      let [name, salary] = worker.split(" ");
+   }
+
 
 }
 }
