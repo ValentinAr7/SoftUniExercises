@@ -49,7 +49,10 @@ function solve() {
 
    result.forEach(w => print += `Name ${w[0]} with salary: ${w[1]}`);
 
-   
+   document.querySelector("#bestRestaurant p")
+   .textContent =  `Name: ${bestName} Average Salary: ${currAvgSalary.toFixed(2)} Best Salary: ${result[0][1].toFixed(2)}`;
+
+   document.querySelector("#worker p").textContent = print
 
 
 }
