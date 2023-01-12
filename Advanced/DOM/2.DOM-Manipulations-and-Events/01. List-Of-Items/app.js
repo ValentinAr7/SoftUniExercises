@@ -8,6 +8,11 @@ function addItem() {
     //on the screen
     let liElement = document.createElement("li")
 
+    const deleteBtn = document.getElementById("a");
+    deleteBtn.textContent = "[Delete]"
+    deleteBtn.href = "#"
+    liElement.appendChild(deleteBtn)
+
     //assign input value to element text content
     liElement.textContent = text
 
