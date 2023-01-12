@@ -8,7 +8,7 @@ function addItem() {
     //on the screen
     let liElement = document.createElement("li")
 
-    const deleteBtn = document.getElementById("a");
+    const deleteBtn = document.createElemen("a");
     deleteBtn.textContent = "[Delete]"
     deleteBtn.href = "#"
     liElement.appendChild(deleteBtn)
