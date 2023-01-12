@@ -5,7 +5,7 @@ function attachGradientEvents() {
     const result = document.getElementById('result')
 
     function onMouseOver(ev){
-        result.textContent = Math.floor(ev.offsetX / gradient * 100) + '%';
+        result.textContent = Math.floor(ev.offsetX / gradient.clientWidth * 100) + '%';
     }
 
 }
