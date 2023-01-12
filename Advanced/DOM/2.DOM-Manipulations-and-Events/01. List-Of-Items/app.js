@@ -13,6 +13,8 @@ function addItem() {
     deleteBtn.href = "#"
     liElement.appendChild(deleteBtn)
 
+    deleteBtn.addEventListener('click', onDelete)
+
     //assign input value to element text content
     liElement.textContent = text
 
@@ -23,5 +25,7 @@ function addItem() {
 
     //select input field and clear content value
     document.getElementById("newItemText").value = ""
-
+}
+function onDelete(event){
+    console.log(event)
 }
