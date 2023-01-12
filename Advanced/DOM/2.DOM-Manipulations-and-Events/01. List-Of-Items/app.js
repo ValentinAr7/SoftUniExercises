@@ -8,15 +8,14 @@ function addItem() {
     //on the screen
     let liElement = document.createElement("li")
 
-    const deleteBtn = document.createElemen("a");
-    deleteBtn.textContent = "[Delete]"
-    deleteBtn.href = "#"
-    liElement.appendChild(deleteBtn)
-
-    deleteBtn.addEventListener('click', onDelete)
-
     //assign input value to element text content
     liElement.textContent = text
+
+    const deleteBtn = document.createElement("a");
+    deleteBtn.textContent = '[Delete]'
+    deleteBtn.href = "#"
+    liElement.appendChild(deleteBtn)
+    deleteBtn.addEventListener('click', onDelete)
 
     //appent the child to the parent ul items
     //not the li is visible on the screen
@@ -26,6 +25,7 @@ function addItem() {
     //select input field and clear content value
     document.getElementById("newItemText").value = ""
 }
+
 function onDelete(event){
-    console.log(event)
+event.target.parentElement.remove()
 }
