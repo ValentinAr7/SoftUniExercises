@@ -3,11 +3,7 @@ const solution = (start, finish, difference = finish - start) =>
 Math.floor(difference / 3) + difference % 3
 
 
-
-
-
-
-
+//Second task
 catsAndShelves(1, 5)
 function catsAndShelves(start, finish) {
 
