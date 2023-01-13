@@ -12,9 +12,9 @@ function attachEventsListeners() {
 
     let rations = {
         day: 1,
-        hour: 24,
-        mins: 1440,
-        secs: 86400,
+        hours: 24,
+        minutes: 1440,
+        seconds: 86400,
     }
 
     daysBtn.addEventListener("click", onConvert);
@@ -26,13 +26,19 @@ function attachEventsListeners() {
         let days = value / rations[unit];
         return {
             days: days,
-            hours: days * rations.hour,
-            minutes: days * mins,
-            seconds: days * secs
+            hours: days * rations.hours,
+            minutes: days * rations.minutes,
+            seconds: days * rations.seconds
         }
     }
 
     function onConvert(e) {
+        let input = e.target.parentElement.querySelector('input[type="text"]');
+        let time = convert(Number(input.value), input.id)
 
+        days.value = time.days
+        hours.value = time.hours
+        minutes.value = time.minutes
+        seconds.value = time.seconds
     }
 }
