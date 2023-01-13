@@ -4,9 +4,8 @@ function lockedProfile() {
         .forEach(b => b.addEventListener("click", toggle))
 
     function toggle(e) {
-
         let profile = e.target.parentElement
-        let isActive = profile.querySelector('input [type="radio"] [value="unlock]').checked
+        const isActive = profile.querySelector('input[type="radio"] [value="unlock"]').checked
 
         if (isActive) {
             let div = profile.querySelector("div")
@@ -19,10 +18,5 @@ function lockedProfile() {
                 e.target.textContent = "Show more"
             }
         }
-
-
     }
-
-
-
 }
