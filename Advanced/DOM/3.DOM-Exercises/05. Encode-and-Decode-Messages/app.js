@@ -16,5 +16,14 @@ function encodeAndDecodeMessages() {
         textAreas[0].value = ''
     }
 
-    function decode(){}
+    function decode(e){
+        let decodedMessage = ''
+        let input = textAreas[1].value
+        for(let i = 0; i < input.length; i++){
+            decodedMessage += String.fromCharCode(input[index].charCodeAt(0) - 1)
+        }
+        textAreas[0].value = encodedMessage;
+        textAreas[1].value = ''
+
+    }
 }
