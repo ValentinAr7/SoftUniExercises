@@ -22,6 +22,28 @@ function solve() {
     }
   }
 
+  function buy(){
+    let list = [];
+    let total = 0;
+    let decoration = 0;
+
+    const bought = items.filter(i => i.isChecked());
+
+    for(let item of bought){
+      list.push(item.name);
+      total += Number(item.price);
+      decoration += Number(item.decFactor);
+    }
+
+    decoration /= bought.length;
+
+    output.value = [
+      `Bought furniture: ${list.join('. ')}`,
+      `Total price: ${total.toFixed(2)}`,
+      `Avarage decoration factor: ${decoration}`
+    ].join('\n')
+  }
+
   
 
 
