@@ -12,6 +12,7 @@ function solve() {
   function generate(){
     const data = JSON.parse(input.value);
 
+    
     for(let item of data){
       const row = document.createElement('tr')
 
@@ -19,6 +20,24 @@ function solve() {
       row.appendChild(createColumn('p', item.name));
       row.appendChild(createColumn('p', item.price));
       row.appendChild(createColumn('p', item.decFactor));
+
+      const c5 = document.createElement('td');
+      const checkbox = document.createElement('input');
+
+      checkbox.type = 'checkbox';
+      c5.append(checkbox);
+      row.append(c5);
+
+      tbody.appendChild(row);
+
+      items.push({
+        ...items,
+        isChecked
+      })
+
+      function isChecked(){
+        return checkbox.checked;
+      }
     }
   }
 
@@ -49,7 +68,7 @@ function solve() {
     let inner;
 
     if(type == 'img'){
-      inner = document.createElement('p');
+      inner = document.createElement('img');
       inner.src = content;
     } else {
       inner = document.createElement('p');
