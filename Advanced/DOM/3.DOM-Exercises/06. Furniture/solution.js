@@ -54,7 +54,7 @@ function solve() {
       decoration += Number(item.decFactor);
     }
 
-    decoration /= bought.length;
+    decoration /= bought.length
 
     output.value = [
       `Bought furniture: ${list.join('. ')}`,
