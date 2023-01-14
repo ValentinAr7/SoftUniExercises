@@ -1,7 +1,7 @@
 function solve() {
 
   const [generateBtn, buyBtn] = Array.from(document.querySelectorAll("button"));
-  const [input, output] = Array.from(document.querySelectorAll("textArea"));
+  const [input, output] = Array.from(document.querySelectorAll("textarea"));
   const tbody = document.querySelector("tbody");
 
   generateBtn.addEventListener('click', generate);
