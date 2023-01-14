@@ -44,8 +44,19 @@ function solve() {
     ].join('\n')
   }
 
-  
+  function createColumn(type, content){
+    const result = document.createElement('td');
+    let inner;
 
+    if(type == 'img'){
+      inner = document.createElement('p');
+      inner.src = content;
+    } else {
+      inner = document.createElement('p');
+      inner.textContent = content
+    }
+    result.appendChild(inner);
 
-
+    return result;
+  }  
 }
