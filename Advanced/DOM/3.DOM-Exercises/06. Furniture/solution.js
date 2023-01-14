@@ -31,7 +31,7 @@ function solve() {
       tbody.appendChild(row);
 
       items.push({
-        ...items, 
+        ...item, 
         isChecked
       })
 
