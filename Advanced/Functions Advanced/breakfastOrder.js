@@ -29,6 +29,19 @@ function breakfastOrder(){
         return `protein = ${stock.protein}, carbohydrate = ${stock.carbohydrate}, fat = ${stock.fat}, flovour = ${stock.flavour}`
     }
     
+    function prepare(recipeAsString, qty) {
+        qty = Number(qty);
+        const recipe = Object.entries(recipe[recipeAsString]);
+
+        recipe.forEach(ingridient => ingridient[1] *= qty);
+
+        for(let [ingridient, requiered] of recipe){
+            if(stock[ingridient] < requiered){
+                return `Error: not enough: ${ingridient} in stock`
+            }
+        }
+    recipe.forEach((ingridient =>ingridient[1] *= qty))
+    }
 
 
     return function (command){
