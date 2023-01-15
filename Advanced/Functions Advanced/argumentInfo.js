@@ -16,5 +16,9 @@ for(let arg of params){
 console.log(types);
 }
 
-argumentInfo('cat', 42, function () { 
-    console.log('Hello world!');})
+argumentInfo(
+'cat', 
+42, 
+function () { 
+    console.log('Hello world!');
+})
