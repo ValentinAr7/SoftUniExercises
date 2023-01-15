@@ -45,5 +45,13 @@ function breakfastOrder() {
     }
     return function (command) {
     }
+}
 
-} breakfastOrder()
+let manager = breakfastOrder();
+
+console.log(manager('restock flavour 50'));
+console.log(manager('prepare lemonade 4'));
+console.log(manager('restock carbohydrate 10'));
+
+
+
