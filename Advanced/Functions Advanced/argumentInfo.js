@@ -13,7 +13,11 @@ for(let arg of params){
     }
     types[type]++
 }
-console.log(types);
+const result = Object.entries(types).sort((a, b) => b[1] - a-1)
+
+for(let[type, count] of result){
+    console.log(`${type}  = ${count}`);
+}
 }
 
 argumentInfo(
