@@ -25,7 +25,7 @@ function calculator() {
 
     // Substract function to substract the value of field1 from field2 and set the result
     function substract (){
-        result.value = Number(field2.value) - Number(field1.value)
+        result.value = Number(field1.value) - Number(field2.value)
     }
 
 
