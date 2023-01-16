@@ -13,6 +13,7 @@ function deck(cardss) {
         }
     }
 
+    
     console.log(result.join(' '));
     function cards(face, suit) {
 
