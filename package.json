@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ValentinAr7/SoftUniExercises/issues"
   },
-  "homepage": "https://github.com/ValentinAr7/SoftUniExercises#readme"
+  "homepage": "https://github.com/ValentinAr7/SoftUniExercises#readme",
+  "dependencies": {
+    "chai": "^4.3.7"
+  }
 }
