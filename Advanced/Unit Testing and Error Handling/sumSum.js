@@ -5,9 +5,17 @@ function subSum (arr, start, finish){
         return NaN
     }
 
+    if(start < 0){
+        start = 0
+    }
+
+    if(finish > arr.length - 1 ){
+    finish = arr.length - 1    
+}
+
 
 for(let i = start; i<=finish; i++){
-    sum = arr[i]
+    sum += Number(arr[i])
     
 }
 console.log(sum);
