@@ -11,4 +11,14 @@ function requestValidator(obj){
     if(!(obj.uri && (obj.uri == '*' || uriRegex.test(obj.uri)))) {
         throw new Error ('Invalid request header: Invalid URI')
     }
+
+    if(!(obj.version && validVersions.includes(obj.version))) {
+        throw new Error ('Invalid request header: Invalid Version')
+    }
+
+    let messageRegex = /^[^<>\\&\'\"]+$/
+
+    if(!(obj.hasOwnProperty('message') && obj.message == "" || messageRegex.test(obj.messageRegex))) {
+        throw new Error ('Invalid request header: Invalid message')
+    }
 }
