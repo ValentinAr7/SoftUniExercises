@@ -21,4 +21,15 @@ function requestValidator(obj){
     if(!(obj.hasOwnProperty('message') && obj.message == "" || messageRegex.test(obj.messageRegex))) {
         throw new Error ('Invalid request header: Invalid message')
     }
+
+    return obj;
 }
+
+requestValidator ({
+
+    method: 'GET',
+    uri: 'svn.public.catalog',
+    version: 'HTTP/1.1',
+    message: ''
+    
+    })
