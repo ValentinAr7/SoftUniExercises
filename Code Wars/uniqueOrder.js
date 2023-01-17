@@ -1,20 +1,22 @@
-var uniqueInOrder=function(string){
+var uniqueInOrder=function(iterable){
 
     let result = []
 
-    for(let i = 0; i < string.length; i++){
-        let currentLetter = string[i]
-        let nextChar = string[i + 1]
+    for(let i = 0; i < iterable.length; i++){
+        let currentLetter = iterable[i]
+        let nextChar = iterable[i + 1]
 
-        if(!result.includes(currentLetter) && currentLetter !== nextChar){
-            result.push(currentLetter)
+        if(currentLetter !== nextChar){
+                
+            if(!result.includes(currentLetter)){
+        }
+        result.push(currentLetter)
         }
     }
-    console.log(result);
-
+return result
   }
 
-//   uniqueInOrder('AAAABBBCCDAABBB')
+  uniqueInOrder('AAAABBBCCDAABBB')
 
 
 //   describe("Tests", () => {
