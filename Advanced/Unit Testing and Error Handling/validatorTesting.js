@@ -7,4 +7,8 @@ function requestValidator(obj){
     if(!(obj.method && validMethods.includes(obj.method))) {
         throw new Error ('Invalid request header: Invalid Method')
     }
+
+    if(!(obj.uri && (obj.uri == '*' || uriRegex.test(obj.uri)))) {
+        throw new Error ('Invalid request header: Invalid URI')
+    }
 }
