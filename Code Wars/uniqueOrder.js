@@ -1,27 +1,30 @@
-var uniqueInOrder=function(iterable){
+var uniqueInOrder = function (iterable) {
 
     let result = []
 
-    for(let i = 0; i < iterable.length; i++){
+    //check if previouse and next characters match the current one
+    for (let i = 0; i < iterable.length; i++) {
         let currentLetter = iterable[i]
         let nextChar = iterable[i + 1]
 
-        if(currentLetter !== nextChar){
-                
-            if(!result.includes(currentLetter)){
-        }
-        result.push(currentLetter)
+        
+        if (currentLetter !== nextChar) {
+
+            //check if result includes the current letter
+            if (!result.includes(currentLetter)) {
+            }
+            //if result does not include current letter then push it
+            result.push(currentLetter)
         }
     }
-return result
-  }
+    return result
+}
 
-  uniqueInOrder('AAAABBBCCDAABBB')
+uniqueInOrder('AAAABBBCCDAABBB')
 
-
-//   describe("Tests", () => {
-//     it("test", () => {
-//       assert.deepEqual(uniqueInOrder('AAAABBBCCDAABBB'), ['A','B','C','D','A','B'])
-//     });
-//   });
-  
+//Test
+describe("Tests", () => {
+    it("test", () => {
+        assert.deepEqual(uniqueInOrder('AAAABBBCCDAABBB'), ['A', 'B', 'C', 'D', 'A', 'B'])
+    });
+});
