@@ -1,27 +1,30 @@
 class Stringer {
 
-    constructor (innerString, innerLength){
+    constructor(innerString, innerLength) {
         this.innerString = string
         this.innerLength = length
     }
 
-    increase(length){
+    //method to increase the length of the string
+    increase(length) {
         this.innerLength += length
     }
 
-    decrease(length){
-        this.innerLength -+ length
+    //method to decrease the length of the strring
+    decrease(length) {
+        this.innerLength - + length
     }
 
+
     toString() {
-        if(this.innerLength < 0){
+        if (this.innerLength < 0) {
             return '...'
         }
 
-        if(this.innerString > this.innerLength){
+        if (this.innerString > this.innerLength) {
             this.innerString.splice(0, this.innerLength) + '...'
         }
-return this.innerString
+        return this.innerString
     }
 
 }
