@@ -24,7 +24,9 @@ function ticketsData(arrayOfStrings, sortingCriteria){
         let ticket = new Ticket(destination, price, status);
         tickets.push(ticket)
     }
-    
+
+    tickets.sort((a,b) => a.compareTo(b, sortingCriteria));
+    return tickets
 
 }
 
