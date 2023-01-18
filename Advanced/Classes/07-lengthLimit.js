@@ -5,17 +5,22 @@ class Stringer {
         this.innerLength = length
     }
 
-    //method to increase the length of the string
+    // Increase the value of innerLength property with the given length
     increase(length) {
         this.innerLength += length
     }
 
-    //method to decrease the length of the strring
+    // Decrease the value of innerLength property with the given length
+    // Ensure innerLength property does not fall below 0   
     decrease(length) {
         this.innerLength - + length
     }
 
 
+    // Return the string that the object was initialized with
+    // If the length of the string is greater than innerLength property
+    // Truncate the string from the right to left and add 3 dots to the end
+    // If innerLength property is 0, return '...'
     toString() {
         if (this.innerLength < 0) {
             return '...'
