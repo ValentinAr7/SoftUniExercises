@@ -1,15 +1,20 @@
-class Tickets {
+function ticketsData(arrayOfStrings, sortingCriteria){
 
-    constructor(destinationName, price, status){
-        this.destinationName = destinationName
-        this.price = price
-        this.status = status
+    let tickets = []
+
+    for(let i = 0; i < arrayOfStrings.length; i++){
+        let [destination, price, status] = arrayOfStrings[i].split("|")
+        price = Number(price)
+        let ticket = new Ticket(destination, price, status);
+        tickets.push(ticket)
+
     }
+
 
 }
 
-['Philadelphia|94.20|available',
+ticketsData(['Philadelphia|94.20|available',
 'New York City|95.99|available',
 'New York City|95.99|sold',
 'Boston|126.20|departed'],
-'destination'
+'destination')
