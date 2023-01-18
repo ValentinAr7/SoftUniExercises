@@ -6,18 +6,14 @@ function addingShifted (arrayOfArrays, shift) {
     let result = []
 
     for(let i = 0; i < array1.length; i++){
-        let num1 = array1[i]
+        
+    result.push(a[i] + b[i])
 
-        for(let i = 0; i < array2.length; i++){
-        let num2 = array2[i]
-        
-        result.push(num1 + num2)
-        }
-        
     }
-
-
     console.log(result);
+
+
+    
 }
 
 
