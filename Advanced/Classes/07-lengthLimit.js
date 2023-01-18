@@ -13,11 +13,18 @@ class Stringer {
         this.innerLength -+ length
     }
 
+    toString() {
+        if(this.innerLength < 0){
+            return '...'
+        }
+
+        if(this.innerString > this.innerLength){
+            this.innerString.splice(0, this.innerLength) + '...'
+        }
+return this.innerString
+    }
 
 }
-
-
-
 
 let test = new Stringer("Test", 5);
 console.log(test.toString()); // Test
