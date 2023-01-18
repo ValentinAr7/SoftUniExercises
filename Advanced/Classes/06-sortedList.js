@@ -7,7 +7,7 @@ class List {
         let index = 0;
         // Find the correct position of the element in the array
         if (index < this.items.length && this.items[index] < element) {
-            throw new Error('Invalid input')
+            index++
         }
         // Use splice method to add the element in the correct position
         this.items.splice(index, 0, element)
