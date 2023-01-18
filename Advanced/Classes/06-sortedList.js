@@ -21,6 +21,16 @@ constructor (){
         return this;
     }
 
+    get(index) {
+        if (index >= 0 && index < this.items.length) {
+            return this.items[index];
+        }
+    }
+
+    get size() {
+        return this.items.length;
+    }
+
 }
 let newArray = []
 
