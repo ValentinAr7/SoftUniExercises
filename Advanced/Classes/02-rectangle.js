@@ -5,8 +5,8 @@ class Rectangle {
         this.color = color;
     }
 
-    calcArea(width, height){
-        console.log(width * height);
+    calcArea(){
+        return this.width * this.height
     }
 }
 
@@ -15,3 +15,4 @@ console.log(rect.width);
 console.log(rect.height);
 console.log(rect.color);
 console.log(rect.calcArea());
+
