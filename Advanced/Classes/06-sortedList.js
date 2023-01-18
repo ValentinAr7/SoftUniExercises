@@ -1,28 +1,33 @@
-class List{
-constructor (){
-    this.items = []
-}
+class List {
+    constructor() {
+        this.items = []
+    }
 
-    add(element){
+    add(element) {
         let index = 0;
-        //if element is outside the range throw an error
-        if(index < this.items.length && this.items[index] < element){
-            throw new Error ('Invalid input')
-        } 
-        //replace index with element
+        // Find the correct position of the element in the array
+        if (index < this.items.length && this.items[index] < element) {
+            throw new Error('Invalid input')
+        }
+        // Use splice method to add the element in the correct position
         this.items.splice(index, 0, element)
         return this
     }
 
     remove(index) {
+        // Check if the index is valid
         if (index >= 0 && index < this.items.length) {
+            // Use splice method to remove the element at the given index
+
             this.items.splice(index, 1);
         }
         return this;
     }
 
     get(index) {
+        // Check if the index is valid
         if (index >= 0 && index < this.items.length) {
+            // Return the element at the given index
             return this.items[index];
         }
     }
@@ -32,7 +37,7 @@ constructor (){
     }
 
 }
-let newArray = []
+
 
 let list = new List();
 list.add(5);
