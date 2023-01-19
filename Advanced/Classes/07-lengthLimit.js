@@ -16,7 +16,6 @@ class Stringer {
         this.innerLength - + length
     }
 
-
     // Return the string that the object was initialized with
     // If the length of the string is greater than innerLength property
     // Truncate the string from the right to left and add 3 dots to the end
