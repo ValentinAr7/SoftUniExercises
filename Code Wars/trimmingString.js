@@ -3,13 +3,12 @@ function trim(str, size) {
     let trimmedStr = []
     let cutter = size - 3
 
-    let lowerThanCutter = 
-
     if(str.length <= 3){
     trimmedStr = str.slice(0, size)
+    } else {
+        trimmedStr = str.slice(0, cutter )
     }
 
-    trimmedStr = str.slice(0, cutter )
 
 
 console.log(trimmedStr + '...'); 
