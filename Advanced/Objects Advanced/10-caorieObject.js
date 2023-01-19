@@ -1,18 +1,15 @@
 function calorieObject (arrayOfStrings){
 
     let obj = {
-        productName: [],
-        calories: []
+
     }
 
-    for(let i = 0; i < arrayOfStrings.length; i++){
-        if(arrayOfStrings[i] % 2 == 0){
-            
-        } else { 
-            obj.productName.push(arrayOfStrings[i])
-        }
+    for(let i = 0; i < arrayOfStrings.length; i+=2){
+        let product = arrayOfStrings[i]
+        let calories = arrayOfStrings[i+1]
+        obj[product] = calories
     }
-
+console.log(obj);
 }
 
 calorieObject (
