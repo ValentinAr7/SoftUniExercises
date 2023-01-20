@@ -29,7 +29,7 @@ function trim(str, size) {
 
 }
 
-trim("Creating kata is fun", 14)
-trim("He", 1)
-trim("Code Wars is pretty rad", 50)
-trim('Hey...', 3)
+console.log(trim("Creating kata is fun", 2))
+console.log(trim("He", 1))
+console.log(trim("Code Wars is pretty rad", 50))
+console.log(trim('Hey...', 3))
