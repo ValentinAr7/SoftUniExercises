@@ -53,13 +53,34 @@
 // if(var in obj){} 
 
 
-let count = 5;
-let parser = {
-    increment() { count++ },
-    decrement() { count-- },
-    reset()     { count = 0 }
-};
 
-parser.increment();
-console.log(count);
+const obj = {
+  name: 'Peter',
+  age: 25
+};
+console.log(Object.getOwnPropertyDescriptors(obj));
+
+Object.defineProperty(obj, 'name', {
+    enumerable: false
+})
+
+
+// class Person {
+//     constructor(name, age){  
+//         this.name = name
+//         this.age = age
+//     }
+
+//     sayHello(){
+//         console.log(this.name + ' say hello');
+//     }
+// }
+
+// const guy1 = new Person('Peter', 33)
+// guy1.sayHello()   
+// console.log(guy1);
+
+
+
+
 
