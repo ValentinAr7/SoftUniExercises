@@ -13,9 +13,11 @@ function person (firstName, lastName){
             return this.firstName + ' ' + this.lastName
         },
 
-
+        //setter gets a value and split it into 2 variables
         set(value){
             const [first, last] = value.split(' ');
+
+            //checks if the input data is valid
             if(first != undefined && last != undefined){
                 this.firstName = first;
                 this.lastName = last;
