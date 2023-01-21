@@ -7,9 +7,13 @@ function person (firstName, lastName){
     };
 
     Object.defineProperty(person, 'fullName', {
+
+        //getter toconcatenate the first and last name
         get(){
             return this.firstName + ' ' + this.lastName
         },
+
+
         set(value){
             const [first, last] = value.split(' ');
             if(first != undefined && last != undefined){
