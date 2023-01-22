@@ -15,3 +15,9 @@ function Person (name, age){
 Person.prototype.toString =  function(){
     return `To string methid from prototype of ${this.name}`
 }
+
+extendPrototype(Person.prototype)
+
+const p = new Person ('Peter', 34)
+console.log(p.toSpeciesString());
+console.log(p.species);
