@@ -29,6 +29,7 @@ function trim(str, size) {
 
 }
 
+console.log(trim('ZRZ...', 6));
 console.log(trim("Creating kata is fun", 2))
 console.log(trim("He", 1))
 console.log(trim("Code Wars is pretty rad", 50))
