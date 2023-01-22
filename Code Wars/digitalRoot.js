@@ -3,21 +3,28 @@ function digitalRoot(n) {
 
     let sum = 0 //29
 
-    let sumStr = sum.toString()
     let num = n.toString()
 
 
 
 
-
     for(let i = 0; i < num.length; i++){
+
         let currentNum = Number(num[i])
         sum+=currentNum
+        
 
-        for(let i=0; i<sumStr.length; i++){
-            let curretnNum= Number()
-        }
+
+
     }
+
+    let sumStr = sum.toString()
+
+    for(let j=0; j<sumStr.length; j++){
+        let curretnNum= Number(sumStr[j])
+        sum  += curretnNum
+    }
+
 
     console.log(sum);
 
