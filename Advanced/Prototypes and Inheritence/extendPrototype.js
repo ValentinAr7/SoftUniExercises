@@ -11,3 +11,7 @@ function Person (name, age){
     this.name = name,
     this.age = age
 }
+
+Person.prototype.toString =  function(){
+    return `To string methid from prototype of ${this.name}`
+}
