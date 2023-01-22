@@ -15,7 +15,7 @@ function convert(num) {
 
     for(key in romanNumerals){
         let values = romanNumerals[key]
-        
+        while(num != 0){
         if(num > 1000){
             result.push('M')
             num -= 1000
@@ -28,14 +28,24 @@ function convert(num) {
         } else if (num > 50){
             result.push('L')
             num-=50
-        } else if (num > 10){
+        }
+        else if (num > 10){
             result.push('X')
-            num-=10
-        } 
+            num -= 10
+        } else if (num > 5){
+            result.push('V')
+            num-=5
+        } else {
+            result.push('I')
+            num-=1
+        }
     }
+}
+
+
     console.log(result);
     console.log(num);
 
 }
 
-convert(1870)
+convert(1872)
