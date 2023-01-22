@@ -29,8 +29,8 @@ function convert(num) {
             result.push('L')
             num-=50
         } else if (num > 10){
-            result.push('D')
-            num-=500
+            result.push('X')
+            num-=10
         } 
     }
     console.log(result);
