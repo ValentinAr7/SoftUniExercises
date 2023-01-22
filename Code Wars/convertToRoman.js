@@ -1,51 +1,65 @@
-function convert(num) {
+function convert(number) {
 
     let result = []
 
     const romanNumerals = {
-        I: 1,
-        V: 5,
-        X: 10,
-        L: 50,
-        C: 100,
-        D: 500,
-        M: 1000
+            1000: "M",
+            900: "CM",
+            500: "D",
+            400: "CD",
+            100: "C",
+            90: "XC",
+            50: "L",
+            40: "XL",
+            10: "X",
+            9: "IX",
+            5: "V",
+            4: "IV",
+            1: "I"
     }
 
 
-    for(key in romanNumerals){
-        let values = romanNumerals[key]
-        while(num != 0){
-        if(num > 1000){
-            result.push('M')
-            num -= 1000
-        } else if (num > 500){
-            result.push('D')
-            num-=500
-        } else if (num > 100){
-            result.push('C')
-            num-=100
-        } else if (num > 50){
-            result.push('L')
-            num-=50
+    for (let key in romanNumerals) {
+
+        if(number >= key){
+            result.push(romanNumerals[key])
+            number -= key
         }
-        else if (num > 10){
-            result.push('X')
-            num -= 10
-        } else if (num > 5){
-            result.push('V')
-            num-=5
-        } else {
-            result.push('I')
-            num-=1
-        }
-    }
-}
+
+      }
 
 
     console.log(result);
-    console.log(num);
-
+    console.log(number);
 }
 
-convert(1872)
+
+convert(1000)
+
+
+
+
+
+// if(num > 1000){
+//     result.push('M')
+//     num -= 1000
+// } else if (num > 500){
+//     result.push('D')
+//     num-=500
+// } else if (num > 100){
+//     result.push('C')
+//     num-=100
+// } else if (num > 50){
+//     result.push('L')
+//     num-=50
+// }
+// else if (num > 10){
+//     result.push('X')
+//     num -= 10
+// } else if (num > 5){
+//     result.push('V')
+//     num-=5
+// } else {
+//     result.push('I')
+//     num-=1
+// }
