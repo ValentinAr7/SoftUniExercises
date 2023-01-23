@@ -19,4 +19,12 @@ class Garden {
 
         return `The ${plantName} has been successfully planted in the garden.`
     }
+
+    ripenPlant(plantName, quantity){
+        if(quantity <= 0){
+            throw new Error('The quantity cannot be zero or negative')
+        }
+        const plant = this.plants.find(p => p.plantName == plantName);
+        
+    }
 }
