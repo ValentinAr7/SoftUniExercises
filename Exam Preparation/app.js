@@ -53,7 +53,12 @@ function solve() {
         input.content.value = '';
 
         function edit(){
-            
+            //populate input fields with values
+            input.title.value = title;
+            input.category.value = category;
+            input.content.value = content;
+
+            li.remove()
         }
 
 
