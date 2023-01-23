@@ -16,7 +16,7 @@ function solve() {
     document.getElementById('publish-btn').addEventListener('click', publish);
     document.getElementById('clear-btn').addEventListener('click', clear);
 
-    function publish(event){
+    function publish(event) {
         event.preventDefault();
 
         //read input fields
@@ -25,7 +25,7 @@ function solve() {
         const content = input.content.value;
 
         //validate input
-        if(title == '' || category == '' || content == ''){
+        if (title == '' || category == '' || content == '') {
             return;
         }
 
@@ -38,7 +38,7 @@ function solve() {
         </article>
         <button class="action-btn edit">Edit</button>
         <button class="action-btn approve">Edit</button>`
-        
+
         //add functionality to buttons
         const editBtn = li.querySelector('.edit');
         const approveBtn = li.querySelector('.approve')
@@ -52,7 +52,7 @@ function solve() {
         input.category.value = '';
         input.content.value = '';
 
-        function edit(){
+        function edit() {
             //populate input fields with values
             input.title.value = title;
             input.category.value = category;
@@ -61,14 +61,14 @@ function solve() {
             li.remove()
         }
 
-        function approve(){
+        function approve() {
             lists.published.appendChild(li);
             editBtn.remove()
             approveBtn.remove()
         }
-    
+
     }
-    function clear (){
-     lists.published.innerHTML = ''       
+    function clear() {
+        lists.published.innerHTML = ''
     }
 }
