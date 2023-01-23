@@ -12,4 +12,9 @@ function solve() {
         review: document.getElementById('review-list'),
         published: document.getElementById('published-list')
     }
+
+    document.getElementById('publish-btn').addEventListener('click', publish);
+    document.getElementById('clear-btn').addEventListener('click', clear);
+
+    
 }
