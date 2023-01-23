@@ -1,48 +1,48 @@
 window.addEventListener('load', solve);
 
 function solve() {
-    
-    const input ={
-        model: document.getElementById('model'),
-        year: document.getElementById('year'),
-        description: document.getElementById('description'),
-        price: document.getElementById('price'),
-    }
 
 
-    let table = document.querySelectorAll('#information tr:nth-child(1) th')
+    const modelElement = document.getElementById('model'),
+    const yearElement = document.getElementById('year'),
+    const descriptionElement = document.getElementById('description'),
+    const priceElement = document.getElementById('price'),
 
-    let btnAdd = document.getElementById('add')
+    const btnAdd = document.getElementById('add')
     btnAdd.addEventListener('click', add)
 
-    function add(){
+    function add(event) {
+        event.preventDefault()
 
-        const model = input.model.value
-        const year = input.year.value
-        const description = input.description.value
-        const price = input.price.value
+        let model = modelElement.value
+        let description = descriptionElement.value
+        let year = Number(yearElement.value);
+        let price = Number(priceElement.value)
 
-        if(model == '' || year == '' || description == '' || price == ''){
+        if(!modelElement.value || !descriptionElement.value){
+            return
+        }
+
+        if (model == '' || year == '' || description == '' || price == '') {
             return;
         }
-        
-        const tbl = document.getElementById('furniture-list')
-        const tbody = document.createElement('tbody')
-        tbody.innerHTML = `<tbody>
-        <tr class="info">
-        <td>${model}</td>
-        <td>${price}</td>
-        <td>
-        <button class="moreBtn">More Info</button>
-        <button class="buyBtn">Buy it</button>
-        </td>
-        </tr>
-        <tr class="hide">
-        <td>Year: ${year}</td>
-        <td colspan="3">${description}</td>
-        </tr>
-        </tbody>
-        `
+
+        if(year <= 0 || price <=0){
+            return
+        }
+
+
+        let rowElement = document.createElement('tr')
+        let modelCellElement = document.createElement('td')
+        let priceCellElement = document.createElement('td')
+        let actionsCellElement = document.createElement('td')
+
+        modelCellElement.textContent = model
+        priceCellElement.textContent = price
+
+        rowElement.appendChild(modelCellElement)
+        rowElement.appendChild(priceCellElement)
+        rowElement.appendChild(actionsCellElement)
 
         const moreInfoBtn = tbody.querySelector('.moreBtn');
         const buyBtn = tbody.querySelector('.buyBtn');
@@ -50,7 +50,6 @@ function solve() {
         buyBtn.addEventListener('click', buy)
 
 
-        tbl.appendChild(tbody)
     }
 
 
@@ -59,11 +58,11 @@ function solve() {
 
 
 
-    function moreInfo(){
+    function moreInfo() {
 
     }
 
-    function buy(){
+    function buy() {
 
 
     }
