@@ -19,6 +19,7 @@ function solve() {
     function publish(event){
         event.preventDefault();
 
+        //read input fields
         const title = input.title.value;
         const category = input.category.value;
         const content = input.content.value;
@@ -27,5 +28,16 @@ function solve() {
         if(title == '' || category == '' || content == ''){
             return;
         }
+
+        const li = document.createElement('li');
+        li.className = 'rpost';
+        li.innerHTML = `<article>
+            <h4>${title}</h4>
+            <p>Category: ${category}</p>
+            <p>Content: ${content}</p>
+            </article>
+            <button class="action-btn edit">Edit</button>
+            <button class="action-btn approve">Edit</button>`
+            
     }
 }
