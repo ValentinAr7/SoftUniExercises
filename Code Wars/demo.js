@@ -80,7 +80,4 @@ Object.defineProperty(obj, 'name', {
 // guy1.sayHello()   
 // console.log(guy1);
 
-
-
-
-
+ 
