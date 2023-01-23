@@ -65,7 +65,17 @@ class Garden {
         const plantAsString = this.plants.map(p => p.plantName).sort((a,b) => a.localeCompare(b))
         const plantsRow = `Plants in the garden: ${plantAsString.join(', ')}`;
 
-        let storageRow = 'Plants in storage: The storage is empty.'
+        let storageRow = 'Plants in storage: The storage is empty.';
+        if(this.storage.length > 0){
+            const storageAsString = this.storage.map(p => `${p.plantName}(${p.quantity})`);
+            storageRow = `Plants in storage: ${storageAsString.join(', ')}`;
+        }
+
+        return[
+            `The garden has ${this.spaceAvailable} free space left.`,
+            plantsRow,
+            storageRow,
+        ].join('\n')
 
     }
 }
