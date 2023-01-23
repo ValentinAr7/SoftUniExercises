@@ -33,5 +33,12 @@ class Garden {
         }
         plant.ripe = true;
         plant.quantity += quantity;
+
+        if(quantity == 1){
+            return `${quantity} ${plantName} has successfully ripened.`;
+        } else {
+            return `${quantity} ${plantName}s have successfully ripened.`;
+
+        }
     }
 }
