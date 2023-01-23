@@ -23,6 +23,9 @@ function solve() {
         const category = input.category.value;
         const content = input.content.value;
 
-        
+        //validate input
+        if(title == '' || category == '' || content == ''){
+            return;
+        }
     }
 }
