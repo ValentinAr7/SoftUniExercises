@@ -61,6 +61,14 @@ function solve() {
             li.remove()
         }
 
-
+        function approve(){
+            lists.published.appendChild(li);
+            editBtn.remove()
+            approveBtn.remove()
+        }
+    
+    }
+    function clear (){
+     lists.published.innerHTML = ''       
     }
 }
