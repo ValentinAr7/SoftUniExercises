@@ -35,9 +35,16 @@ function solve() {
             <h4>${title}</h4>
             <p>Category: ${category}</p>
             <p>Content: ${content}</p>
-            </article>
-            <button class="action-btn edit">Edit</button>
-            <button class="action-btn approve">Edit</button>`
-            
+        </article>
+        <button class="action-btn edit">Edit</button>
+        <button class="action-btn approve">Edit</button>`
+        
+        //add functionality to buttons
+        const editBtn = li.querySelector('.edit');
+        const approveBtn = li.querySelector('.approve')
+        editBtn.addEventListener('click', edit);
+        approveBtn.addEventListener('click', approve);
+
+
     }
 }
