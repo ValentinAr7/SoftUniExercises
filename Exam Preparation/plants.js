@@ -42,7 +42,7 @@ class Garden {
         }
     }
 
-    harvesrPlant (plantName){
+    harvestPlant (plantName){
         const plantIndex = this.plants.findIndex(p.plantName == plantName);
         if(plantIndex == -1){
             throw new Error(`There is no ${plantName} in the garden.`);
@@ -59,5 +59,13 @@ class Garden {
         this.spaceAvailable += plant.spaceRequiered;
 
         return `The ${plantName} has been successfully harvested.`;
+    }
+
+    generateReport(){
+        const plantAsString = this.plants.map(p => p.plantName).sort((a,b) => a.localeCompare(b))
+        const plantsRow = `Plants in the garden: ${plantAsString.join(', ')}`;
+
+        let storageRow = 'Plants in storage: The storage is empty.'
+
     }
 }
