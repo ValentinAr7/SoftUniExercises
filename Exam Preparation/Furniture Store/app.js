@@ -26,6 +26,22 @@ function solve() {
             return;
         }
         
+        const tbody = document.createElement('tbody')
+        tbody.innerHTML = `<tbody>
+        <tr class="info">
+        <td>${model}</td>
+        <td>${price}</td>
+        <td>
+        <button class="moreBtn">More Info</button>
+        <button class="buyBtn">Buy it</button>
+        </td>
+        </tr>
+        <tr class="hide">
+        <td>Year: ${year}</td>
+        <td colspan="3">${description}</td>
+        </tr>
+        </tbody>
+        `
     }
 
 
