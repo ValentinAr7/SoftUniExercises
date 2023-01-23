@@ -26,6 +26,7 @@ function solve() {
             return;
         }
         
+        const tbl = document.getElementById('furniture-list')
         const tbody = document.createElement('tbody')
         tbody.innerHTML = `<tbody>
         <tr class="info">
@@ -42,6 +43,14 @@ function solve() {
         </tr>
         </tbody>
         `
+
+        const moreInfoBtn = tbody.querySelector('.moreBtn');
+        const buyBtn = tbody.querySelector('.buyBtn');
+        moreInfoBtn.addEventListener('click', edit);
+        buyBtn.addEventListener('click', buy)
+
+
+        tbl.appendChild(tbody)
     }
 
 
