@@ -22,9 +22,16 @@ class Garden {
 
     ripenPlant(plantName, quantity){
         if(quantity <= 0){
-            throw new Error('The quantity cannot be zero or negative')
+            throw new Error('The quantity cannot be zero or negative.')
         }
         const plant = this.plants.find(p => p.plantName == plantName);
-        
+        if(plant == undefined){
+            throw new Error(`There is no ${plantName} in the garden.`);
+        }
+        if(plant.ripe){
+            throw new Error (`The ${plantName} is already ripe.`);
+        }
+        plant.ripe = true;
+        plant.quantity += quantity;
     }
 }
