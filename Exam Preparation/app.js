@@ -45,6 +45,17 @@ function solve() {
         editBtn.addEventListener('click', edit);
         approveBtn.addEventListener('click', approve);
 
+        //append to first list
+        lists.review.appendChild(li);
+
+        input.title.value = '';
+        input.category.value = '';
+        input.content.value = '';
+
+        function edit(){
+            
+        }
+
 
     }
 }
