@@ -24,7 +24,6 @@ function solution() {
         return;
       }
 
-
       //create CELLS in preview
       let nameCellElement = document.createElement('li') 
       let emailCellElement = document.createElement('li') 
@@ -48,16 +47,9 @@ function solution() {
       previewElement.appendChild(addressCellElement);
       previewElement.appendChild(postcodeCellElement);
 
-
-
-
-
-
-
-
-
-
-
+      document.getElementById("submitBTN").disabled = true; 
+      document.getElementById("editBTN").disabled = false; 
+      document.getElementById("continueBTN").disabled = false; 
 
 
     })
