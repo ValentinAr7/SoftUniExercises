@@ -32,7 +32,7 @@ function solve() {
             return
         }
 
-        //create all eleents requiered in the table
+        //create all elements requiered in the table
         let rowElement = document.createElement('tr')
         let modelCellElement = document.createElement('td')
         let priceCellElement = document.createElement('td')
