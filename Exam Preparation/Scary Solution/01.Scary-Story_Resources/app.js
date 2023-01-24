@@ -57,16 +57,32 @@ function solve() {
 
 
     let saveBtn = document.createElement("button");
-    saveBtn.setAttribute('class', 'save-btn');
+    saveBtn.classList.add('save-btn')
     saveBtn.textContent = 'Save Story';
+    saveBtn.disabled = false
 
     let editBtn = document.createElement("button");
-    editBtn.setAttribute('class', 'edit-btn');
+    editBtn.classList.add('edit-btn');
     editBtn.textContent = 'Edit Story';
+    editBtn.disabled = false;
 
     let deleteBtn = document.createElement("button");
-    deleteBtn.setAttribute('class', 'delete-btn');
+    deleteBtn.classList.add('delete-btn');
     deleteBtn.textContent = 'Delete Story';
+    deleteBtn.disabled = false;
+
+    editBtn.addEventListener('click', (e)=>{
+      firstNameElement.value = firstName
+      lastNameElement.value = lastName
+      ageElement.value = age
+      storyTitleElement.value = storyTitle
+      genreElement.value = genre
+      storyElemenet.value = story
+
+      liElement.remove()
+      
+
+    })
 
 
 
@@ -81,6 +97,9 @@ function solve() {
     articleElement.appendChild(storyTitleCellElement)
     articleElement.appendChild(genreCellElement)
     articleElement.appendChild(fullStoryCellElement)
+    articleElement.appendChild(saveBtn)
+    articleElement.appendChild(deleteBtn)
+    articleElement.appendChild(editBtn)
 
     liElement.appendChild(articleElement);
     liElement.appendChild(saveBtnElement);
