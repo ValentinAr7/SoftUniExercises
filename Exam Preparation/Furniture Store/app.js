@@ -55,7 +55,11 @@ function solve() {
         contentsRowElement.classList.add('hide')
         contentsRowElement.style.display = ' contents'
 
+        contentsRowElement.appendChild(yearContentElement)
+        contentsRowElement.appendChild(descriptionContentElement)
+
         furnitureListElement.appendChild(rowElement)
+        furnitureListElement.appendChild(contentsRowElement)
 
 })
 }
