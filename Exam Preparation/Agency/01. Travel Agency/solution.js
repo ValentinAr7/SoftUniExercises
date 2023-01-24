@@ -8,6 +8,7 @@ function solution() {
     const addressElement = document.getElementById('address');
     const postcodeElement = document.getElementById('code');
     const submitBtnElement = document.getElementById('submitBTN')
+    const previewElement = document.getElementById('infoPreview')
 
     submitBtnElement.addEventListener('click', (e) => {
       e.preventDefault()
@@ -20,17 +21,13 @@ function solution() {
       let postcode = postcodeElement.value;
 
 
-      //create CELLS in preview
-      let divElement = document.createElement('div')
-      
-      let ulElement = document.createElement('ul')
+      //create CELLS in preview 
       let nameCellElement = document.createElement('li')
       let emailCellElement = document.createElement('li')
       let phoneCellElement = document.createElement('li')
       let addressCellElement = document.createElement('li')
       let postcodeCellElement = document.createElement('li')
 
-      let actionsElement = document.createElement('div')
 
       //assign values to the preview
       nameCellElement.textContent = name;
@@ -41,11 +38,11 @@ function solution() {
 
 
 
-      ulElement.appendChild(nameCellElement);
-      ulElement.appendChild(emailCellElement);
-      ulElement.appendChild(phoneCellElement);
-      ulElement.appendChild(addressCellElement);
-      ulElement.appendChild(postcodeCellElement);
+      previewElement.appendChild(nameCellElement);
+      previewElement.appendChild(emailCellElement);
+      previewElement.appendChild(phoneCellElement);
+      previewElement.appendChild(addressCellElement);
+      previewElement.appendChild(postcodeCellElement);
 
 
 
