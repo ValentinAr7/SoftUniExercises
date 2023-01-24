@@ -10,6 +10,8 @@ function solve() {
   let genreElement = document.getElementById('genre')
   let storyElemenet = document.getElementById('story')
   let previewListElement = document.getElementById('preview-list')
+  let mainElement = document.getElementById('main')
+  let bodyElement = document.querySelector(".body");
   //buttons
   let btnPublishElement = document.getElementById('form-btn')
   
@@ -80,7 +82,17 @@ function solve() {
       storyElemenet.value = story
 
       liElement.remove()
-      
+    })
+
+    saveBtn.addEventListener('click', (e)=>{
+      mainElement.remove();
+      let h1Saved = document.createElement("h1");
+      h1Saved.textContent = "Your scary story is saved!";
+      let bodyElement2 = document.createElement("div");
+      bodyElement2.setAttribute('id', 'main');
+      bodyElement.appendChild(bodyElement2);
+
+      bodyElement2.appendChild(h1Saved);
 
     })
 
