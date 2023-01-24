@@ -10,6 +10,9 @@ function solution() {
     const submitBtnElement = document.getElementById('submitBTN')
     const previewElement = document.getElementById('infoPreview')
 
+    const editBtnElement = document.getElementById('editBTN');
+    const continueBtnElement = document.getElementById('continueBTN')
+
     submitBtnElement.addEventListener('click', (e) => {
       e.preventDefault()
 
@@ -17,13 +20,12 @@ function solution() {
       let name = addNameElement.value;
       let email = emailElement.value;
       let phone = phoneElement.value;
-      let address = addNameElement.value;
+      let address = addressElement.value;
       let postcode = postcodeElement.value;
 
       if(!name || !email){
         return;
       }
-
       //create CELLS in preview
       let nameCellElement = document.createElement('li') 
       let emailCellElement = document.createElement('li') 
@@ -31,13 +33,27 @@ function solution() {
       let addressCellElement = document.createElement('li') 
       let postcodeCellElement = document.createElement('li')
 
-
       //assign values to the preview
       nameCellElement.textContent = `Full name: ${name}`;
       emailCellElement.textContent = `Email: ${email}`;
       phoneCellElement.textContent = `Phone Number: ${phone}`;
       addressCellElement.textContent = `Address: ${address}`;
       postcodeCellElement.textContent = `Postal Code: ${postcode}`;
+
+
+      addNameElement.value= '';
+      emailElement.value = '';
+      phoneElement.value = '';
+      addressElement.value = '';
+      postcodeElement.value = '';
+
+
+
+
+
+
+
+
 
 
 

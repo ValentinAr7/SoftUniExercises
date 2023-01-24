@@ -10,6 +10,8 @@ function solve() {
     const priceElement = document.getElementById('price')
     const furnitureListElement = document.getElementById('furniture-list')
 
+    
+
     // create event for Add button
     addButtonElement.addEventListener('click', (e) => {
         //prevent refreshing of the page
