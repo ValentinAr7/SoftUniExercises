@@ -22,7 +22,7 @@ function solve() {
         let priceCellElement = document.createElement('td')
         let actionsCellElement = document.createElement('td')
         let infoButtonElement = document.createElement('button')
-        let buyButtonElement = document.createElement('buttons')
+        let buyButtonElement = document.createElement('button')
         let contentsRowElement = document.createElement('tr')
         let yearContentElement = document.createElement('td')
         let descriptionContentElement = document.createElement('td')
@@ -33,6 +33,18 @@ function solve() {
 
         infoButtonElement.textContent = 'More Info'
         infoButtonElement.classList.add('moreBtn')
+        infoButtonElement.addEventListener('click', (e) => {
+
+            if (e.currentTarget.textContent == 'More Info') {
+                contentsRowElement.style.display = 'contents'
+                e.currentTarget.textContent = 'Less Info'
+            } else {
+                contentsRowElement.style.display = 'none'
+            e.currentTarget.textContent = 'More Info'
+            }
+        })
+
+
         buyButtonElement.textContent = 'Buy it'
         buyButtonElement.classList.add('buyBtn')
         buyButtonElement.addEventListener('click', (e)=>{
@@ -45,16 +57,6 @@ function solve() {
             contentsRowElement.remove()
         })
 
-        infoButtonElement.addEventListener('click', (e) => {
-
-            if (e.currentTarget.textContent == 'More Info') {
-                contentsRowElement.style.display = 'contents'
-                e.currentTarget.textContent = 'Less Info'
-            } else {
-                contentsRowElement.style.display = 'none'
-            e.currentTarget.textContent = 'More Info'
-            }
-        })
 
         actionsCellElement.appendChild(infoButtonElement)
         actionsCellElement.appendChild(buyButtonElement)
