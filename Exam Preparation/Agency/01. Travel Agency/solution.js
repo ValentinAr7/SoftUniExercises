@@ -21,20 +21,17 @@ function solution() {
       let postcode = postcodeElement.value;
 
 
-      //create CELLS in preview 
-      let nameCellElement = document.createElement('li')
-      let emailCellElement = document.createElement('li')
-      let phoneCellElement = document.createElement('li')
-      let addressCellElement = document.createElement('li')
-      let postcodeCellElement = document.createElement('li')
+      //create CELLS in preview
+      let [nameCellElement, emailCellElement, 
+        phoneCellElement, addressCellElement, postcodeCellElement]  = document.createElement('li')
 
 
       //assign values to the preview
-      nameCellElement.textContent = name;
-      emailCellElement.textContent = email;
-      phoneCellElement.textContent = phone;
-      addressCellElement.textContent = address;
-      postcodeCellElement.textContent = postcode;
+      nameCellElement.textContent = `Full name: ${name}`;
+      emailCellElement.textContent = `Email: ${email}`;
+      phoneCellElement.textContent = `Phone Number: ${phone}`;
+      addressCellElement.textContent = `Address: ${address}`;
+      postcodeCellElement.textContent = `Postal Code: ${postcode}`;
 
 
 
@@ -43,6 +40,12 @@ function solution() {
       previewElement.appendChild(phoneCellElement);
       previewElement.appendChild(addressCellElement);
       previewElement.appendChild(postcodeCellElement);
+
+
+
+
+
+
 
 
 
