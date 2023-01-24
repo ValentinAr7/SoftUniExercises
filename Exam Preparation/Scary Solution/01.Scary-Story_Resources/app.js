@@ -51,12 +51,18 @@ function solve() {
     fullStoryCellElement.textContent = `${story}`
 
 
-
     articleElement.appendChild(fullNameCellElement)
     articleElement.appendChild(ageCellElement)
     articleElement.appendChild(storyTitleCellElement)
     articleElement.appendChild(genreCellElement)
     articleElement.appendChild(fullStoryCellElement)
+
+    liElement.appendChild(articleElement);
+    liElement.appendChild(saveBtnElement);
+    liElement.appendChild(editBtnElement);
+    liElement.appendChild(deleteBtnElement);
+
+    previewListElement.appendChild(liElement)
 
 
 
