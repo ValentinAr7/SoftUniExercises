@@ -2,6 +2,7 @@ window.addEventListener('load', solve);
 
 function solve() {
 
+    //get all elements with IDs
     const addButtonElement = document.getElementById('add')
     const modelElement = document.getElementById('model')
     const yearElement = document.getElementById('year')
@@ -9,7 +10,9 @@ function solve() {
     const priceElement = document.getElementById('price')
     const furnitureListElement = document.getElementById('furniture-list')
 
+    // create event for Add button
     addButtonElement.addEventListener('click', (e) => {
+        //prevent refreshing of the page
         e.preventDefault()
 
         let model = modelElement.value
@@ -17,11 +20,11 @@ function solve() {
         let year = Number(yearElement.value);
         let price = Number(priceElement.value)
 
-        if(!model || !description){
+        if (!model || !description) {
             return;
-        } 
+        }
 
-        if(year <= 0 || price <= 0){
+        if (year <= 0 || price <= 0) {
             return
         }
 
@@ -48,19 +51,19 @@ function solve() {
                 e.currentTarget.textContent = 'Less Info'
             } else {
                 contentsRowElement.style.display = 'none'
-            e.currentTarget.textContent = 'More Info'
+                e.currentTarget.textContent = 'More Info'
             }
         })
 
 
         buyButtonElement.textContent = 'Buy it'
         buyButtonElement.classList.add('buyBtn')
-        buyButtonElement.addEventListener('click', (e)=>{
+        buyButtonElement.addEventListener('click', (e) => {
             let currentTotalPrice = Number(totalPriceElement.textContent)
             let totalPrice = currentTotalPrice + price
-            totalPriceElement.textContent= totalPrice.toFixed(2)
-            
-            
+            totalPriceElement.textContent = totalPrice.toFixed(2)
+
+
             rowElement.remove()
             contentsRowElement.remove()
         })
