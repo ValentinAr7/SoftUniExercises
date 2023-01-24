@@ -21,11 +21,16 @@ function solution() {
 
 
       //create CELLS in preview
+      let divElement = document.createElement('div')
+      
+      let ulElement = document.createElement('ul')
       let nameCellElement = document.createElement('li')
       let emailCellElement = document.createElement('li')
       let phoneCellElement = document.createElement('li')
       let addressCellElement = document.createElement('li')
       let postcodeCellElement = document.createElement('li')
+
+      let actionsElement = document.createElement('div')
 
       //assign values to the preview
       nameCellElement.textContent = name;
@@ -33,6 +38,18 @@ function solution() {
       phoneCellElement.textContent = phone;
       addressCellElement.textContent = address;
       postcodeCellElement.textContent = postcode;
+
+
+
+      ulElement.appendChild(nameCellElement);
+      ulElement.appendChild(emailCellElement);
+      ulElement.appendChild(phoneCellElement);
+      ulElement.appendChild(addressCellElement);
+      ulElement.appendChild(postcodeCellElement);
+
+
+
+
 
 
 
