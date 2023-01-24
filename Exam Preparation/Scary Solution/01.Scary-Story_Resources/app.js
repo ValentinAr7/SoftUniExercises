@@ -3,13 +3,13 @@ window.addEventListener("load", solve);
 function solve() {
 
   //Input fields
-  const firstNameElement = document.getElementById('first-name');
-  const lastNameElement = document.getElementById('last-name');
-  const ageElement = document.getElementById('age');
-  const storyTitleElement = document.getElementById('story-title')
-  const genreElement = document.getElementById('genre')
-  const storyElemenet = document.getElementById('story')
-  const previewListElement = document.getElementById('preview-list')
+  let firstNameElement = document.getElementById('first-name');
+  let lastNameElement = document.getElementById('last-name');
+  let ageElement = document.getElementById('age');
+  let storyTitleElement = document.getElementById('story-title')
+  let genreElement = document.getElementById('genre')
+  let storyElemenet = document.getElementById('story')
+  let previewListElement = document.getElementById('preview-list')
   //buttons
   let btnPublishElement = document.getElementById('form-btn')
   
@@ -24,10 +24,9 @@ function solve() {
     let genre = genreElement.value;
     let story = storyElemenet.value;
 
-    // if(!firstName || !lastName || !age || !storyTitle || !genre || !story){
-    //   return;
-    // }
-
+    if(!firstName || !lastName || !age || !storyTitle || !genre || !story){
+      return;
+    }
   
     let saveBtnElement = document.createElement('button');
     let editBtnElement = document.createElement('button');
@@ -43,12 +42,28 @@ function solve() {
     let genreCellElement = document.createElement('p');
     let fullStoryCellElement = document.createElement('p')
 
-
     fullNameCellElement.textContent = `Name: ${firstName} ${lastName}`;
     ageCellElement.textContent = `Age: ${age}`;
-    storyTitleCellElement.textContent = `Title: ${title}`;
+    storyTitleCellElement.textContent = `Title: ${storyTitle}`;
     genreCellElement.textContent = `Genre: ${genre}`;
     fullStoryCellElement.textContent = `${story}`
+
+    firstNameElement.value = ''
+    lastNameElement.value = ''
+    ageElement.value = ''
+    storyTitleElement.value = ''
+    genreElement.value = ''
+    storyElemenet.value = ''
+
+
+
+
+
+
+
+
+
+
 
 
     articleElement.appendChild(fullNameCellElement)
@@ -63,10 +78,6 @@ function solve() {
     liElement.appendChild(deleteBtnElement);
 
     previewListElement.appendChild(liElement)
-
-
-
-
 
   })
 
