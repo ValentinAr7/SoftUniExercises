@@ -30,6 +30,7 @@ function solve() {
     let liElement = document.createElement('li')
     liElement.classList.add('story-info')
 
+    let articleElement=document.createElement('article')
     let fullNameCellElement = document.createElement('h4');
     let ageCellElement = document.createElement('p');
     let storyTitleCellElement = document.createElement('p');
@@ -43,10 +44,7 @@ function solve() {
     genreCellElement.textContent = `Genre: ${genre}`;
     fullStoryCellElement.textContent = `${story}`
 
-
-
-
-    
+    previewListElement.appendChild(articleElement)
     previewListElement.appendChild(liElement)
     previewListElement.appendChild(fullNameCellElement)
     previewListElement.appendChild(ageCellElement)
