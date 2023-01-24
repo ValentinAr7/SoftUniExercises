@@ -2,11 +2,11 @@ window.addEventListener('load', solution);
 
 function solution() {
 
-    const addNameElement = document.getElementById('fname');
-    const emailElement = document.getElementById('email');
-    const phoneElement = document.getElementById('phone');
-    const addressElement = document.getElementById('address');
-    const postcodeElement = document.getElementById('code');
+    let addNameElement = document.getElementById('fname');
+    let emailElement = document.getElementById('email');
+    let phoneElement = document.getElementById('phone');
+    let addressElement = document.getElementById('address');
+    let postcodeElement = document.getElementById('code');
     const submitBtnElement = document.getElementById('submitBTN')
     const previewElement = document.getElementById('infoPreview')
 
@@ -40,12 +40,27 @@ function solution() {
       addressCellElement.textContent = `Address: ${address}`;
       postcodeCellElement.textContent = `Postal Code: ${postcode}`;
 
-
+      //Empty imput fileds after SUBMIT btn is clicked
       addNameElement.value= '';
       emailElement.value = '';
       phoneElement.value = '';
       addressElement.value = '';
       postcodeElement.value = '';
+
+      editBtnElement.addEventListener('click', (e) =>{
+        addNameElement.value= name
+        emailElement.value = email
+        phoneElement.value = phone
+        addressElement.value = address
+        postcodeElement.value = postcode
+
+        previewElement.remove()
+        document.getElementById("submitBTN").disabled = false; 
+        document.getElementById("editBTN").disabled = true; 
+        document.getElementById("continueBTN").disabled = true; 
+  
+
+      })
 
 
 
