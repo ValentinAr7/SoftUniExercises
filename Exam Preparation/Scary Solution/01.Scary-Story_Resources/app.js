@@ -23,15 +23,19 @@ function solve() {
     let genre = genreElement.value;
     let story = storyElemenet.value;
 
-    if(!firstName || !lastName || !age || !storyTitle || !genre || !story){
-      return;
-    }
+    // if(!firstName || !lastName || !age || !storyTitle || !genre || !story){
+    //   return;
+    // }
+
+    let liElement = document.createElement('li')
+    liElement.classList.add('story-info')
 
     let fullNameCellElement = document.createElement('h4');
     let ageCellElement = document.createElement('p');
     let storyTitleCellElement = document.createElement('p');
     let genreCellElement = document.createElement('p');
     let fullStoryCellElement = document.createElement('p')
+
 
     fullNameCellElement.textContent = `Name: ${firstName} ${lastName}`;
     ageCellElement.textContent = `Age: ${age}`;
@@ -43,7 +47,12 @@ function solve() {
 
 
     
-
+    previewListElement.appendChild(liElement)
+    previewListElement.appendChild(fullNameCellElement)
+    previewListElement.appendChild(ageCellElement)
+    previewListElement.appendChild(storyTitleCellElement)
+    previewListElement.appendChild(genreCellElement)
+    previewListElement.appendChild(fullStoryCellElement)
 
 
 
