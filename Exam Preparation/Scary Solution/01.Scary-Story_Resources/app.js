@@ -29,16 +29,8 @@ function solve() {
     }
   
     let saveBtnElement = document.createElement('button');
-    saveBtnElement.classList.add('save-btn');
-    saveBtnElement.textContent = 'Save';
-
     let editBtnElement = document.createElement('button');
-    editBtnElement.classList.add('edit-btn');
-    editBtnElement.textContent = 'Edit';
-
     let deleteBtnElement = document.createElement('button');
-    deleteBtnElement.classList.add('delete-btn');
-    deleteBtnElement.textContent('Delete')
 
     let liElement = document.createElement('li')
     liElement.classList.add('story-info')
@@ -64,7 +56,17 @@ function solve() {
     storyElemenet.value = ''
 
 
+    let saveBtn = document.createElement("button");
+    saveBtn.setAttribute('class', 'save-btn');
+    saveBtn.textContent = 'Save Story';
 
+    let editBtn = document.createElement("button");
+    editBtn.setAttribute('class', 'edit-btn');
+    editBtn.textContent = 'Edit Story';
+
+    let deleteBtn = document.createElement("button");
+    deleteBtn.setAttribute('class', 'delete-btn');
+    deleteBtn.textContent = 'Delete Story';
 
 
 
