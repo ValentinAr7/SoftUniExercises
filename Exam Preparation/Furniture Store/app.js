@@ -7,7 +7,7 @@ function solve() {
     const yearElement = document.getElementById('year')
     const descriptionElement = document.getElementById('description')
     const priceElement = document.getElementById('price')
-    const furnitureListElement = getElementById('furniture-list')
+    const furnitureListElement = document.getElementById('furniture-list')
 
     addButtonElement.addEventListener('click', (e) => {
         e.preventDefault()
@@ -16,6 +16,14 @@ function solve() {
         let description = descriptionElement.value
         let year = Number(yearElement.value);
         let price = Number(priceElement.value)
+
+        if(!model || !description){
+            return;
+        } 
+
+        if(year <= 0 || price <= 0){
+            return
+        }
 
         let rowElement = document.createElement('tr')
         let modelCellElement = document.createElement('td')
@@ -36,7 +44,7 @@ function solve() {
         infoButtonElement.addEventListener('click', (e) => {
 
             if (e.currentTarget.textContent == 'More Info') {
-                contentsRowElement.style.display = 'contents'
+                contentsRowElement.style.display = 'contents';
                 e.currentTarget.textContent = 'Less Info'
             } else {
                 contentsRowElement.style.display = 'none'
