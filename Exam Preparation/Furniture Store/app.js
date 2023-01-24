@@ -9,7 +9,7 @@ function solve() {
     const priceElement = document.getElementById('price')
     const furnitureListElement = getElementById('furniture-list')
 
-    addButtonElement.addEventListener('click', (e) =>{
+    addButtonElement.addEventListener('click', (e) => {
         e.preventDefault()
 
         let model = modelElement.value
@@ -35,8 +35,15 @@ function solve() {
         buyButtonElement.textContent = 'Buy it'
         buyButtonElement.classList.add('buyBtn')
 
-        infoButtonElement.addEventListener('click', (e) =>{
-            e.currentTarget.textContent = 'Less Info'
+        infoButtonElement.addEventListener('click', (e) => {
+
+            if (e.currentTarget.textContent == 'More Info') {
+                contentsRowElement.style.display = 'contents'
+                e.currentTarget.textContent = 'Less Info'
+            } else {
+                contentsRowElement.style.display = 'none'
+            e.currentTarget.textContent = 'More Info'
+            }
         })
 
         actionsCellElement.appendChild(infoButtonElement)
@@ -53,7 +60,7 @@ function solve() {
         descriptionContentElement.textContent = `Description: ${description}`
 
         contentsRowElement.classList.add('hide')
-        contentsRowElement.style.display = ' contents'
+        contentsRowElement.style.display = 'none'
 
         contentsRowElement.appendChild(yearContentElement)
         contentsRowElement.appendChild(descriptionContentElement)
@@ -61,5 +68,5 @@ function solve() {
         furnitureListElement.appendChild(rowElement)
         furnitureListElement.appendChild(contentsRowElement)
 
-})
+    })
 }
