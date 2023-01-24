@@ -67,20 +67,24 @@ function solve() {
             }
         })
 
-        
+        //chane text content of the button
         buyButtonElement.textContent = 'Buy it'
+        //add class to the button
         buyButtonElement.classList.add('buyBtn')
+
         buyButtonElement.addEventListener('click', (e) => {
+            //add up the sum of all purchased items
             let currentTotalPrice = Number(totalPriceElement.textContent)
             let totalPrice = currentTotalPrice + price
+            // 00.00
             totalPriceElement.textContent = totalPrice.toFixed(2)
 
-
+            //remove item data in table once item is purchase
             rowElement.remove()
             contentsRowElement.remove()
         })
 
-
+        //append childs
         actionsCellElement.appendChild(infoButtonElement)
         actionsCellElement.appendChild(buyButtonElement)
 
