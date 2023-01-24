@@ -12,6 +12,7 @@ function solve() {
   const previewListElement = document.getElementById('preview-list')
   //buttons
   let btnPublishElement = document.getElementById('form-btn')
+  
 
   btnPublishElement.addEventListener('click', (e)=> {
     e.preventDefault()
@@ -26,6 +27,11 @@ function solve() {
     // if(!firstName || !lastName || !age || !storyTitle || !genre || !story){
     //   return;
     // }
+
+  
+    let saveBtnElement = document.createElement('button');
+    let editBtnElement = document.createElement('button');
+    let deleteBtnElement = document.createElement('button');
 
     let liElement = document.createElement('li')
     liElement.classList.add('story-info')
@@ -44,13 +50,15 @@ function solve() {
     genreCellElement.textContent = `Genre: ${genre}`;
     fullStoryCellElement.textContent = `${story}`
 
-    previewListElement.appendChild(articleElement)
-    previewListElement.appendChild(liElement)
-    previewListElement.appendChild(fullNameCellElement)
-    previewListElement.appendChild(ageCellElement)
-    previewListElement.appendChild(storyTitleCellElement)
-    previewListElement.appendChild(genreCellElement)
-    previewListElement.appendChild(fullStoryCellElement)
+
+
+    articleElement.appendChild(fullNameCellElement)
+    articleElement.appendChild(ageCellElement)
+    articleElement.appendChild(storyTitleCellElement)
+    articleElement.appendChild(genreCellElement)
+    articleElement.appendChild(fullStoryCellElement)
+
+
 
 
 
