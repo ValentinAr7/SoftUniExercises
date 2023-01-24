@@ -9,6 +9,8 @@ function solution() {
     let postcodeElement = document.getElementById('code');
     const submitBtnElement = document.getElementById('submitBTN')
     const previewElement = document.getElementById('infoPreview')
+    const blockElement = document.getElementById('block');
+
 
     const editBtnElement = document.getElementById('editBTN');
     const continueBtnElement = document.getElementById('continueBTN')
@@ -56,7 +58,7 @@ function solution() {
         addressElement.value = address
         postcodeElement.value = postcode
 
-        previewElement.remove()
+        previewElement.textContent = ''
         document.getElementById("submitBTN").disabled = false; 
         document.getElementById("editBTN").disabled = true; 
         document.getElementById("continueBTN").disabled = true; 
@@ -64,11 +66,11 @@ function solution() {
 
 
       continueBtnElement.addEventListener('click', (e) =>{
-        const blockElement = document.getElementById('block');
+        blockElement.innerHTML = ''
         let thanksMessage = document.createElement('h3')
-        blockElement.remove()
-
         thanksMessage.textContent = 'Thank you for your reservation!'
+        blockElement.appendChild(thanksMessage)
+
       })
       
       previewElement.appendChild(nameCellElement);
@@ -83,8 +85,4 @@ function solution() {
       document.getElementById("continueBTN").disabled = false; 
 
     })
-
-
-
-
 }
