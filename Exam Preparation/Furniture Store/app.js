@@ -15,19 +15,24 @@ function solve() {
         //prevent refreshing of the page
         e.preventDefault()
 
+        //get the values of all 4 input fields and convert year and price into numbers
         let model = modelElement.value
         let description = descriptionElement.value
         let year = Number(yearElement.value);
         let price = Number(priceElement.value)
 
+
+        //check for any empty fields
         if (!model || !description) {
             return;
         }
 
+        //check if price or year are <= 0
         if (year <= 0 || price <= 0) {
             return
         }
 
+        //create all eleents requiered in the table
         let rowElement = document.createElement('tr')
         let modelCellElement = document.createElement('td')
         let priceCellElement = document.createElement('td')
@@ -39,23 +44,30 @@ function solve() {
         let descriptionContentElement = document.createElement('td')
         let totalPriceElement = document.querySelector('.total-price')
 
+        // set the text content of the model cell to the entered model
         modelCellElement.textContent = model
+        // set the text content of the price cell to the entered price
         priceCellElement.textContent = price.toFixed(2);
 
+        //set text content of 'More Info' buttons
         infoButtonElement.textContent = 'More Info'
+        //add class to the button
         infoButtonElement.classList.add('moreBtn')
         infoButtonElement.addEventListener('click', (e) => {
 
+            //change display and text content when click the buttons
             if (e.currentTarget.textContent == 'More Info') {
+                //toggle
                 contentsRowElement.style.display = 'contents';
                 e.currentTarget.textContent = 'Less Info'
             } else {
+                //hide
                 contentsRowElement.style.display = 'none'
                 e.currentTarget.textContent = 'More Info'
             }
         })
 
-
+        
         buyButtonElement.textContent = 'Buy it'
         buyButtonElement.classList.add('buyBtn')
         buyButtonElement.addEventListener('click', (e) => {
