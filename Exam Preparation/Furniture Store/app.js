@@ -26,6 +26,7 @@ function solve() {
         let contentsRowElement = document.createElement('tr')
         let yearContentElement = document.createElement('td')
         let descriptionContentElement = document.createElement('td')
+        let totalPriceElement = document.querySelector('.total-price')
 
         modelCellElement.textContent = model
         priceCellElement.textContent = price.toFixed(2);
@@ -34,6 +35,15 @@ function solve() {
         infoButtonElement.classList.add('moreBtn')
         buyButtonElement.textContent = 'Buy it'
         buyButtonElement.classList.add('buyBtn')
+        buyButtonElement.addEventListener('click', (e)=>{
+            let currentTotalPrice = Number(totalPriceElement.textContent)
+            let totalPrice = currentTotalPrice + price
+            totalPriceElement.textContent= totalPrice.toFixed(2)
+            
+            
+            rowElement.remove()
+            contentsRowElement.remove()
+        })
 
         infoButtonElement.addEventListener('click', (e) => {
 
