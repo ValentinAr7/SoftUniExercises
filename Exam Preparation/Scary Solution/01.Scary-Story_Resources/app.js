@@ -29,8 +29,16 @@ function solve() {
     }
   
     let saveBtnElement = document.createElement('button');
+    saveBtnElement.classList.add('save-btn');
+    saveBtnElement.textContent = 'Save';
+
     let editBtnElement = document.createElement('button');
+    editBtnElement.classList.add('edit-btn');
+    editBtnElement.textContent = 'Edit';
+
     let deleteBtnElement = document.createElement('button');
+    deleteBtnElement.classList.add('delete-btn');
+    deleteBtnElement.textContent('Delete')
 
     let liElement = document.createElement('li')
     liElement.classList.add('story-info')
