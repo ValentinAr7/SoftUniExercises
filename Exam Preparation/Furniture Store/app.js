@@ -23,19 +23,35 @@ function solve() {
         let actionsCellElement = document.createElement('td')
         let infoButtonElement = document.createElement('button')
         let buyButtonElement = document.createElement('buttons')
+        let contentsRowElement = document.createElement('tr')
+        let yearContentElement = document.createElement('td')
+        let descriptionContentElement = document.createElement('td')
 
         modelCellElement.textContent = model
-        priceCellElement.textContent = price
+        priceCellElement.textContent = price.toFixed(2);
 
         infoButtonElement.textContent = 'More Info'
+        infoButtonElement.classList.add('moreBtn')
         buyButtonElement.textContent = 'Buy it'
+        buyButtonElement.classList.add('buyBtn')
+
+        infoButtonElement.addEventListener('click', (e) =>{
+            e.currentTarget.textContent = 'Less Info'
+        })
 
         actionsCellElement.appendChild(infoButtonElement)
         actionsCellElement.appendChild(buyButtonElement)
 
+        rowElement.classList.add('info')
+
         rowElement.appendChild(modelCellElement)
         rowElement.appendChild(priceCellElement)
         rowElement.appendChild(actionsCellElement)
+
+        yearContentElement.textContent = `Year: ${year}`
+
+        contentsRowElement.classList.add('hide')
+        contentsRowElement.style.display = ' contents'
 
         furnitureListElement.appendChild(rowElement)
 
