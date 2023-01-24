@@ -49,6 +49,8 @@ function solve() {
         rowElement.appendChild(actionsCellElement)
 
         yearContentElement.textContent = `Year: ${year}`
+        descriptionContentElement.setAttribute('colspan', 3)
+        descriptionContentElement.textContent = `Description: ${description}`
 
         contentsRowElement.classList.add('hide')
         contentsRowElement.style.display = ' contents'
