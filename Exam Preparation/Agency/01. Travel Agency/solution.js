@@ -20,10 +20,17 @@ function solution() {
       let address = addNameElement.value;
       let postcode = postcodeElement.value;
 
+      if(!name || !email){
+        return;
+      }
+
 
       //create CELLS in preview
-      let [nameCellElement, emailCellElement, 
-        phoneCellElement, addressCellElement, postcodeCellElement]  = document.createElement('li')
+      let nameCellElement = document.createElement('li') 
+      let emailCellElement = document.createElement('li') 
+      let phoneCellElement = document.createElement('li') 
+      let addressCellElement = document.createElement('li') 
+      let postcodeCellElement = document.createElement('li')
 
 
       //assign values to the preview
