@@ -47,6 +47,8 @@ function solution() {
       addressElement.value = '';
       postcodeElement.value = '';
 
+
+      //EDIT BUTTON functionallity
       editBtnElement.addEventListener('click', (e) =>{
         addNameElement.value= name
         emailElement.value = email
@@ -58,30 +60,27 @@ function solution() {
         document.getElementById("submitBTN").disabled = false; 
         document.getElementById("editBTN").disabled = true; 
         document.getElementById("continueBTN").disabled = true; 
-  
-
       })
 
 
+      continueBtnElement.addEventListener('click', (e) =>{
+        const blockElement = document.getElementById('block');
+        let thanksMessage = document.createElement('h3')
+        blockElement.remove()
 
-
-
-
-
-
-
-
-
+        thanksMessage.textContent = 'Thank you for your reservation!'
+      })
+      
       previewElement.appendChild(nameCellElement);
       previewElement.appendChild(emailCellElement);
       previewElement.appendChild(phoneCellElement);
       previewElement.appendChild(addressCellElement);
       previewElement.appendChild(postcodeCellElement);
 
+
       document.getElementById("submitBTN").disabled = true; 
       document.getElementById("editBTN").disabled = false; 
       document.getElementById("continueBTN").disabled = false; 
-
 
     })
 
