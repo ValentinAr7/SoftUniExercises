@@ -1,83 +1,163 @@
 window.addEventListener("load", solve);
 
 function solve() {
+  const makeInputEl = document.getElementById("make");
+  const modelInputEl = document.getElementById("model");
+  const yearInputEl = document.getElementById("year");
+  const fuelInputEl = document.getElementById("fuel");
+  const firstPriceInputEl = document.getElementById("original-cost");
+  const sellingPriceInputEl = document.getElementById("selling-price");
+  const tableEl = document.getElementById("table-body");
+  const soldCarsEl = document.getElementById("cars-list");
+  const totalProfit = document.getElementById("profit");
+  let profitMade = 0;
 
-  let carMakeElement = document.getElementById('make');
-  let carModelElement = document.getElementById('model');
-  let productionYearElement = document.getElementById('year');
-  let fuelTypeElement = document.getElementById('fuel');
-  let originalPriceElement = document.getElementById('original-price');
-  let sellingPriceElement = document.getElementById('selling-price');
-  let publishBtnElement = document.getElementById('publish');
+  const submitButtonEl = document
+    .getElementById("publish")
+    .addEventListener("click", (ev) => {
+      ev.preventDefault();
+      if (
+        makeInputEl.value !== "" &&
+        modelInputEl.value !== "" &&
+        yearInputEl.value !== "" &&
+        fuelInputEl.value !== "" &&
+        firstPriceInputEl.value !== "" &&
+        sellingPriceInputEl.value
+      ) {
+        addPost(
+          ev,
+          makeInputEl.value,
+          modelInputEl.value,
+          yearInputEl.value,
+          fuelInputEl.value,
+          firstPriceInputEl.value,
+          sellingPriceInputEl.value
+        );
+        clearInputFileds();
+      }
+    });
 
-  let tableBodyElement = document.getElementById('table-body')
+  function addPost(
+    ev,
+    makeInputEl,
+    modelInputEl,
+    yearInputEl,
+    fuelInputEl,
+    firstPriceInputEl,
+    sellingPriceInputEl
+  ) {
+    // ev.preventDefault();
 
-  publishBtnElement.addEventListener('click', (e) => {
-    e.preventDefault();
+    const tr = elGenerator("tr");
+    tr.setAttribute("class", "row");
+    elGenerator("td", `${makeInputEl}`, tr);
+    elGenerator("td", `${modelInputEl}`, tr);
+    elGenerator("td", `${yearInputEl}`, tr);
+    elGenerator("td", `${fuelInputEl}`, tr);
+    elGenerator("td", `${firstPriceInputEl}`, tr);
+    elGenerator("td", `${sellingPriceInputEl}`, tr);
+    const actionCell = elGenerator("td");
+    tr.appendChild(actionCell);
 
-    let make = carMakeElement.value;
-    let model = carModelElement.value;
-    let year = productionYearElement.value;
-    let fuel = fuelTypeElement.value;
-    let originalPrice = originalPriceElement.value;
-    let sellingPrice = sellingPriceElement.value;
+    const editBtn = elGenerator("button", "Edit", actionCell);
+    editBtn.setAttribute("class", "action-btn");
+    editBtn.setAttribute("id", "edit");
+    const sellBtn = elGenerator("button", "Sell", actionCell);
+    sellBtn.setAttribute("class", "action-btn");
+    sellBtn.setAttribute("id", "sell");
 
-    if (!make || !model || !year || !fuel || !originalPrice || !sellingPrice) {
-      return
+    tableEl.appendChild(tr);
+
+    sellBtn.addEventListener("click", (ev) =>
+      sellCar(
+        ev,
+        makeInputEl,
+        modelInputEl,
+        yearInputEl,
+        firstPriceInputEl,
+        sellingPriceInputEl
+      )
+    );
+    editBtn.addEventListener("click", (ev) =>
+      editPost(
+        ev,
+        makeInputEl,
+        modelInputEl,
+        yearInputEl,
+        fuelInputEl,
+        firstPriceInputEl,
+        sellingPriceInputEl
+      )
+    );
+  }
+
+  function editPost(
+    ev,
+    _makeInputEl,
+    _modelInputEl,
+    _yearInputEl,
+    _fuelInputEl,
+    _firstPriceInputEl,
+    _sellingPriceInputEl
+  ) {
+    ev.target.parentNode.parentNode.remove();
+
+    makeInputEl.value = _makeInputEl;
+    modelInputEl.value = _modelInputEl;
+    yearInputEl.value = _yearInputEl;
+    fuelInputEl.value = _fuelInputEl;
+    firstPriceInputEl.value = _firstPriceInputEl;
+    sellingPriceInputEl.value = _sellingPriceInputEl;
+  }
+
+  function sellCar(
+    ev,
+    _makeInputEl,
+    _modelInputEl,
+    _yearInputEl,
+    _firstPriceInputEl,
+    _sellingPriceInputEl
+  ) {
+    ev.target.parentNode.parentNode.remove();
+
+    let profitForCurrentCar = _sellingPriceInputEl - _firstPriceInputEl;
+
+    const soldLiEl = document.createElement("li");
+    soldLiEl.className = "each-list";
+    const carName = document.createElement("span");
+    carName.textContent = _makeInputEl + " " + _modelInputEl;
+    const carYear = document.createElement("span");
+    carYear.textContent = _yearInputEl;
+    const carProfit = document.createElement("span");
+    carProfit.textContent = profitForCurrentCar;
+
+    soldLiEl.appendChild(carName);
+    soldLiEl.appendChild(carYear);
+    soldLiEl.appendChild(carProfit);
+
+    soldCarsEl.appendChild(soldLiEl);
+
+    profitMade += profitForCurrentCar;
+
+    totalProfit.textContent = profitMade;
+  }
+
+  function clearInputFileds() {
+    makeInputEl.value = "";
+    modelInputEl.value = "";
+    yearInputEl.value = "";
+    fuelInputEl.value = "";
+    firstPriceInputEl.value = "";
+    sellingPriceInputEl.value = "";
+  }
+
+  function elGenerator(type, content, parent) {
+    const element = document.createElement(type);
+    element.textContent = content;
+
+    if (parent) {
+      parent.appendChild(element);
     }
-
-    if (originalPrice > sellingPrice) {
-      return
-    }
-
-    let tableRowElement = document.createElement('tr');
-    tableRowElement.classList.add('row')
-
-    let makeCellElement = document.createElement('td')
-    let modelCellElement = document.createElement('td')
-    let yearCellElement = document.createElement('td')
-    let fuelTypeElement = document.createElement('td')
-    let originalPriceCellElement = document.createElement('td')
-    let sellingPriceCellElement = document.createElement('td')
-    let btnsRow = document.createElement('td')
-
-    let editBtnElement = document.createElement('button')
-    editBtnElement.classList.add('action-btn')
-    editBtnElement.textContent('Edit')
-    btnsRow.appendChild(editBtnElement)
-
-    let sellBtnElement = document.createElement('button')
-    sellBtnElement.classList.add('action-btn')
-    sellBtnElement.textContent('Sell')
-    btnsRow.appendChild(sellBtnElement)
-
-
-    makeCellElement.textContent = make;
-    modelCellElement.textContent = model;
-    yearCellElement.textContent = year;
-    fuelTypeElement.textContent = fuel;
-    originalPriceCellElement.textContent = originalPrice
-    sellingPrice.textContent = sellingPrice
-
-
-
-
-
-    tableRowElement.appendChild(sellingPriceCellElement)
-    tableRowElement.appendChild(originalPriceCellElement)
-    tableRowElement.appendChild(fuelTypeElement)
-    tableRowElement.appendChild(fuelTypeElement)
-    tableRowElement.appendChild(yearCellElement)
-    tableRowElement.appendChild(modelCellElement)
-    tableRowElement.appendChild(makeCellElement)
-    tableRowElement.appendChild(btnsRow)
-
-
-    tableBodyElement.appendChild(tableRowElement)
-
-
-
-  })
-
-
+    return element;
+  }
 }
