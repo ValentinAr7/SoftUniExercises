@@ -49,8 +49,10 @@ function solve() {
 
     allHitContainer.appendChild(divElement)
 
-
-
+    genreCellElement = genreElement.value;
+    nameCellElement =songNameElement.value;
+    authorCellElement = authorElement.value;
+    dateCellElement = dateElement.value;
 
 
     })
