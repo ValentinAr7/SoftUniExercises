@@ -43,9 +43,9 @@ function solve() {
         nameH4.textContent = `Recipient: ${name}`
         spanText.textContent = message
 
-        name = '';
-        title = '';
-        message = ''
+        recepientElement.value = '';
+        titleElement.value = '';
+        messageElement.value = ''
 
 //------------------------------------------------------------------------------------
         btnSend.addEventListener('click', (e)=>{
