@@ -12,7 +12,7 @@ function solve() {
 
   let tableBodyElement = document.getElementById('table-body')
 
-  publishBtnElement.addEventListener('click', (e)=>{
+  publishBtnElement.addEventListener('click', (e) => {
     e.preventDefault();
 
     let make = carMakeElement.value;
@@ -22,15 +22,16 @@ function solve() {
     let originalPrice = originalPriceElement.value;
     let sellingPrice = sellingPriceElement.value;
 
-    // if(!make  ||  !model  ||  !year  ||  !fuel   ||  !originalPrice  || !sellingPrice) {
-    //     return}
+    if (!make || !model || !year || !fuel || !originalPrice || !sellingPrice) {
+      return
+    }
 
-    // if(originalPrice > sellingPrice){
-    //   return
-    // }
+    if (originalPrice > sellingPrice) {
+      return
+    }
 
     let tableRowElement = document.createElement('tr');
-    tableRowElement.classList.add(row)
+    tableRowElement.classList.add('row')
 
     let makeCellElement = document.createElement('td')
     let modelCellElement = document.createElement('td')
@@ -38,14 +39,6 @@ function solve() {
     let fuelTypeElement = document.createElement('td')
     let originalPriceCellElement = document.createElement('td')
     let sellingPriceCellElement = document.createElement('td')
-
-    makeCellElement.textContent = make;
-    modelCellElement.textContent = model;
-    yearCellElement.textContent = year;
-    fuelTypeElement.textContent = fuel;
-    originalPriceCellElement.textContent = originalPrice
-    sellingPrice.textContent = sellingPrice
-
     let btnsRow = document.createElement('td')
 
     let editBtnElement = document.createElement('button')
@@ -59,6 +52,17 @@ function solve() {
     btnsRow.appendChild(sellBtnElement)
 
 
+    makeCellElement.textContent = make;
+    modelCellElement.textContent = model;
+    yearCellElement.textContent = year;
+    fuelTypeElement.textContent = fuel;
+    originalPriceCellElement.textContent = originalPrice
+    sellingPrice.textContent = sellingPrice
+
+
+
+
+
     tableRowElement.appendChild(sellingPriceCellElement)
     tableRowElement.appendChild(originalPriceCellElement)
     tableRowElement.appendChild(fuelTypeElement)
@@ -69,10 +73,9 @@ function solve() {
     tableRowElement.appendChild(btnsRow)
 
 
-
     tableBodyElement.appendChild(tableRowElement)
 
-      
+
 
   })
 
