@@ -9,14 +9,14 @@ function solve() {
     let resetButton = document.getElementById('reset')
 
 
-    addToListButton.addEventListener('click', (e)=>{
+    addToListButton.addEventListener('click', (e) => {
         e.preventDefault();
 
         let name = recepientElement.value;
         let title = titleElement.value;
         let message = messageElement.value;
 
-        if(!name || !title || !message ){
+        if (!name || !title || !message) {
             return
         }
 
@@ -27,7 +27,7 @@ function solve() {
 
         let buttonList = document.createElement('div');
         buttonList.id = 'list-action'
-        
+
         let btnSend = document.createElement('button')
         btnSend.id = 'send'
         btnSend.textContent = 'Send'
@@ -47,53 +47,84 @@ function solve() {
         titleElement.value = '';
         messageElement.value = ''
 
-//------------------------------------------------------------------------------------
-        btnSend.addEventListener('click', (e)=>{
-        let ulSentEmails = document.querySelector('.sent-list')
+        //------------------------------------------------------------------------------------
+        btnSend.addEventListener('click', (e) => {
+            let ulSentEmails = document.querySelector('.sent-list')
 
 
-        let sendBtnLiElement = document.createElement('li')
+            let sendBtnLiElement = document.createElement('li')
 
-        let toSpanElement = document.createElement('span')
-        let titleSpanElement = document.createElement('span')
+            let toSpanElement = document.createElement('span')
+            let titleSpanElement = document.createElement('span')
 
-        let divElement = document.createElement('div');
-        divElement.id = 'btn'
+            let divElement = document.createElement('div');
+            divElement.id = 'btn'
 
-        let btnDelete2 = document.createElement('button')
-        btnDelete2.classList.add('delete')
-        btnDelete2.textContent = 'Delete'
+            let btnDelete2 = document.createElement('button')
+            btnDelete2.classList.add('delete')
+            btnDelete2.textContent = 'Delete'
 
-        toSpanElement.textContent = `To: ${name}`
-        titleSpanElement.textContent = `Title: ${title}`
+            toSpanElement.textContent = `To: ${name}`
+            titleSpanElement.textContent = `Title: ${title}`
+
+            liElement.remove()
 
 
-        divElement.appendChild(btnDelete2)
 
-        sendBtnLiElement.appendChild(toSpanElement)
-        sendBtnLiElement.appendChild(titleSpanElement)
-        sendBtnLiElement.appendChild(divElement)
+            divElement.appendChild(btnDelete2)
 
-        ulSentEmails.appendChild(sendBtnLiElement)
+            sendBtnLiElement.appendChild(toSpanElement)
+            sendBtnLiElement.appendChild(titleSpanElement)
+            sendBtnLiElement.appendChild(divElement)
+
+            ulSentEmails.appendChild(sendBtnLiElement)
+
+
+
+//---------------------------------------------------------------------------------------------------------------------
+            btnDelete2.addEventListener('click', (e) => {
+                let ulDeleteElement = document.querySelector('.delete-list')
+
+                let deleteBtnLiElement = document.createElement('li');
+                let toDeleteSpan = document.createElement('span');
+                let titleDeleteSpan = document.createElement('span');
+
+                toDeleteSpan.textContent = `To: ${name}`
+                titleDeleteSpan.textContent = `To: ${title}`
+
+                deleteBtnLiElement.appendChild(toDeleteSpan)
+                deleteBtnLiElement.appendChild(titleDeleteSpan)
+
+                ulDeleteElement.appendChild(deleteBtnLiElement)
+
+                ulSentEmails.remove()
+
+            })
+
 
         })
 
 
 
-        btnDelete.addEventListener('click', (e)=>{
+        btnDelete.addEventListener('click', (e) => {
             let ulDeleteElement = document.querySelector('.delete-list')
 
             let deleteBtnLiElement = document.createElement('li');
             let toDeleteSpan = document.createElement('span');
             let titleDeleteSpan = document.createElement('span');
 
+            toDeleteSpan.textContent = `To: ${name}`
+            titleDeleteSpan.textContent = `To: ${title}`
+
             deleteBtnLiElement.appendChild(toDeleteSpan)
             deleteBtnLiElement.appendChild(titleDeleteSpan)
 
             ulDeleteElement.appendChild(deleteBtnLiElement)
 
+            ulElement.remove()
+
         })
-        
+
 
 
 
@@ -105,10 +136,6 @@ function solve() {
         liElement.appendChild(buttonList)
 
         ulElement.appendChild(liElement)
-
-
-
-
     })
 
 
