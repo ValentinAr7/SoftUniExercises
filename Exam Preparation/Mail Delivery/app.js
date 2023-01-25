@@ -90,7 +90,7 @@ function solve() {
                 let titleDeleteSpan = document.createElement('span');
 
                 toDeleteSpan.textContent = `To: ${name}`
-                titleDeleteSpan.textContent = `To: ${title}`
+                titleDeleteSpan.textContent = `Title: ${title}`
 
                 deleteBtnLiElement.appendChild(toDeleteSpan)
                 deleteBtnLiElement.appendChild(titleDeleteSpan)
@@ -125,11 +125,6 @@ function solve() {
 
         })
 
-
-
-
-
-
         liElement.appendChild(titleH4)
         liElement.appendChild(nameH4)
         liElement.appendChild(spanText)
@@ -137,8 +132,5 @@ function solve() {
 
         ulElement.appendChild(liElement)
     })
-
-
-
 }
 solve()
