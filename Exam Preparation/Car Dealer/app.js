@@ -22,12 +22,12 @@ function solve() {
     let originalPrice = originalPriceElement.value;
     let sellingPrice = sellingPriceElement.value;
 
-    if(!make  ||  !model  ||  !year  ||  !fuel   ||  !originalPrice  || !sellingPrice) {
-        return}
+    // if(!make  ||  !model  ||  !year  ||  !fuel   ||  !originalPrice  || !sellingPrice) {
+    //     return}
 
-    if(originalPrice > sellingPrice){
-      return
-    }
+    // if(originalPrice > sellingPrice){
+    //   return
+    // }
 
     let tableRowElement = document.createElement('tr');
     tableRowElement.classList.add(row)
