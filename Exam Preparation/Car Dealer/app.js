@@ -42,6 +42,9 @@ function solve() {
     makeCellElement.textContent = make;
     modelCellElement.textContent = model;
     yearCellElement.textContent = year;
+    fuelTypeElement.textContent = fuel;
+    originalPriceCellElement.textContent = originalPrice
+    sellingPrice.textContent = sellingPrice
 
     let btnsRow = document.createElement('td')
     let editBtnElement = document.createElement('button')
