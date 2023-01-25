@@ -7,6 +7,7 @@ function solve() {
 
     let addToListButton = document.getElementById('add')
     let resetButton = document.getElementById('reset')
+    let ulSentEmails = document.getElementById('sent-list')
 
 
     addToListButton.addEventListener('click', (e)=>{
@@ -46,7 +47,6 @@ function solve() {
 
 
         btnSend.addEventListener('click', (e)=>{
-
         let sendBtnLiElement = document.createElement('li')
         let toSpanElement = document.createElement('span')
         let titleSpanElement = document.createElement('span')
@@ -56,8 +56,8 @@ function solve() {
         btnDelete2.classList.add('delete')
         btnDelete2.textContent = 'Delete'
 
-        toSpanElement.textContent = name
-        titleSpanElement.textContent = title
+        toSpanElement.textContent = `To: ${name}`
+        titleSpanElement.textContent = `Title: ${title}`
 
 
         divElement.appendChild(btnDelete2)
@@ -65,6 +65,8 @@ function solve() {
         sendBtnLiElement.appendChild(toSpanElement)
         sendBtnLiElement.appendChild(titleSpanElement)
         sendBtnLiElement.appendChild(divElement)
+
+        ulSentEmails.appendChild(sendBtnLiElement)
 
 
         
