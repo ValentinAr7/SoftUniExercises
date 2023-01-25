@@ -77,6 +77,22 @@ function solve() {
         ulSentEmails.appendChild(sendBtnLiElement)
 
         })
+
+
+
+        btnDelete.addEventListener('click', (e)=>{
+            let ulDeleteElement = document.querySelector('.delete-list')
+
+            let deleteBtnLiElement = document.createElement('li');
+            let toDeleteSpan = document.createElement('span');
+            let titleDeleteSpan = document.createElement('span');
+
+            deleteBtnLiElement.appendChild(toDeleteSpan)
+            deleteBtnLiElement.appendChild(titleDeleteSpan)
+
+            ulDeleteElement.appendChild(deleteBtnLiElement)
+
+        })
         
 
 
