@@ -93,7 +93,11 @@ function solve() {
       bodyElement.appendChild(bodyElement2);
 
       bodyElement2.appendChild(h1Saved);
+    })
 
+    deleteBtn.addEventListener('click',(e)=>{
+      liElement.remove();
+      
     })
 
 
