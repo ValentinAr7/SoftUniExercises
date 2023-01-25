@@ -52,7 +52,19 @@ function solve() {
         let titleSpanElement = document.createElement('span')
 
         let divElement = document.createElement('div');
+        let btnDelete2 = document.createElement('button')
+        btnDelete2.textContent = 'Delete'
+
+        divElement.appendChild(btnDelete2)
+
+        sendBtnLiElement.appendChild(toSpanElement)
+        sendBtnLiElement.appendChild(titleSpanElement)
+        sendBtnLiElement.appendChild(divElement)
+
+
         
+
+
             
 
 
