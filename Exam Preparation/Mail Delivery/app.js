@@ -3,6 +3,7 @@ function solve() {
     let recepientElement = document.getElementById('recipientName');
     let titleElement = document.getElementById('title')
     let messageElement = document.getElementById('message')
+    let ulElement = document.getElementById('list')
 
     let addToListButton = document.getElementById('add')
     let resetButton = document.getElementById('reset')
@@ -41,6 +42,12 @@ function solve() {
         titleH4.value = title
         nameH4.value = name
         spanText.value = message
+
+        liElement.appendChild(titleH4)
+        liElement.appendChild(nameH4)
+        liElement.appendChild(spanText)
+
+        ulElement.appendChild(liElement)
 
 
 
