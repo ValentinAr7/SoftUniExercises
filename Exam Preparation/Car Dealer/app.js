@@ -30,6 +30,7 @@ function solve() {
     }
 
     let tableRowElement = document.createElement('tr');
+    tableRowElement.classList.add(row)
 
     let makeCellElement = document.createElement('td')
     let modelCellElement = document.createElement('td')
@@ -37,6 +38,10 @@ function solve() {
     let fuelTypeElement = document.createElement('td')
     let originalPriceCellElement = document.createElement('td')
     let sellingPriceCellElement = document.createElement('td')
+
+    makeCellElement.textContent = make;
+    modelCellElement.textContent = model;
+    yearCellElement.textContent = year;
 
     let btnsRow = document.createElement('td')
     let editBtnElement = document.createElement('button')
@@ -56,6 +61,8 @@ function solve() {
     tableRowElement.appendChild(modelCellElement)
     tableRowElement.appendChild(makeCellElement)
     tableRowElement.appendChild(btnsRow)
+
+
 
     tableBodyElement.appendChild(tableRowElement)
 
