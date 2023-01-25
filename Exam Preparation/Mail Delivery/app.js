@@ -53,7 +53,12 @@ function solve() {
 
         let divElement = document.createElement('div');
         let btnDelete2 = document.createElement('button')
+        btnDelete2.classList.add('delete')
         btnDelete2.textContent = 'Delete'
+
+        toSpanElement.textContent = name
+        titleSpanElement.textContent = title
+
 
         divElement.appendChild(btnDelete2)
 
