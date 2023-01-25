@@ -18,10 +18,37 @@ function solve() {
         return;
     }
 
+    let divElement = document.createElement('div')
+    divElement.classList.add('hits-info')
+
     let genreCellElement = document.createElement('h2');
     let nameCellElement = document.createElement('h2');
     let authorCellElement = document.createElement('h2');
     let dateCellElement = document.createElement('h3');
+
+    divElement.appendChild(genreCellElement)
+    divElement.appendChild(nameCellElement)
+    divElement.appendChild(authorCellElement)
+    divElement.appendChild(dateCellElement)
+
+    let saveBtn = document.createElement('button');
+    saveBtn.classList.add('save-btn')
+    saveBtn.textContent = 'Save song'
+    divElement.appendChild(saveBtn)
+
+
+    let likeBtn = document.createElement('button');
+    likeBtn.classList.add('like-btn');
+    likeBtn.textContent = 'Like song';
+    divElement.appendChild(likeBtn)
+
+    let deleteBtn = document.createElement('button');
+    deleteBtn.classList.add('delete-btn')
+    deleteBtn.textContent = 'Delete Song'
+    divElement.appendChild(deleteBtn)
+
+    allHitContainer.appendChild(divElement)
+
 
 
 
