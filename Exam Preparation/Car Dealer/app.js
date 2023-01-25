@@ -48,6 +48,14 @@ function solve() {
     btnsRow.appendChild(sellBtnElement)
 
 
+    tableRowElement.appendChild(sellingPriceCellElement)
+    tableRowElement.appendChild(originalPriceCellElement)
+    tableRowElement.appendChild(fuelTypeElement)
+    tableRowElement.appendChild(fuelTypeElement)
+    tableRowElement.appendChild(yearCellElement)
+    tableRowElement.appendChild(modelCellElement)
+    tableRowElement.appendChild(makeCellElement)
+    tableRowElement.appendChild(btnsRow)
 
     tableBodyElement.appendChild(tableRowElement)
 
