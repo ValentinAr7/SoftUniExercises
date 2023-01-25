@@ -39,13 +39,14 @@ function solve() {
         btnDelete.textContent = 'Delete'
         buttonList.appendChild(btnDelete)
 
-        titleH4.value = title
-        nameH4.value = name
-        spanText.value = message
+        titleH4.textContent = `Title: ${title}`
+        nameH4.textContent = `Recipient: ${name}`
+        spanText.textContent = message
 
         liElement.appendChild(titleH4)
         liElement.appendChild(nameH4)
         liElement.appendChild(spanText)
+        liElement.appendChild(buttonList)
 
         ulElement.appendChild(liElement)
 
