@@ -43,6 +43,25 @@ function solve() {
         nameH4.textContent = `Recipient: ${name}`
         spanText.textContent = message
 
+
+
+        btnSend.addEventListener('click', (e)=>{
+
+        let sendBtnLiElement = document.createElement('li')
+        let toSpanElement = document.createElement('span')
+        let titleSpanElement = document.createElement('span')
+
+        let divElement = document.createElement('div');
+        
+            
+
+
+        })
+
+
+
+
+
         liElement.appendChild(titleH4)
         liElement.appendChild(nameH4)
         liElement.appendChild(spanText)
