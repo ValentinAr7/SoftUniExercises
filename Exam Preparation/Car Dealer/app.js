@@ -47,12 +47,15 @@ function solve() {
     sellingPrice.textContent = sellingPrice
 
     let btnsRow = document.createElement('td')
+
     let editBtnElement = document.createElement('button')
-    editBtnElement.setAttribute('class', 'action-btn')
+    editBtnElement.classList.add('action-btn')
+    editBtnElement.textContent('Edit')
     btnsRow.appendChild(editBtnElement)
 
     let sellBtnElement = document.createElement('button')
-    sellBtnElement.setAttribute('class', 'action-btn')
+    sellBtnElement.classList.add('action-btn')
+    sellBtnElement.textContent('Sell')
     btnsRow.appendChild(sellBtnElement)
 
 
