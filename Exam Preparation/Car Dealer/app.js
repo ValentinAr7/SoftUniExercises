@@ -8,8 +8,9 @@ function solve() {
   let fuelTypeElement = document.getElementById('fuel');
   let originalPriceElement = document.getElementById('original-price');
   let sellingPriceElement = document.getElementById('selling-price');
-
   let publishBtnElement = document.getElementById('publish');
+
+  let tableBodyElement = document.getElementById('table-body')
 
   publishBtnElement.addEventListener('click', (e)=>{
     e.preventDefault();
@@ -27,6 +28,29 @@ function solve() {
     if(originalPrice > sellingPrice){
       return
     }
+
+    let tableRowElement = document.createElement('tr');
+
+    let makeCellElement = document.createElement('td')
+    let modelCellElement = document.createElement('td')
+    let yearCellElement = document.createElement('td')
+    let fuelTypeElement = document.createElement('td')
+    let originalPriceCellElement = document.createElement('td')
+    let sellingPriceCellElement = document.createElement('td')
+
+    let btnsRow = document.createElement('td')
+    let editBtnElement = document.createElement('button')
+    editBtnElement.setAttribute('class', 'action-btn')
+    btnsRow.appendChild(editBtnElement)
+
+    let sellBtnElement = document.createElement('button')
+    sellBtnElement.setAttribute('class', 'action-btn')
+    btnsRow.appendChild(sellBtnElement)
+
+
+
+    tableBodyElement.appendChild(tableRowElement)
+
       
 
   })
