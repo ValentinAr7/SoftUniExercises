@@ -49,10 +49,10 @@ function solve() {
 
     allHitContainer.appendChild(divElement)
 
-    genreCellElement = genreElement.value;
-    nameCellElement =songNameElement.value;
-    authorCellElement = authorElement.value;
-    dateCellElement = dateElement.value;
+    genreCellElement.textContent = `Genre: ${genreElement.value}`
+    nameCellElement.textContent =`Name: ${songNameElement.value}`
+    authorCellElement.textContent = `Author: ${authorElement.value}`
+    dateCellElement.textContent = `Date: ${dateElement.value}`
 
 
     })
