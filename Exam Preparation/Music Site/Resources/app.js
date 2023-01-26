@@ -55,6 +55,22 @@ function solve() {
     dateCellElement.textContent = `Date: ${dateElement.value}`
 
 
+    let totalLikes = 0
+    likeBtn.addEventListener('click', (e)=>{
+        
+        let totalLikesElement = document.getElementById('total-likes');
+        let divTotalLikes = document.querySelector('.likes');
+
+        totalLikes++
+
+        let likesP = document.createElement('p');
+        likesP.textContent = `Total Likes: ${totalLikes}`
+
+        divTotalLikes.appendChild(likesP)
+
+
+    })
+
     })
 
 
