@@ -1,17 +1,28 @@
 class ArtGallery {
-    constructor (creator){
+    constructor(creator) {
         this.creator = creator
-        this.possibleArticles = { 
-            "picture":200,
-            "photo":50,
-            "item":250 
+        this.possibleArticles = {
+            "picture": 200,
+            "photo": 50,
+            "item": 250
         }
-        this.guests = []
+        this.listOfArticles = [];
+        this.guests = [];
     }
 
-    addArticle( articleModel, articleName, quantity ){
+    addArticle(articleModel, articleName, quantity) {
+        let articleModelLower = articleModel.toLowerCase()
+        if (!this.possibleArticles[articleModelLower]) {
+            throw new Error(`This article model is not included in this gallery!`)
+        }
+
+        if (this.listOfArticles.some(x => x.articleName = articleName)) {
+
+        }
 
     }
+
+
 }
 
 
