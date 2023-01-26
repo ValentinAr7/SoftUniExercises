@@ -8,4 +8,14 @@ class ArtGallery {
         }
         this.guests = []
     }
+
+    addArticle( articleModel, articleName, quantity ){
+
+    }
 }
+
+
+const artGallery = new ArtGallery('Curtis Mayfield');
+console.log(artGallery.addArticle('picture', 'Mona Liza', 3));
+console.log(artGallery.addArticle('Item', 'Ancient vase', 2));
+console.log(artGallery.addArticle('PICTURE', 'Mona Liza', 1));
