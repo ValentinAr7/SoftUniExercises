@@ -32,6 +32,10 @@ class SummerCamp {
         }
 
         this.listOfParticipants.push(newList)
+
+        if(this.listOfParticipants.some(x => x.name == name)){
+            return `The ${name} is already registered at the camp.`
+        }
     }
 }
 
