@@ -33,6 +33,19 @@ class SummerCamp {
         this.listOfParticipants.push(newList)
         return `The ${name} was successfully registered.`
     }
+
+    unregisterParticipant (name){
+        let indexOfParticipnat = this.listOfParticipants.findIndex(x => x.name == name)
+        
+            if(indexOfParticipnat == -1){
+                throw new Error (`The ${name} is not registered at the camp.`)
+    
+            }
+        } 
+
+
+
+    }
 }
 
 
