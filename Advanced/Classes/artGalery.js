@@ -23,6 +23,8 @@ class ArtGallery {
             this.listOfArticles.push(addObjectToArtciles)
         }
 
+        return `Successfully added article ${articleName} with a new quantity- ${quantity}.`
+
     }
 
 
