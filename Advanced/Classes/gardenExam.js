@@ -52,6 +52,16 @@ class Garden {
         const plant = this.plant[plantIndex]
         if(plant.ripe == false){
             throw new Error (`The ${plantName} cannot be harvested before it is ripe.`)
+        } else {
+            this.plants.splice(plantIndex, 1);
+            this.storage.push({
+                plantName,
+                quantity: plant.quantity
+            });
+
+            this.spaceAvailable += this.spaceRequired
+
+            return `The ${plantName} has been successfully harvested.`
         }
     }
 
