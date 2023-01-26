@@ -16,10 +16,9 @@ class SummerCamp {
         if(!this.priceForTheCamp[condition]){
             throw new Error (`Unsuccessful registration at the camp.`)
         }
-
-        // if(this.listOfParticipants.includes(name)){
-        //     return `The ${name} is already registered at the camp`
-        // }
+        if(this.listOfParticipants.some(x => x.name == name)){
+            return `The ${name} is already registered at the camp.`
+        }
 
         if(this.priceForTheCamp[condition] < money){
             return `The money is not enough to pay the stay at the camp.`
@@ -32,10 +31,7 @@ class SummerCamp {
         }
 
         this.listOfParticipants.push(newList)
-
-        if(this.listOfParticipants.some(x => x.name == name)){
-            return `The ${name} is already registered at the camp.`
-        }
+        return `The ${name} was successfully registered.`
     }
 }
 
