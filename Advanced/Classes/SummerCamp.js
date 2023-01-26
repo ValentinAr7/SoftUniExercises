@@ -46,7 +46,7 @@ class SummerCamp {
 
 
     }
-}
+
 
 
 const summerCamp = new SummerCamp("Jane Austen", "Pancharevo Sofia 1137, Bulgaria");
