@@ -71,7 +71,6 @@ class ArtGallery {
             this.guests.points -= this.possibleArticles[articleModel]
             this.guests.purchaseArticle++
         }
-
         return `${guestName} successfully purchased the article worth ${this.possibleArticles[articleModel]} points.`
 
 
