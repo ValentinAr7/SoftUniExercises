@@ -16,8 +16,11 @@ class ArtGallery {
             throw new Error(`This article model is not included in this gallery!`)
         }
 
-        if (this.listOfArticles.some(x => x.articleName = articleName)) {
-
+        if (this.listOfArticles.some(x => x.articleName == articleName && x.articleModel == articleModel)) {
+            quantity += quantity
+        } else {
+            let addObjectToArtciles = {articleModel, articleName, quantity}
+            this.listOfArticles.push(addObjectToArtciles)
         }
 
     }
