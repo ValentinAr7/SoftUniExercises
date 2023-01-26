@@ -42,14 +42,17 @@ class Garden {
         } else {
             return `${quantity} ${plantName}s have successfully ripened`
         }
-
-
-
-
     }
 
     harvestPlant(plantName) {
-
+        const plantIndex = this.plants.find(p => p.plantName == plantName);
+        if(plantIndex == -1){
+            throw new Error (`There is no ${plantName} in the garden.`)
+        }
+        const plant = this.plant[plantIndex]
+        if(plant.ripe == false){
+            throw new Error (`The ${plantName} cannot be harvested before it is ripe.`)
+        }
     }
 
     generateReport(){
