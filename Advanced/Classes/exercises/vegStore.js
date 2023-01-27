@@ -34,9 +34,36 @@ class VegetableStore{
     }
 
     buyingVegetables (selectedProducts){
-        
+
+        let totalPrice = 0
+
+        selectedProducts.forEach(product => {
+            let [type, quantity] = product.split(' ')
+
+
+            let currentProduct = this.availableProducts.some(x=> x.type == type)
+            if(!currentProduct){
+               throw new Error `${type} is not available in the store, your current bill is ${totalPrice}.`            }
+        })
+
+        if(currentProduct.quantity < quantity){
+            throw new Error (`The quantity ${quantity} for the vegetable ${type} is not available in the store, your current bill is ${totalPrice}.`)
+        }
+
+        totalPrice += quantity* currentProduct.quantity
+        currentProduct.quantity -+ quantity
+        return  `Great choice! You must pay the following amount ${totalPrice}.`
     }
     
 }
 let vegStore = new VegetableStore("Jerrie Munro", "1463 Pette Kyosheta, Sofia");
-console.log(vegStore.loadingVegetables(["Okra 2.5 3.5", "Beans 10 2.8","Celery 5.5 2.2", "Celery 0.5 2.5"]));
+
+console.log(vegStore.loadingVegetables(["Okra 2.5 3.5", "Beans 10 2.8",
+
+"Celery 5.5 2.2", "Celery 0.5 2.5"]));
+
+console.log(vegStore.buyingVegetables(["Okra 1"]));
+
+console.log(vegStore.buyingVegetables(["Beans 8", "Okra 1.5"]));
+
+console.log(vegStore.buyingVegetables(["Banana 1", "Beans 2"]))
