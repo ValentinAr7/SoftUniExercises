@@ -7,13 +7,6 @@ class VegetableStore{
 
     loadingVegetables (vegetables){
 
-        let vegStore = {
-            type,
-            quantity,
-            price,
-        }
-
-
         vegetables.forEach(element => {
             let [type, quantity, price] = element.split(' ')
             let currentProduct = this.availableProducts.some(x => x.type === type)
@@ -23,24 +16,25 @@ class VegetableStore{
                     quantity: Number(quantity),
                     price: Number(price)
                 })
+            } else {
+                currentProduct.quantity += Number(quantity)
+                if(currentProduct.price > Number(price)){
+                    currentProduct.price == price
+                }
             }
+            let buff = [];
+            this.availableProducts.forEach(product => buff.push(product.type))
+            return `Successfully added ${this.availableProducts.type}`
+
         });
 
-
-
-
-
-        // let uniqueVeg = this.vegetables.some(x => x.type == type)
-        
-        // this.availableProducts.push(uniqueVeg);
-        // console.log(availableProducts);
-
     }
+    
 
 
 }
 
-// let vegStore = new VegetableStore("Jerrie Munro", "1463 Pette Kyosheta,Sofia");
+let vegStore = new VegetableStore("Jerrie Munro", "1463 Pette Kyosheta,Sofia");
 
-// console.log(vegStore.loadingVegetables(["Okra 2.5 3.5", "Beans 10 2.8",
-// "Celery 5.5 2.2", "Celery 0.5 2.5"]));
+console.log(vegStore.loadingVegetables(["Okra 2.5 3.5", "Beans 10 2.8",
+"Celery 5.5 2.2", "Celery 0.5 2.5"]));
