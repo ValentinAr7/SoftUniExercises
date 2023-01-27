@@ -32,6 +32,10 @@ class VegetableStore{
             this.availableProducts.forEach(product => buff.push(product.type))
             return `Successfully added ${buff.join(', ')}`
     }
+
+    buyingVegetables (selectedProducts){
+        
+    }
     
 }
 let vegStore = new VegetableStore("Jerrie Munro", "1463 Pette Kyosheta, Sofia");
