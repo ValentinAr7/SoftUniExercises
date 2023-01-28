@@ -11,7 +11,17 @@ class footballTeam{
         footballPlayers.forEach(player =>{
             let [name, age, playerValue] = player.split('/')
             
+            let checkPlayerName = this.invitedPlayers.find(x => x.name == name)
+
+            if(!checkPlayer){
+                this.invitedPlayers.push({
+                   name,
+                   age,
+                   playerValue, 
+                })
+            }
         })
+
     }
 
 }
