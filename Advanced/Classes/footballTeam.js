@@ -3,6 +3,7 @@ class footballTeam{
         this.clubName = clubName;
         this.country = country;
         this.invitedPlayers = [];
+        this.bought = false
 
     }
 
@@ -29,9 +30,28 @@ class footballTeam{
 
     signContract(selectedPlayer){
 
+        let priceDifference = 0
 
         selectedPlayer.forEach(sign =>{
             let [name, playerOffer] = sign.split('/');
+
+            if(this.invitedPlayers.some(x=> x.name == name)){
+                throw new Error (`${name} is not invited to the selection list!`)
+            }
+
+            if(this.invitedPlayers.playerValue > playerOffer){
+                priceDifference = this.invitedPlayers.playerValue -= playerOffer
+                throw new Error (`The manager's offer is not enough to sign a contract with ${name}, ${priceDifference} million more are needed to sign the contract!`)
+            }
+
+            this.bought = true;
+
+            if(this.bought){
+                this.invitedPlayers.playerValue == 'Bought'
+            return `"Congratulations! You sign a contract with ${name} for ${BuyingPrice} million dollars.`
+
+            }
+
         })
 
     }
