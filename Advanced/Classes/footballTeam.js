@@ -11,6 +11,8 @@ class footballTeam{
 
         footballPlayers.forEach(player =>{
             let [name, age, playerValue] = player.split('/')
+            age = Number(age)
+            playerValue = Number(playerValue)
             
             let checkPlayerName = this.invitedPlayers.find(x => x.name == name)
 
@@ -32,10 +34,12 @@ class footballTeam{
 
         let priceDifference = 0
 
-        selectedPlayer.forEach(sign =>{
-            let [name, playerOffer] = sign.split('/');
+        
+            let [name, playerOffer] = selectedPlayer.split('/');
+            playerOffer = Number(playerOffer)
 
-            if(this.invitedPlayers.some(x=> x.name == name)){
+            let selectedPlayerObject = this.invitedPlayers.find(x => x.name === name);
+            if(!selectedPlayerObject){
                 throw new Error (`${name} is not invited to the selection list!`)
             }
 
@@ -47,14 +51,15 @@ class footballTeam{
             this.bought = true;
 
             if(this.bought){
-                this.invitedPlayers.playerValue == 'Bought'
-            return `"Congratulations! You sign a contract with ${name} for ${BuyingPrice} million dollars.`
+                this.invitedPlayers.playerValue = 'Bought'
+            return `"Congratulations! You sign a contract with ${name} for ${playerOffer} million dollars.`
 
             }
-
-        })
-
     }
+
+
+
+    
 }
 
 let fTeam = new footballTeam("Barcelona", "Spain");
