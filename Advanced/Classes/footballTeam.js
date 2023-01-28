@@ -52,7 +52,7 @@ class footballTeam{
 
             if(this.bought){
                 this.invitedPlayers.playerValue = 'Bought'
-            return `"Congratulations! You sign a contract with ${name} for ${playerOffer} million dollars.`
+            return `Congratulations! You sign a contract with ${name} for ${playerOffer} million dollars.`
 
             }
     }
