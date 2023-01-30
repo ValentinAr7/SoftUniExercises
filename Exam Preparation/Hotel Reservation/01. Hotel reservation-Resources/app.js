@@ -66,27 +66,27 @@ function solve() {
 
         })
 
-        btnContinue.addEventListener('click', (e) =>{
+        btnContinue.addEventListener('click', (e) => {
 
             let li = document.createElement('li');
             li.classList.add('reservation-content')
 
-            let ul =  document.querySelector('.confirm-list')
+            let ul = document.querySelector('.confirm-list')
 
             let article = document.createElement('article');
             let h3 = document.createElement('h3');
             let fromDate = document.createElement('p');
             let toDate = document.createElement('p');
             let forManyPeople = document.createElement('p');
-    
+
             let btnConfirm = document.createElement('button');
             btnConfirm.classList.add('confirm-btn')
             btnConfirm.textContent = 'Confirm'
-    
+
             let btnCancel = document.createElement('button');
             btnCancel.classList.add('cancel-btn');
             btnCancel.textContent = 'Cancel'
-    
+
             h3.textContent = `Name: ${firstName} ${lastName}`;
             fromDate.textContent = `From date: ${checkIn}`;
             toDate.textContent = `To date: ${checkOut}`;
@@ -95,22 +95,37 @@ function solve() {
             infoListElement.remove()
             btnNextElement.disabled = false;
 
-            
-        article.appendChild(h3);
-        article.appendChild(fromDate);
-        article.appendChild(toDate);
-        article.appendChild(forManyPeople);
 
-        li.appendChild(article);
-        li.appendChild(btnCancel);
-        li.appendChild(btnConfirm);
+            article.appendChild(h3);
+            article.appendChild(fromDate);
+            article.appendChild(toDate);
+            article.appendChild(forManyPeople);
 
-        ul.appendChild(li)
+            li.appendChild(article);
+            li.appendChild(btnCancel);
+            li.appendChild(btnConfirm);
 
-
+            ul.appendChild(li)
         })
 
 
+        btnConfirm.addEventListener('click', (e) =>{
+            li.remove()
+            btnNextElement.disabled = false;
+
+            let title = document.getElementById('verification')
+            title.textContent = 'Confirmed'
+            title.classList.add('reservation-confirmed')
+        })
+
+        btnCancel.addEventListener('click', (e) =>{
+            li.remove();
+            btnNextElement.disabled = false;
+
+            let cancelTitle = document.getElementById('verification')
+            cancelTitle.textContent = 'Cancelled'
+            cancelTitle.classList.add('reservation=cancelled')
+        })
 
 
 
