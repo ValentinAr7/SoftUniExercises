@@ -49,6 +49,18 @@ class OnlineShop {
     }
 
     sellProduct(product) {
+        const haveProduct = this.products.find(s => s.product === product)
+        if(!haveProduct){
+            throw new Error (`There is no ${product} in the warehouse.`)
+        }
+
+        let salesObj = {
+            product,
+            sales: 1
+        }
+        this.products.quantity--
+        this.sales.push(salesObj)
+
         
     }
 
