@@ -57,6 +57,20 @@ class footballTeam{
             }
     }
 
+    ageLimit(name, age){
+
+        if(!this.invitedPlayers.find(x=> x.name ==name)){
+            throw new Error `${name} is not invited to the selection list!`
+        }
+
+        if(this.invitedPlayers.age < age){
+            if(this.invitedPlayers.age - age >= 5){
+                return `${name} will sign a contract for ${this.invitedPlayers.age - age} years with ${clubName} in ${country}!`
+            } else {
+                `${name} will sign a full 5 years contract for ${clubName} in ${country}!`
+            }
+        }
+    }
 
 
     
@@ -64,6 +78,7 @@ class footballTeam{
 
 let fTeam = new footballTeam("Barcelona", "Spain");
 console.log(fTeam.newAdditions(["Kylian Mbappé/23/160", "Lionel Messi/35/50", "Pau Torres/25/52"]));
-console.log(fTeam.signContract("Lionel Messi/60"));
+console.log(fTeam.ageLimit("Lionel Messi", 33 ));
+console.log(fTeam.ageLimit("Kylian Mbappé", 30));
+console.log(fTeam.ageLimit("Pau Torres", 26));
 console.log(fTeam.signContract("Kylian Mbappé/240"));
-console.log(fTeam.signContract("Barbukov/10"));
