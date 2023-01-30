@@ -41,7 +41,7 @@ function solve() {
         h3Element.textContent = `Name: ${firstName} ${lastName}`;
         fromDateCell.textContent = `From date: ${checkIn}`;
         toDateCell.textContent = `To date: ${checkOut}`;
-        guests.textContent = `For ${guests} people`
+        forManyPeopleCell.textContent = `For ${guests} people`
 
         firstNameElement.value = '';
         lastNameElement.value = '';
@@ -62,6 +62,32 @@ function solve() {
             guestsNumberElement.value = guests;
 
             infoListElement.remove()
+
+        })
+
+        btnContinue.addEventListener('click', (e) =>{
+
+            let li = document.createElement('li');
+            li.classList.add('reservation-content')
+
+            let article = document.createElement('article');
+            let h3 = document.createElement('h3');
+            let fromDate = document.createElement('p');
+            let toDate = document.createElement('p');
+            let forManyPeople = document.createElement('p');
+    
+            let btnConfirm = document.createElement('button');
+            btnConfirm.classList.add('confirm-btn')
+            btnConfirm.textContent = 'Confirmt'
+    
+            let btnSave = document.createElement('button');
+            btnSave.classList.add('save-btn');
+            btnSave.textContent = 'Save'
+    
+            h3.textContent = `Name: ${firstName} ${lastName}`;
+            fromDate.textContent = `From date: ${checkIn}`;
+            toDate.textContent = `To date: ${checkOut}`;
+            forManyPeople.textContent = `For ${guests} people`
 
         })
 
