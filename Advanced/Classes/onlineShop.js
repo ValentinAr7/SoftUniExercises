@@ -61,7 +61,7 @@ class OnlineShop {
         this.products.quantity--
         this.sales.push(salesObj)
 
-        
+        return `The ${product} has been successfully sold.`
     }
 
 }
