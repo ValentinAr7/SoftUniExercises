@@ -16,7 +16,6 @@ function solve() {
     btnNextElement.addEventListener('click', (e) => {
         e.preventDefault()
 
-
         let firstName = firstNameElement.value;
         let lastName = lastNameElement.value;
         let checkIn = checkInElement.value;
@@ -63,8 +62,8 @@ function solve() {
 
             infoListElement.remove()
             btnNextElement.disabled = false;
-
         })
+
 
         btnContinue.addEventListener('click', (e) => {
 
@@ -109,29 +108,6 @@ function solve() {
         })
 
 
-        btnConfirm.addEventListener('click', (e) =>{
-            li.remove()
-            btnNextElement.disabled = false;
-
-            let title = document.getElementById('verification')
-            title.textContent = 'Confirmed'
-            title.classList.add('reservation-confirmed')
-        })
-
-        btnCancel.addEventListener('click', (e) =>{
-            li.remove();
-            btnNextElement.disabled = false;
-
-            let cancelTitle = document.getElementById('verification')
-            cancelTitle.textContent = 'Cancelled'
-            cancelTitle.classList.add('reservation=cancelled')
-        })
-
-
-
-
-
-
 
         articleElement.appendChild(h3Element);
         articleElement.appendChild(fromDateCell);
@@ -145,16 +121,26 @@ function solve() {
         infoListElement.appendChild(liElement)
 
 
+        btnConfirm.addEventListener('click', (e) => {
+            
+            li.remove()
+            btnNextElement.disabled = false;
 
+            verification.setAttribute('class', 'reservation-confirmed');
+            verification.textContent = 'Confirmed.';
+        })
 
+        btnCancel.addEventListener('click', (e) => {
 
+            li.remove();
+            btnNextElement.disabled = false;
+
+            verification.setAttribute('class', 'reservation-cancelled');
+            verification.textContent = 'Cancelled.';
+
+        })
 
     })
-
-
-
-
-
 }
 
 
