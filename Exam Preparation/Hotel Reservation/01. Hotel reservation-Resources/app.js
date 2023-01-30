@@ -81,11 +81,11 @@ function solve() {
     
             let btnConfirm = document.createElement('button');
             btnConfirm.classList.add('confirm-btn')
-            btnConfirm.textContent = 'Confirmt'
+            btnConfirm.textContent = 'Confirm'
     
-            let btnSave = document.createElement('button');
-            btnSave.classList.add('save-btn');
-            btnSave.textContent = 'Save'
+            let btnCancel = document.createElement('button');
+            btnCancel.classList.add('cancel-btn');
+            btnCancel.textContent = 'Cancel'
     
             h3.textContent = `Name: ${firstName} ${lastName}`;
             fromDate.textContent = `From date: ${checkIn}`;
@@ -102,7 +102,7 @@ function solve() {
         article.appendChild(forManyPeople);
 
         li.appendChild(article);
-        li.appendChild(btnSave);
+        li.appendChild(btnCancel);
         li.appendChild(btnConfirm);
 
         ul.appendChild(li)
