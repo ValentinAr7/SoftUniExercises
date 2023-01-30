@@ -43,15 +43,15 @@ function solve() {
     toDateCell.textContent = `To date: ${checkOut}`;
     guests.textContent = `For ${guests} people`
 
-    firstNameElement.textContent = '';
-    lastNameElement.textContent = '';
-    checkInElement.textContent = '';
-    checkOutElement.textContent = '';
-    guestsNumberElement.textContent = '';
+    firstNameElement.value = '';
+    lastNameElement.value = '';
+    checkInElement.value = '';
+    checkOutElement.value = '';
+    guestsNumberElement.value = '';
 
-    btnNextElement.enabled = false;
-    btnEdit.enabled = true;
-    btnContinue.enabled = true;
+    btnNextElement.disabled  = true;
+    btnEdit.disabled = false;
+    btnContinue.disabled = false;
 
 
 
