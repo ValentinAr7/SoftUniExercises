@@ -1,14 +1,14 @@
-class OnlineShop{
-    constructor(warehouseSpace){
+class OnlineShop {
+    constructor(warehouseSpace) {
         this.warehouseSpace = warehouseSpace;
         this.products = [];
         this.sales = [];
     }
 
-    loadingStore(product, quantity, spaceRequired){
-        
-        if(this.warehouseSpace < spaceRequired){
-            throw new Error (`Not enough space in the warehouse.`)
+    loadingStore(product, quantity, spaceRequired) {
+
+        if (this.warehouseSpace < spaceRequired) {
+            throw new Error(`Not enough space in the warehouse.`)
         }
 
         let productObj = {
