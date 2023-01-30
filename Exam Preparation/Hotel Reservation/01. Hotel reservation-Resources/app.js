@@ -62,6 +62,7 @@ function solve() {
             guestsNumberElement.value = guests;
 
             infoListElement.remove()
+            btnNextElement.disabled = false;
 
         })
 
@@ -69,6 +70,8 @@ function solve() {
 
             let li = document.createElement('li');
             li.classList.add('reservation-content')
+
+            let ul =  document.querySelector('.confirm-list')
 
             let article = document.createElement('article');
             let h3 = document.createElement('h3');
@@ -88,6 +91,22 @@ function solve() {
             fromDate.textContent = `From date: ${checkIn}`;
             toDate.textContent = `To date: ${checkOut}`;
             forManyPeople.textContent = `For ${guests} people`
+
+            infoListElement.remove()
+            btnNextElement.disabled = false;
+
+            
+        article.appendChild(h3);
+        article.appendChild(fromDate);
+        article.appendChild(toDate);
+        article.appendChild(forManyPeople);
+
+        li.appendChild(article);
+        li.appendChild(btnSave);
+        li.appendChild(btnConfirm);
+
+        ul.appendChild(li)
+
 
         })
 
