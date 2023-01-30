@@ -72,14 +72,14 @@ class OnlineShop {
 
         let output = `You sold ${this.sales.length} products today!\nProducts in the warehouse:\n`;
         for (let product of this.products) {
-          let sales = this.sales.find(s => s.product === product.product);
-          let quantityLeft = product.quantity - (sales ? sales.sales : 0);
-          output += `${product.product} - ${quantityLeft} more left\n`;
+            let sales = this.sales.find(s => s.product === product.product);
+            let quantityLeft = product.quantity - (sales ? sales.sales : 0);
+            output += `${product.product} - ${quantityLeft} more left\n`;
         }
-        
+
         return output;
-      }
     }
+}
 
 
 
