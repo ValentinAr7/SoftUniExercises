@@ -47,6 +47,8 @@ class OnlineShop {
 
         return `You added ${difference} more from the ${product} products.`
     }
+
+    
 }
 
 const myOnlineShop = new OnlineShop(500)
