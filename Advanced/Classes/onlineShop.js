@@ -20,7 +20,7 @@ class OnlineShop {
         }
 
         this.products.push(productObj)
-        this.warehouseSpace -= spaceRequired
+        this.warehouseSpace -= Number(spaceRequired)
 
         return `The ${product} has been successfully delivered in the warehouse.`
     }
@@ -29,7 +29,8 @@ class OnlineShop {
 
         minimalQuantity = Number(minimalQuantity)
 
-        if(!this.products.find(p => p.product == product)){
+        let foundProduct = this.products.find(p => p.product === product)
+        if(!foundProduct){
             throw new Error (`There is no ${product} in the warehouse.`)
         }
 
@@ -37,12 +38,12 @@ class OnlineShop {
             throw new Error (`The quantity cannot be zero or negative.`)
         }
 
-        if(this.products.quantity >= minimalQuantity){
+        if(foundProduct.quantity >= minimalQuantity){
             return `You have enough from product ${product}.`
         }
 
-        this.products.quantity == minimalQuantity
-        let difference = this.products.quantity - minimalQuantity
+        let difference = minimalQuantity - foundProduct.quantity
+        foundProduct.quantity = minimalQuantity
 
         return `You added ${difference} more from the ${product} products.`
     }
