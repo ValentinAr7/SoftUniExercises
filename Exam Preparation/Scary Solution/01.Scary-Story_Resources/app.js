@@ -72,6 +72,7 @@ function solve() {
     deleteBtn.classList.add('delete-btn');
     deleteBtn.textContent = 'Delete Story';
     deleteBtn.disabled = false;
+    
 
     editBtn.addEventListener('click', (e)=>{
       firstNameElement.value = firstName
