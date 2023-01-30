@@ -25,6 +25,7 @@ function solve() {
     let guests = guestsNumberElement.value;
 
     let liElement = document.createElement('li');
+    
 
     let articleElement = document.createElement('article');
     let h3Element = document.createElement('h3');
@@ -45,6 +46,20 @@ function solve() {
     fromDateCell.value = `From date: ${checkIn}`;
     toDateCell.value = `To date: ${checkOut}`;
     guests.value = `For ${guests} people`
+
+    articleElement.appendChild(h3Element);
+    articleElement.appendChild(fromDateCell);
+    articleElement.appendChild(toDateCell);
+    articleElement.appendChild(forManyPeopleCell);
+
+    liElement.appendChild(articleElement);
+    liElement.appendChild(btnEdit);
+    liElement.appendChild(btnContinue);
+
+    infoListElement.appendChild(liElement)
+
+
+
 
 
 
