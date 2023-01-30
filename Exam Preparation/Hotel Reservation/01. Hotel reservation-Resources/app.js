@@ -41,11 +41,24 @@ function solve() {
     btnContinue.classList.add('continue-btn');
     btnContinue.textContent = 'Continue'
 
+    h3Element.textContent = `Name: ${firstName} ${lastName}`;
+    fromDateCell.textContent = `From date: ${checkIn}`;
+    toDateCell.textContent = `To date: ${checkOut}`;
+    guests.textContent = `For ${guests} people`
 
-    h3Element.value = `Name: ${firstName} ${lastName}`;
-    fromDateCell.value = `From date: ${checkIn}`;
-    toDateCell.value = `To date: ${checkOut}`;
-    guests.value = `For ${guests} people`
+    firstNameElement.textContent = '';
+    lastNameElement.textContent = '';
+    checkInElement.textContent = '';
+    checkOutElement.textContent = '';
+    guestsNumberElement.textContent = '';
+
+
+
+
+
+
+
+
 
     articleElement.appendChild(h3Element);
     articleElement.appendChild(fromDateCell);
