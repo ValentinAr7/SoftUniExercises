@@ -36,10 +36,15 @@ function solve() {
     btnEdit.classList.add('edit-btn')
     btnEdit.textContent = 'Edit'
 
-
     let btnContinue = document.createElement('button');
     btnContinue.classList.add('continue-btn');
     btnContinue.textContent = 'Continue'
+
+
+    h3Element.value = `Name: ${firstName} ${lastName}`;
+    fromDateCell.value = `From date: ${checkIn}`;
+    toDateCell.value = `To date: ${checkOut}`;
+    guests.value = `For ${guests} people`
 
 
 
