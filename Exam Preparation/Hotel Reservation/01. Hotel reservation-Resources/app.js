@@ -12,7 +12,7 @@ function solve() {
     let infoReservationElement = document.getElementById('info-reservations')
     let btnNextElement = document.getElementById('next-btn')
 
-    
+
     btnNextElement.addEventListener('click', (e) =>{
         e.preventDefault()
 
@@ -24,8 +24,6 @@ function solve() {
     let guests = guestsNumberElement.value;
 
     let liElement = document.createElement('li');
-    
-
     let articleElement = document.createElement('article');
     let h3Element = document.createElement('h3');
     let fromDateCell =document.createElement('p');
@@ -50,6 +48,10 @@ function solve() {
     checkInElement.textContent = '';
     checkOutElement.textContent = '';
     guestsNumberElement.textContent = '';
+
+    btnNextElement.enabled = false;
+    btnEdit.enabled = true;
+    btnContinue.enabled = true;
 
 
 
