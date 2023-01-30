@@ -9,11 +9,10 @@ function solve() {
     let guestsNumberElement = document.getElementById('people-count')
 
     let infoListElement = document.querySelector('.info-list')
-
     let infoReservationElement = document.getElementById('info-reservations')
-
     let btnNextElement = document.getElementById('next-btn')
 
+    
     btnNextElement.addEventListener('click', (e) =>{
         e.preventDefault()
 
