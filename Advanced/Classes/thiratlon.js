@@ -10,7 +10,10 @@ class Triathlon {
     addParticipant (participantName, participantGender){
 
         if (this.participants[participantName] === undefined) {
+
             this.participants[participantName] = participantGender;
+            //The line of code assigns a value (participantGender) to a property (participantName) of an object (this.participants). So, in this line, the value participantGender is being assigned to a property with the name participantName within the participants object. 
+            
             return `A new participant has been added - ${participantName}`;
           } else {
             return `${participantName} has already been added to the list`;
