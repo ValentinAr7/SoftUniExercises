@@ -31,7 +31,13 @@ class Triathlon {
 
             let completedCount = 0
             if(condition / 30 > 3){
+                let participantGender = this.participants[participantName]
+                this.listOfFinalists.push({
+                    name: participantName,
+                    gender: participantGender
+                })
                 return `Congratulations, ${participantName} finished the whole competition`
+           
             }
 
             if(condition / 30 > 2 && condition / 30 < 3){
@@ -51,9 +57,12 @@ class Triathlon {
         
             if(!finalistCheck){
                 return `${participantName} is not in the current finalists list`
+            } else {
+                return `${participantName} was rewarded with a trophy for his performance`
+
             }
 
-            return `${participantName} was rewarded with a trophy for his performance`
+
         
         }
 
