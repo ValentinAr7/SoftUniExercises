@@ -11,7 +11,14 @@ class Triathlon {
 
         const existParticipant = this.participants.find(p => p.participantName = participantName)
 
-        
+        let participant = {
+            participantName: participantGender
+        }
+
+        if(!existParticipant){
+            this.participants.push(participant)
+            return `A new participant has been added - ${participantName}`
+        }
     }
 
 }
