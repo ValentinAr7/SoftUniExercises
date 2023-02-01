@@ -46,6 +46,10 @@ class Triathlon {
             
         }
 
+        rewarding (participantName){
+            
+        }
+
 }
 const contest = new Triathlon("Dynamos");
 console.log(contest.addParticipant("Peter", "male"));
