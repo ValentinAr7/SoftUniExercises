@@ -3,8 +3,12 @@ class Triathlon {
     constructor(competitionName ){
 
         this.competitionName = competitionName;
-        this.participants = participants;
+        this.participants = {};
         this.listOfFinalists = [];
+    }
+
+    addParticipant (participantName, participantGender){
+        
     }
 
 }
