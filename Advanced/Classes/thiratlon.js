@@ -24,6 +24,26 @@ class Triathlon {
             if(this.participants[participantName] === undefined){
                 throw new Error (`${participantName} is not in the current participants list`)
             }
+
+            if(condition < 30){
+                throw new Error (`${participantName} is not well prepared and cannot finish any discipline`)
+            }
+
+            let completedCount = 0
+            if(condition / 30 > 3){
+                return `Congratulations, ${participantName} finished the whole competition`
+            }
+
+            if(condition / 30 > 2 && condition / 30 < 3){
+                completedCount = 2
+                return `${participantName} could only complete ${completedCount} of the disciplines`
+            } 
+
+            if(condition / 30 > 1 && condition / 30 < 2){
+                completedCount = 1
+                return `${participantName} could only complete ${completedCount} of the disciplines`
+            } 
+            
         }
 
 }
