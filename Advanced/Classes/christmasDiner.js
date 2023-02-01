@@ -1,19 +1,19 @@
 class ChristmasDinner {
 
-    constructor(budget){
+    constructor(budget) {
         this.budget = budget
         this.dishes = []
         this.products = []
         this.guests = {}
 
-        if(this.budget < 0){
-            throw new Error (`The budget cannot be a negative number`)
+        if (this.budget < 0) {
+            throw new Error(`The budget cannot be a negative number`)
         }
     }
 
-    shopping([product, price]){
-        if(this.budget < price){
-            throw new Error (`Not enough money to buy this product`)
+    shopping([product, price]) {
+        if (this.budget < price) {
+            throw new Error(`Not enough money to buy this product`)
         } else {
             this.products.push(product)
             this.budget -= price
@@ -21,9 +21,9 @@ class ChristmasDinner {
         }
     }
 
-    recipes({recipeName, productsList}){
-        
-        if(this.products.every(x => productsList.includes(x))){
+    recipes({ recipeName, productsList }) {
+
+        if (this.products.every(x => productsList.includes(x))) {
             this.dishes.push({ recipeName, productsList });
             return `${recipeName} has been successfully cooked!`
         } else {
@@ -31,33 +31,33 @@ class ChristmasDinner {
         }
     }
 
-    inviteGuests(name, dish){
+    inviteGuests(name, dish) {
 
         let findDishes = this.dishes.find(d => d.dish == dish);
 
-        if(!findDishes){
+        if (!findDishes) {
             return `We do not have this dish`
         }
 
-        if(this.guests[name] === undefined){
+        if (this.guests[name] === undefined) {
             return `This guest has already been invited`
         }
 
         this.guests[name] = dish
         return `You have successfully invited ${name}!`
-        
+
 
     }
 
-    showAttendance(){
+    showAttendance() {
         let result = "";
         for (const guest in this.guests) {
-          const dish = this.dishes.find(({ recipeName }) => recipeName === this.guests[guest]);
-          result += `${guest} will eat ${dish.recipeName}, which consists of ${dish.productsList.join(", ")}\n`;
+            const dish = this.dishes.find(({ recipeName }) => recipeName === this.guests[guest]);
+            result += `${guest} will eat ${dish.recipeName}, which consists of ${dish.productsList.join(", ")}\n`;
         }
         return result.trim()
-      }    
     }
+}
 
 
 
