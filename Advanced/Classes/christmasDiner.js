@@ -19,8 +19,38 @@ class ChristmasDinner {
             this.budget -= price
             return `You have successfully bought ${product}!`
         }
+    }
 
+    recipes({recipeName, productsList}){
+        
+        if(this.products.every(x => productsList.includes(x))){
+            this.dishes.push({ recipeName, productsList });
+            return `${recipeName} has been successfully cooked!`
+        } else {
+            return `We do not have this product`
+        }
+    }
 
+    inviteGuests(name, dish){
+
+        let findDishes = this.dishes.find(d => d.dish == dish);
+
+        if(!findDishes){
+            return `We do not have this dish`
+        }
+
+        if(this.guests[name] === undefined){
+            return `This guest has already been invited`
+        }
+
+        this.guests[name] = dish
+        return `You have successfully invited ${name}!`
+        
+
+    }
+
+    showAttendance(){
+        return `${this.guests[name]} will eat ${this.dishes}, which consist of ${this.products}`
     }
 
 
@@ -37,21 +67,21 @@ dinner.shopping(['Peppers', 1]);
 dinner.shopping(['Fruits', 40]);
 dinner.shopping(['Honey', 10]);
 
-// dinner.recipes({
-//     recipeName: 'Oshav',
-//     productsList: ['Fruits', 'Honey']
-// });
-// dinner.recipes({
-//     recipeName: 'Folded cabbage leaves filled with rice',
-//     productsList: ['Cabbage', 'Rice', 'Salt', 'Savory']
-// });
-// dinner.recipes({
-//     recipeName: 'Peppers filled with beans',
-//     productsList: ['Beans', 'Peppers', 'Salt']
-// });
+dinner.recipes({
+    recipeName: 'Oshav',
+    productsList: ['Fruits', 'Honey']
+});
+dinner.recipes({
+    recipeName: 'Folded cabbage leaves filled with rice',
+    productsList: ['Cabbage', 'Rice', 'Salt', 'Savory']
+});
+dinner.recipes({
+    recipeName: 'Peppers filled with beans',
+    productsList: ['Beans', 'Peppers', 'Salt']
+});
 
-// dinner.inviteGuests('Ivan', 'Oshav');
-// dinner.inviteGuests('Petar', 'Folded cabbage leaves filled with rice');
-// dinner.inviteGuests('Georgi', 'Peppers filled with beans');
+dinner.inviteGuests('Ivan', 'Oshav');
+dinner.inviteGuests('Petar', 'Folded cabbage leaves filled with rice');
+dinner.inviteGuests('Georgi', 'Peppers filled with beans');
 
-// console.log(dinner.showAttendance());
+console.log(dinner.showAttendance());
