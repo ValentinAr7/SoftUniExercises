@@ -61,9 +61,10 @@ class Triathlon {
                 return `${participantName} was rewarded with a trophy for his performance`
 
             }
+        }
 
-
-        
+        showRecord (criteria){
+            
         }
 
 }
