@@ -8,6 +8,9 @@ class Triathlon {
     }
 
     addParticipant (participantName, participantGender){
+
+        const existParticipant = this.participants.find(p => p.participantName = participantName)
+
         
     }
 
