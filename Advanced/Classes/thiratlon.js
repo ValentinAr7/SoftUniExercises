@@ -21,7 +21,9 @@ class Triathlon {
         }
 
         completeness (participantName, condition){
-            
+            if(this.participants[participantName] === undefined){
+                throw new Error (`${participantName} is not in the current participants list`)
+            }
         }
 
 }
