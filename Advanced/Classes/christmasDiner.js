@@ -50,11 +50,17 @@ class ChristmasDinner {
     }
 
     showAttendance(){
-        return `${this.guests[name]} will eat ${this.dishes}, which consist of ${this.products}`
+        let result = "";
+        for (const guest in this.guests) {
+          const dish = this.dishes.find(({ recipeName }) => recipeName === this.guests[guest]);
+          result += `${guest} will eat ${dish.recipeName}, which consists of ${dish.productsList.join(", ")}\n`;
+        }
+        return result.trim()
+      }    
     }
 
 
-}
+
 
 let dinner = new ChristmasDinner(300);
 
