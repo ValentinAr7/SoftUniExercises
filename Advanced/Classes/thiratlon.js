@@ -47,7 +47,9 @@ class Triathlon {
         }
 
         rewarding (participantName){
-            
+            let finalistCheck = this.listOfFinalists.find(n => n.participantName == participantName)
+        
+        
         }
 
 }
