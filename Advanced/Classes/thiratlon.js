@@ -49,6 +49,11 @@ class Triathlon {
         rewarding (participantName){
             let finalistCheck = this.listOfFinalists.find(n => n.participantName == participantName)
         
+            if(!finalistCheck){
+                return `${participantName} is not in the current finalists list`
+            }
+
+            return `${participantName} was rewarded with a trophy for his performance`
         
         }
 
