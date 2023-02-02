@@ -26,7 +26,11 @@ class CarDealership{
     }
 
     sellCar (model, desiredMileage) {
+        let foundCar = this.availableCars.find(c => c.model == model)
 
+        if(!foundCar){
+            throw new Error `${model} was not found`
+        }
     }
 
 }
