@@ -72,6 +72,7 @@ class CarDealership {
             throw new Error("Invalid criteria!");
         }
 
+        //order by mileage or horsepower
         this.soldCars.sort((a, b) => {
             if (criteria === "horsepower") {
                 return b.horsepower - a.horsepower;
@@ -80,6 +81,7 @@ class CarDealership {
             }
         });
 
+        //print report
         let result = `-${this.name} has a total income of ${this.totalIncome.toFixed(2)}$\n`;
         result += `-${this.soldCars.length} cars sold:\n`;
 
