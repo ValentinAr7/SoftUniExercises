@@ -6,4 +6,8 @@ class CarDealership{
        this.totalIncome = 0 
     }
 
+    addCar (model, horsepower, price, mileage){
+        
+    }
+
 }
