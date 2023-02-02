@@ -60,9 +60,11 @@ class CarDealership {
 
     currentCar() {
         let result = ''
+        
         for (let car of this.availableCars) {
             result += `---${car.model} - ${car.horsepower} HP - ${car.mileage.toFixed(2)} km - ${car.price.toFixed(2)}$\n`
         }
+
         return result.length ? result.trim() : "There are no available cars";
     }
 
@@ -92,7 +94,6 @@ class CarDealership {
         return result.trim();
 
     }
-
 }
 
 
