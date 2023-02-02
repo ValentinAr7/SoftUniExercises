@@ -8,9 +8,9 @@ class CarDealership{
 
     addCar (model, horsepower, price, mileage){
 
-        let horsepower = Number(horsepower)
-        let price = Number(price);
-        let mileage = Number(mileage)
+        horsepower = Number(horsepower)
+        price = Number(price);
+        mileage = Number(mileage)
         if(model == '' || horsepower < 0 || price < 0 || mileage < 0){
             throw new Error (`Invalid input!`)
         }
@@ -21,7 +21,9 @@ class CarDealership{
             price,
             mileage
         }
-        
+        this.availableCars.push(newCar)
+        return `"New car added: ${model} - ${horsepower} HP - ${(mileage).toFixed(2)} km - ${(price).toFixed(2)}$`
+
     }
 
 }
