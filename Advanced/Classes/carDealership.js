@@ -14,6 +14,14 @@ class CarDealership{
         if(model == '' || horsepower < 0 || price < 0 || mileage < 0){
             throw new Error (`Invalid input!`)
         }
+
+        let newCar = {
+            model,
+            horsepower,
+            price,
+            mileage
+        }
+        
     }
 
 }
