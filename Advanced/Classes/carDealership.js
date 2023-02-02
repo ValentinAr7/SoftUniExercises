@@ -49,7 +49,8 @@ class CarDealership{
 
         this.soldCars.push(sold)
         this.totalIncome += sellPrice
-        
+
+        return `${model} was sold for ${(soldPrice).toFixed(2)}$`
     }
 
 }
