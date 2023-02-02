@@ -32,9 +32,24 @@ class CarDealership{
             throw new Error (`${model} was not found`)
         }
 
+        let sellPrice = 0
         if((this.availableCars[mileage] - desiredMileage) <= 40000){
-            newCar.price = newCar.price * 0.95
+            sellPrice = newCar.price * 0.95
         }
+
+        if((this.availableCars[mileage] - desiredMileage) > 40000){
+            sellPrice = newCar.price * 0.90
+        }
+
+        let sold = {
+            model,
+            horsepower,
+            soldPrice: sellPrice
+        }
+
+        this.soldCars.push(sold)
+        this.totalIncome += sellPrice
+        
     }
 
 }
