@@ -32,34 +32,39 @@ class CarDealership {
         if (!foundCar) {
             throw new Error(`${model} was not found!`)
         }
-            // this.soldCars[model] = desiredMileage
+        // this.soldCars[model] = desiredMileage
 
-            let mileageDiff = foundCar.mileage - desiredMileage;
-            let price = foundCar.price;
-            
-            if (mileageDiff > 0) {
-              if (mileageDiff <= 40000) {
+        let mileageDiff = foundCar.mileage - desiredMileage;
+        let price = foundCar.price;
+
+        if (mileageDiff > 0) {
+            if (mileageDiff <= 40000) {
                 price *= 0.95;
-              } else {
+            } else {
                 price *= 0.9;
-              }
             }
-
-            let soldCar = { model: foundCar.model, horsepower: foundCar.horsepower, soldPrice: price };
-            this.soldCars.push(soldCar);
-            this.availableCars = this.availableCars.filter(c => c.model != model);
-            this.totalIncome += price;
-            return `${model} was sold for ${price.toFixed(2)}$`;
-          }
-
         }
-    
+
+        let soldCar = {
+            model: foundCar.model,
+            horsepower: foundCar.horsepower,
+            soldPrice: price
+        };
+
+        this.soldCars.push(soldCar);
+        this.availableCars = this.availableCars.filter(c => c.model != model);
+        this.totalIncome += price;
+        return `${model} was sold for ${price.toFixed(2)}$`;
+    }
+
+}
 
 
-        let dealership = new CarDealership('SoftAuto');
-        dealership.addCar('Toyota Corolla', 100, 3500, 190000);
-        dealership.addCar('Mercedes C63', 300, 29000, 187000);
-        dealership.addCar('Audi A3', 120, 4900, 240000);
-        console.log(dealership.sellCar('Toyota Corolla', 230000));
-        console.log(dealership.sellCar('Mercedes C63', 110000));
+
+let dealership = new CarDealership('SoftAuto');
+dealership.addCar('Toyota Corolla', 100, 3500, 190000);
+dealership.addCar('Mercedes C63', 300, 29000, 187000);
+dealership.addCar('Audi A3', 120, 4900, 240000);
+console.log(dealership.sellCar('Toyota Corolla', 230000));
+console.log(dealership.sellCar('Mercedes C63', 110000));
 
