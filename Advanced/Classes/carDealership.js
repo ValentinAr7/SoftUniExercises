@@ -52,7 +52,9 @@ class CarDealership {
         };
 
         this.soldCars.push(soldCar);
+
         this.availableCars = this.availableCars.filter(c => c.model != model);
+        //it returns true for each element in the array for which the model property is not equal to the model argument passed to the sellCar method. The filter method returns a new array with all the elements for which the callback function returned true.
         this.totalIncome += price;
         return `${model} was sold for ${price.toFixed(2)}$`;
     }
