@@ -59,14 +59,21 @@ class CarDealership {
         return `${model} was sold for ${price.toFixed(2)}$`;
     }
 
-}
+    currentCar () {
+        let result = ''
+        for(let car of this.availableCars){
+            result += `---${car.model} - ${car.horsepower} HP - ${car.mileage} km - ${car.price}$\n`
+        }
+        return result.length ? result.trim() : "There are no available cars";
+    }
 
+}
 
 
 let dealership = new CarDealership('SoftAuto');
 dealership.addCar('Toyota Corolla', 100, 3500, 190000);
 dealership.addCar('Mercedes C63', 300, 29000, 187000);
 dealership.addCar('Audi A3', 120, 4900, 240000);
-console.log(dealership.sellCar('Toyota Corolla', 230000));
-console.log(dealership.sellCar('Mercedes C63', 110000));
+console.log(dealership.currentCar());
+
 
