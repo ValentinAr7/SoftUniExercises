@@ -28,8 +28,12 @@ class CarDealership{
     sellCar (model, desiredMileage) {
         let foundCar = this.availableCars.find(c => c.model == model)
 
-        if(!foundCar){
-            throw new Error `${model} was not found`
+        if(this.availableCars[model] === undefined){
+            throw new Error (`${model} was not found`)
+        }
+
+        if((this.availableCars[mileage] - desiredMileage) <= 40000){
+            newCar.price = newCar.price * 0.95
         }
     }
 
