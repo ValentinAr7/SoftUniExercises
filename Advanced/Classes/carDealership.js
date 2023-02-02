@@ -32,7 +32,6 @@ class CarDealership {
         if (!foundCar) {
             throw new Error(`${model} was not found!`)
         }
-        // this.soldCars[model] = desiredMileage
 
         let mileageDiff = foundCar.mileage - desiredMileage;
         let price = foundCar.price;
