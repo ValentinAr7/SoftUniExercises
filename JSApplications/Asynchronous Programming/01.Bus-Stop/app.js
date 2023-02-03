@@ -11,5 +11,11 @@ async function getInfo() {
     const response = await fetch(url);
     const data = await response.json();
 
+    stopNameElement.textContent = data.name;
+    Object.entries(data.buses).forEach((busNumber, timeArrive)) => {
+        const li = document.createElement('li');
+        li.textContent = `Bus ${busNumber} arrives in ${timeArrive} minutes`
+    }
+
 
 }
