@@ -19,9 +19,20 @@ async function getPosts(){
 
     async function getComments(){
         const postsUrl = 'http://localhost:3030/jsonstore/blog/posts'
-        const titleElement = 'http://localhost:3030/jsonstore/blog/comments'
+        const commentsUrl = 'http://localhost:3030/jsonstore/blog/comments'
+
+        const selectedOp = document.getElementById('posts').selectedOptions[0]
+        const titleElement = document.getElementById('post-title');
+    
+        const postResponse = await fetch(postsUrl);
+        const postData = await postResponse.json()
+
+        const commentsResponse = await fetch(commentsUrl)
+        const commentsData = await commentsResponse.json();
+
         
     }
+
 }
 
 attachEvents();
