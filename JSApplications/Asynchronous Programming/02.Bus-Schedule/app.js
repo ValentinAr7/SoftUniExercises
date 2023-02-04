@@ -11,8 +11,9 @@ function solve() {
         let response = await fetch(url);
         let data = await response.json()
 
-        btnDepartElement.addEventListener(click, (e) => {
+        btnDepartElement.addEventListener('click', (e) => {
             e.preventDefault()
+
             btnDepartElement.disabled = true
             btnArriveElement.disabled = false
 
