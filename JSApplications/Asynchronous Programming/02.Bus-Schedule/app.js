@@ -9,11 +9,14 @@ function solve() {
 
 
         let response = await fetch(url);
-        let data = response.json()
+        let data = await response.json()
 
-        infoElement.textContent = data.stopId
         btnDepartElement.addEventListener(click, (e) => {
+            e.preventDefault()
+            btnDepartElement.disabled = true
+            btnArriveElement.disabled = false
 
+            infoElement.textContent = data.stopId
 
             
 
