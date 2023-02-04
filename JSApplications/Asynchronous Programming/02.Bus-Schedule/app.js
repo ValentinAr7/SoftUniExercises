@@ -11,6 +11,7 @@ function solve() {
         let response = await fetch(url);
         let data = response.json()
 
+        infoElement.textContent = data.stopId
         btnDepartElement.addEventListener(click, (e) => {
 
 
