@@ -11,6 +11,8 @@ async function getPosts(){
 
     Object.values(data).forEach(post => {
         const op = document.createElement('option');
+        op.value = post.id;
+        op.textContent = post.title;
     })
 }
 
