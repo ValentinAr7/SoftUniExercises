@@ -1,14 +1,13 @@
 function persistence(num) {
-    
-    let numberTimes = 0;
+    let count = 0;
+  
+    while (num >= 10) {
+      count++;
+      num = String(num).split("").reduce((a, b) => a * b);
+    }
+  
+    return count;
+  }
 
-    let numString = num.toString().split('').map(char => parseInt(char, 10))
-
-    
-    
-
- }
-
-
-  persistence(39) //3
+  persistence(39) 
 
