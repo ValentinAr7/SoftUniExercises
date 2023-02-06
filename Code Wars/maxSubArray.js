@@ -2,7 +2,9 @@ function persistence(num) {
     
     let numberTimes = 0;
 
-    let numString = num.toString().split('')
+    let numString = num.toString().split('').map(char => parseInt(char, 10))
+
+    
     
 
  }
