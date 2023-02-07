@@ -12,5 +12,8 @@ async function onLogin(event){
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({email, password})
-    })
+    });
+
+    const data = await response.json();
+    sessionStorage.setItem('accessToken', data.accessToken);
 }
