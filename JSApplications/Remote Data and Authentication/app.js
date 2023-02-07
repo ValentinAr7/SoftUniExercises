@@ -20,5 +20,12 @@ async function onLogin(event){
 }
 
 async function onLogout(){
-    
+    const token = sessionStorage.getItem('accessToken');
+
+    await fetch('http://localhost:3030/users/logout', {
+        method: 'get',
+        headers: {
+            'X-Authorization': token
+        }
+    })
 }
