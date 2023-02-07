@@ -1,4 +1,5 @@
 document.getElementById('login-form').addEventListener('submit', onLogin);
+document.getElementById('logoutBtn').addEventListener('click', onLogout)
 
 async function onLogin(event){
     event.preventDefault()
@@ -16,4 +17,8 @@ async function onLogin(event){
 
     const data = await response.json();
     sessionStorage.setItem('accessToken', data.accessToken);
+}
+
+async function onLogout(){
+    
 }
