@@ -1,5 +1,12 @@
 function attachEvents() {
 
+    document.getElementById('refresh').addEventListener('click', getAllMsg);
+
+
+}
+
+function renderMsg(data){
+    Object.values(data).map(entry => `${entry.author}: ${entry.content}`) 
 }
 
 
@@ -8,7 +15,7 @@ async function getAllMsg(){
     const response = await fetch(url)
     const data = await response.json()
 
-    return data
+    renderMsg(data)
 }
 
 async function createMessage(body){
