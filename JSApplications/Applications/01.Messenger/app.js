@@ -10,25 +10,26 @@ function renderMsg(data) {
 
     //stores the data of author and content in a variable
     const content = Object.values(data).map(entry => `${entry.author}: ${entry.content}`).join('\n')
-
     //display values in textArea
     textArea.textContent = content
 }
-
-function onSendMsg(){
+//--------------------------------------------------------------------------
+function onSendMsg() {
     const author = document.querySelector('input[name="author"]')
-    const content =document.querySelector('input[name="content"]')
+    const content = document.querySelector('input[name="content"]')
 
-
+    //create object with values input
     const body = {
         author: author.value,
         content: content.value
     }
 
+    author.value = '';
+    content.value = '';
+    
     createMessage(body);
 }
-
-
+//-------------------------------------------------------------------------
 async function getAllMsg() {
     const url = 'http://localhost:3030/jsonstore/messenger'
     const response = await fetch(url)
@@ -36,11 +37,10 @@ async function getAllMsg() {
 
     renderMsg(data)
 }
-
+//--------------------------------------------------------------------------
 async function createMessage(body) {
-
-
     const url = 'http://localhost:3030/jsonstore/messenger'
+
     const response = await fetch(url, {
         method: 'POST',
         headers: {
