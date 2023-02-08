@@ -6,7 +6,8 @@ function attachEvents() {
 }
 
 function renderMsg(data){
-    Object.values(data).map(entry => `${entry.author}: ${entry.content}`) 
+    const content = Object.values(data).map(entry => `${entry.author}: ${entry.content}`) 
+    debugger
 }
 
 
