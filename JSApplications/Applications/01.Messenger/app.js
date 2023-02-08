@@ -18,6 +18,14 @@ function renderMsg(data) {
 function onSendMsg(){
     const author = document.querySelector('input[name="author"]')
     const content =document.querySelector('input[name="content"]')
+
+
+    const body = {
+        author: author.value,
+        content: content.value
+    }
+
+    createMessage(body);
 }
 
 
