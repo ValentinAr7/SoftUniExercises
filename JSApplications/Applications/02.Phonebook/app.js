@@ -10,6 +10,19 @@ async function loadPhones() {
 
     return data
 }
+//----------------------------------------------------------------------
+
+async function postPhone(){
+
+    const url = 'http://localhost:3030/jsonstore/phonebook'
+    const response = await fetch(url, {
+        method: 'POST',
+        'Content-Type': 'application/json',
+        header: {
+            
+        }
+    })
+}
 
 
 
