@@ -6,10 +6,11 @@ function attachEvents() {
 
 function renderRecords(data) {
     const ul = document.getElementById('phonebook')
-    const btnDelete = document.createElement('button')
-    btnDelete.textContent = 'Delete'
+
 
     Object.values(data).forEach(rec => {
+        const btnDelete = document.createElement('button')
+        btnDelete.textContent = 'Delete'
         const li = document.createElement('li');
         li.textContent = `${rec.person}: ${rec.phone}`
         li.setAttribute('data-id', rec._id)
