@@ -5,15 +5,17 @@ function attachEvents() {
 
 }
 
-function handleCreateRec(){
+//----------------------------------------------------------------------------
+function handleCreateRec() {
     const person = document.getElementById('person')
     const phone = document.getElementById('phone')
 
     onCreateRecord(person.value, phone.value)
     person.value = '';
     phone.value = '';
-
 }
+
+//-------------------------------------------------------------------------
 function renderRecords(data) {
     const ul = document.getElementById('phonebook')
     ul.innerHTML = ''
@@ -39,7 +41,7 @@ function handleDelete(e) {
     li.remove()
 }
 
-
+//---------------------------------------------------------------------------
 async function onLoadAllRecords() {
 
     const url = 'http://localhost:3030/jsonstore/phonebook'
@@ -48,8 +50,8 @@ async function onLoadAllRecords() {
 
     return renderRecords(data)
 }
-//----------------------------------------------------------------------
 
+//----------------------------------------------------------------------
 async function onCreateRecord(person, phone) {
 
     const url = 'http://localhost:3030/jsonstore/phonebook'
@@ -70,6 +72,7 @@ async function onCreateRecord(person, phone) {
     return data
 }
 
+//----------------------------------------------------------------------
 async function onDeleteRecords() {
     const url = `http://localhost:3030/jsonstore/phonebook/${id}`;
 
@@ -80,12 +83,7 @@ async function onDeleteRecords() {
         },
         body: JSON.stringify(body)
     })
-
     const data = await response.json()
 }
-
-
-
-
 
 attachEvents();
