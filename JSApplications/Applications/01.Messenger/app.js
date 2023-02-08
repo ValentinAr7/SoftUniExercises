@@ -11,7 +11,9 @@ async function getAllMsg(){
     return data
 }
 
-async function createMessage(){
+async function createMessage(body){
+
+    
     const url = 'http://localhost:3030/jsonstore/messenger'
     const response = await fetch(url, {
         method: 'POST',
