@@ -1,6 +1,19 @@
 function attachEvents() {
 
+    document.getElementById('btnLoad').addEventListener('click', onLoadAllRecords)
+
 }
+
+function renderRecords(data) {
+    const ul = document.getElementById('phonebook')
+    Object.values(data).forEach(rec => {
+        const li = document.createElement('li');
+        li.textContent = `${rec.person}: ${rec.phone}`
+        li.setAttribute('data-id', rec._id)
+        ul.appendChild(li)
+    })
+}
+
 
 async function onLoadAllRecords() {
 
@@ -8,10 +21,11 @@ async function onLoadAllRecords() {
     const response = await fetch(url);
     const data = await response.json()
 
+    return renderRecords(data)
 }
 //----------------------------------------------------------------------
 
-async function onCreateRecord(person, phone){
+async function onCreateRecord(person, phone) {
 
     const url = 'http://localhost:3030/jsonstore/phonebook'
     const body = {
@@ -30,10 +44,10 @@ async function onCreateRecord(person, phone){
     return data
 }
 
-async function onDeleteRecords(){
+async function onDeleteRecords() {
     const url = `http://localhost:3030/jsonstore/phonebook/${id}`;
 
-    const response = await fetch(url,  {
+    const response = await fetch(url, {
         method: 'DELETE',
         header: {
             'Content-Type': 'application/json',
@@ -43,6 +57,8 @@ async function onDeleteRecords(){
 
     const data = await response.json()
 }
+
+
 
 
 
