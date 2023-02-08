@@ -21,7 +21,8 @@ async function createMessage(){
         body: JSON.stringify(body)
     })
 
-
+const data = response.json()
+return data
 }
 
 attachEvents();
