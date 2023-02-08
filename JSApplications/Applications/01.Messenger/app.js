@@ -6,9 +6,9 @@ function attachEvents() {
 }
 
 function renderMsg(data){
-    const textArea = document.getElementById('message')
+    const textArea = document.getElementById('messages')
     //stores the data of author and content in a variable
-    const content = Object.values(data).map(entry => `${entry.author}: ${entry.content}`) 
+    const content = Object.values(data).map(entry => `${entry.author}: ${entry.content}`).join('\n') 
     textArea.textContent = content
 
 }
