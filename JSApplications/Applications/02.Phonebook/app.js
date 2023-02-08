@@ -26,9 +26,22 @@ async function onCreateRecord(person, phone){
         },
         body: JSON.stringify(body)
     })
-
     const data = await response.json()
     return data
+}
+
+async function onDeleteRecords(){
+    const url = `http://localhost:3030/jsonstore/phonebook/${id}`;
+
+    const response = await fetch(url,  {
+        method: 'DELETE',
+        header: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body)
+    })
+
+    const data = await response.json()
 }
 
 
