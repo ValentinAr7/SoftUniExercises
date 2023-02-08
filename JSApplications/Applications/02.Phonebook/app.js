@@ -8,11 +8,15 @@ function attachEvents() {
 function handleCreateRec(){
     const person = document.getElementById('person')
     const phone = document.getElementById('phone')
+    person.value = '';
+    phone.value = '';
+    onCreateRecord(person.value, phone.value)
 
 }
 function renderRecords(data) {
     const ul = document.getElementById('phonebook')
     Object.values(data).forEach(rec => {
+        ul.innerHTML = ''
         const li = document.createElement('li');
         li.textContent = `${rec.person}: ${rec.phone}`
         li.setAttribute('data-id', rec._id)
