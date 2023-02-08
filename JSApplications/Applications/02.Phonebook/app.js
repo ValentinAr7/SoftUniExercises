@@ -66,6 +66,7 @@ async function onCreateRecord(person, phone) {
         body: JSON.stringify(body)
     })
     const data = await response.json()
+    onLoadAllRecords()
     return data
 }
 
