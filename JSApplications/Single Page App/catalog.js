@@ -1,8 +1,13 @@
 import { showDetailsView } from './details.js';
 
+// 4 functions
+// function showCatalogView() uses all 3 recepise
 
-// get data from REST service
-// parse and display each recipe
+// function showCatalogView() displays the section and stores getAllRecipes() in variable recipes
+// function getAllRecipes() fetch data from the server
+// then call displayRecepise(recipes)
+// function displayRecepise() maps all recepise and send them to createRecipeCard()
+// import showCatalogView() in appjs
 
 document.getElementById('recipe-list').addEventListener('click', openRecipe);
 document.getElementById('catalog-link').addEventListener('click', showCatalogView);
@@ -10,7 +15,7 @@ document.getElementById('catalog-link').addEventListener('click', showCatalogVie
 export async function showCatalogView() {
     [...document.querySelectorAll('section')].forEach(s => s.style.display = 'none');
     //hides all elements
-    
+
     const recipes = await getAllRecipes();
     
     document.getElementById('catalog-view').style.display = 'block';
