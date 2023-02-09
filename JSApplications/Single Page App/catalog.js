@@ -17,6 +17,7 @@ export async function showCatalogView() {
     displayRecipes(recipes);
 }
 
+//------------------------ GET ALL RECEPIES FROM THE SERVER -----------------------------------
 async function getAllRecipes() {
     const response = await fetch('http://localhost:3030/data/recipes?select=' + encodeURIComponent('_id,name'));
     const recipes = await response.json();
@@ -24,16 +25,23 @@ async function getAllRecipes() {
     return recipes;
 }
 
+//----------------------------- DISPLAY ALL RECIPES-----------------------------------
 function displayRecipes(recipes) {
     const cards = recipes.map(createRecipeCard);
+    //It maps over the recipes array and passes each recipe data to the createRecipeCard() function. 
+    //The result of the map function is an array of recipe cards (HTML elements).
 
     const fragment = document.createDocumentFragment();
+    // It creates a Document Fragment object,
+
     for (let item of cards) {
         fragment.appendChild(item);
     }
+    // The function then loops over the array of recipe cards (cards) and appends each card as a child node to the Document Fragment.
 
     const list = document.getElementById('recipe-list');
     list.replaceChildren(fragment);
+    // Finally, the function gets the HTML element with the ID of "recipe-list" using document.getElementById('recipe-list') and replaces its child nodes with the Document Fragment using the replaceChildren method. This updates the content of the "recipe-list" element with the new recipe cards. 
 }
 
 function createRecipeCard(recipe) {
