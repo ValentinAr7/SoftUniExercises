@@ -9,10 +9,12 @@ document.getElementById('catalog-link').addEventListener('click', showCatalogVie
 
 export async function showCatalogView() {
     [...document.querySelectorAll('section')].forEach(s => s.style.display = 'none');
+    //hides all elements
     
     const recipes = await getAllRecipes();
     
     document.getElementById('catalog-view').style.display = 'block';
+    // It sets the display style property of the HTML element with the ID of "catalog-view" to "block". This makes the "catalog-view" section visible on the page.
 
     displayRecipes(recipes);
 }
@@ -44,6 +46,7 @@ function displayRecipes(recipes) {
     // Finally, the function gets the HTML element with the ID of "recipe-list" using document.getElementById('recipe-list') and replaces its child nodes with the Document Fragment using the replaceChildren method. This updates the content of the "recipe-list" element with the new recipe cards. 
 }
 
+//------------------------------ CREATE RECIPE CARD ------------------------------------------------
 function createRecipeCard(recipe) {
     const element = document.createElement('li');
     element.textContent = recipe.name;
