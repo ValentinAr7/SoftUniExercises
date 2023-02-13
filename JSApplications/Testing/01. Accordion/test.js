@@ -4,6 +4,9 @@ const { expect } = require ('chai');
 let browser, page;
 
 describe('E2E tests',async function() {
-    
+    before (async () => {browser = await chromium.launch(); })
+    after (async () => { await browser.close(); });
+    beforeEach (async () => { page = awaitbrowser.newPage(); })
+    afterEach(async () => {await page.close(); })
 
 })
