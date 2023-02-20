@@ -5,15 +5,28 @@ const views = {
 }
 
 const main = document.querySelector('main');
-
 document.querySelector('nav').addEventListener('click', onNavigate);
+showView('/')
 
 function onNavigate(event){
     if(event.target.tagName == 'A'){
         const name = new URL(event.target.href);
         const view = views[url.pathname];
         if(typeof view == 'function'){
+            event.preventDefault()
             main.innerHTML = view()
+        history.pushState(null, '', url.pathname)
         }
     }
+}
+
+function showView(){
+    const view = views[name];
+    if(typeof view == 'function'){
+        main.innerHTML = view();
+        return true
+    } else {
+
+    }
+    main.innerHTML = view();
 }
