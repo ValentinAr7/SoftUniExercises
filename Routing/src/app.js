@@ -6,6 +6,9 @@ const views = {
 
 const main = document.querySelector('main');
 document.querySelector('nav').addEventListener('click', onNavigate);
+window.addEventListener('popstate', onPopState)
+
+onPopState();
 
 const startingView = window.location.pathname
 showView(startingView)
