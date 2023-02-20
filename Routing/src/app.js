@@ -10,8 +10,8 @@ document.querySelector('nav').addEventListener('click', onNavigate);
 
 function onNavigate(event){
     if(event.target.tagName == 'A'){
-        const name = event.target.href;
-        const view = views[name];
+        const name = new URL(event.target.href);
+        const view = views[url.pathname];
         if(typeof view == 'function'){
             main.innerHTML = view()
         }
