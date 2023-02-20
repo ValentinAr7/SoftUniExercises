@@ -23,6 +23,11 @@ function onNavigate(event) {
     }
 }
 
+function onPopState(){
+    const startingView = window.location.pathname;
+    showView(startingView)
+}
+
 function showView() {
     const view = views[name];
     if (typeof view == 'function') {
